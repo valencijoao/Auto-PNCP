@@ -13,10 +13,27 @@ ARQUIVO_SAIDA = PASTA_DADOS / 'swagger.json'
 
 session = criar_sessao()
 
-def baixar_swagger():
+SWAGGERS = {
+    "consulta": {
+        "url": "https://pncp.gov.br/api/consulta/swagger-ui/index.html",
+        "arquivo": "swagger_consulta.json"
+
+    },
+
+    "manutencao": {
+        "url": "https://pncp.gov.br/api/pncp/v3/api-docs",
+        "arquivo": "swagger_manutencao.json"
+
+    }
+    }
+
+
+def baixar_swagger(nome, url, arquivo):
     """
     Baixa a documentação do PNCP e retorna um arquivo JSON para consulta.
     """
+
+    print(f"\nBaixando Swagger '{nome}'...")
 
     resposta = session.get(
         URL_SWAGGER,
@@ -25,23 +42,45 @@ def baixar_swagger():
 
     resposta.raise_for_status()
 
+    dados = resposta.json()
+
     swagger = resposta.json()
 
-    with open(
-        ARQUIVO_SAIDA,
-        "w",
-        encoding="utf-8"
-    ) as arquivo:
-        
+    caminho = PASTA_DADOS / arquivo
+
+    with open(caminho, "w", encoding="utf-8") as f:
         json.dump(
-            swagger,
-            arquivo,
+            dados,
+            f,
             indent=4,
             ensure_ascii=False
         )
 
-    print('Arquivo salvo!')
+    print(f"{arquivo} salvo!")
+
+
+def atualizar_swaggers():
+    """
+    Baixa todos os swaggers do PNCP
+    """
+
+    for nome, info in SWAGGERS.items():
+
+        try:
+
+            baixar_swagger(
+                nome,
+                info['url'],
+                info['arquivo']
+
+            )
+
+
+        except Exception as e:
+
+            print(f"Erro ao baixar '{nome}': {e}")
 
 
 if __name__== "__main__":
-    baixar_swagger()
+
+    atualizar_swaggers()

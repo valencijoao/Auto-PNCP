@@ -1,15 +1,24 @@
 import json
 from pathlib import Path
 
-ARQUIVO_SWAGGER = Path('dados') / 'swagger.json'
+PASTA =Path('dados')
 
-def carregar_swagger():
+def carregar_swagger(tipo='consulta'):
     """
-    Carrega o arquivo swagger.json.
+    Carrega um arquivo swagger do PNCP.
     """
 
-    with open(ARQUIVO_SWAGGER, encoding='utf-8') as arquivo:
-        return json.load(arquivo)
+    arquivos = {
+        "consulta": "swagger_consulta.json",
+        "manutencao": "swagger_manutencao.json"
+
+    }
+
+
+    caminho = PASTA / arquivos[tipo]
+
+    with open(caminho, encoding='utf-8') as f:
+        return json.load(f)
     
 def resumo_api(swagger):
     """
@@ -44,11 +53,23 @@ def pesquisar_endpoints(swagger,palavra):
 
     encontrou = False
 
-    for endpoint in swagger.get("paths",{}):
+    paths = swagger.get("paths",{})
 
-        if palavra.lower() in endpoint.lower():
-            print(endpoint)
-            encontrou = True
+    for endpoint, metodos in sorted(paths.items()):
+
+        if palavra.lower() not in endpoint.lower():
+            continue
+
+        encontrou = True
+
+        for metodo, info in metodos.items():
+
+            summary = info.get("summary","Sem resumo")
+
+            print(f"{metodo.upper():6} {endpoint}")
+            print(f"        {summary}")
+
+        print()
 
     if not encontrou:
         print("Nenhum endpoint encontrado.")
@@ -82,9 +103,9 @@ def inspecionar_schema(swagger, nome_schema):
 
     print(f"====='{nome_schema}'=====\n")
 
-    print(json.dupms(
+    print(json.dumps(
         schema,
-        ident=4,
+        indent=4,
         ensure_ascii=False
     ))
 
@@ -175,6 +196,7 @@ def inspecionar_endpoint(swagger, endpoint):
             print(descricao)
 
         parametros = info.get("parameters",[])
+        
 
         if parametros:
             print("\nParâmetros")
@@ -188,34 +210,93 @@ def inspecionar_endpoint(swagger, endpoint):
 
                     )
 
-        respostas = info.get("respostas",{})
+        request_body = info.get("requestBody")
+
+        if request_body:
+            print(f"\nBody da requisição")
+
+            conteudos = request_body.get("content",{})
+
+            for tipo, dados in conteudos.items():
+
+                schema = (
+                    dados
+                    .get("schema",{})
+                    .get("$ref")
+                )
+
+            print(f"- {tipo}")
+
+            if schema:
+                print(f"   {schema.split('/')[-1]}")
+
+        
+
+        respostas = info.get("responses",{})
 
         if respostas:
             print("\nRespostas:")
 
-            for codigo in respostas:
+            for codigo, resposta in respostas.items():
                 print(f"- {codigo}")
+
+                descricao = resposta.get("description")
+
+                if descricao:
+                    print(descricao)
+
+                conteudos = resposta.get("content",{})
+
+                for tipo, dados in conteudos.items():
+
+                    schema = (
+                        dados
+                        .get("schema",{})
+                        .get("$ref")
+                    )
+
+                if schema:
+
+                    print(
+                        f"Schema: {schema.split('/')[-1]}"
+                    )
+
+        content = resposta.get("content", {})
+            
+        for tipo, dados in content.items():
+            
+            print(f"  Tipo: {tipo}")
+            
+            schema = dados.get("schema", {})
+            
+            if "$ref" in schema:
+                print(
+                "  Schema:",
+                schema["$ref"].split("/")[-1]
+                )
+            
+            elif "items" in schema:
+            
+                items = schema["items"]
+            
+                if "$ref" in items:
+                    print(
+                    "  Lista de:",
+                    items["$ref"].split("/")[-1]
+                    )
+
+                if "$ref" in items:
+
+                    schema = items["$ref"].split("/")[-1]
+
+                    print(f"  Lista de: {schema}")
+
+                    listar_campos_schemas(swagger, schema)
+                
 
         print()
 
                 
-
-def listar_schemas(swagger):
-    """
-    Lista todos os schemas da API.
-    """
-
-    print("\n===== SCHEMAS =====\n")
-
-    schemas = (
-        swagger
-        .get("components", {})
-        .get("schemas", {})
-    )
-
-    for nome in schemas:
-        print(nome)
-
 
 def procurar_endpoint(swagger, palavra):
     """
@@ -245,9 +326,9 @@ def procurar_codigo_descricao(swagger):
 
     print("\n===== POSSÍVEIS DOMÍNIOS =====\n")
 
-    for nome in schemas.items():
+    for nome, schema in schemas.items():
 
-        propriedades = schemas.get("properties", {})
+        propriedades = schema.get("properties", {})
 
         nomes = {
             chave.lower()
@@ -256,7 +337,7 @@ def procurar_codigo_descricao(swagger):
 
         possui_codigo = any(
             x in nomes
-            for x in nomes(
+            for x in (
                 "codigo",
                 "id",
                 "valor"
@@ -280,13 +361,13 @@ def procurar_codigo_descricao(swagger):
 
 if __name__ == "__main__":
 
-    swagger = carregar_swagger()
+    swagger = carregar_swagger("consulta")
 
     # resumo_api(swagger)
 
     # listar_endpoints(swagger)
 
-    # pesquisar_endpoints(swagger, "modal")
+    pesquisar_endpoints(swagger, "compra")
 
     # listar_schemas(swagger)
 
@@ -296,6 +377,6 @@ if __name__ == "__main__":
 
     # procurar_endpoint(swagger, "unidade")
 
-    inspecionar_endpoint(swagger, "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}")
+    inspecionar_endpoint(swagger, "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens")
 
     #listar_campos_schemas(swagger, "Compra")
