@@ -313,6 +313,52 @@ def procurar_endpoint(swagger, palavra):
             print(endpoint)
 
 
+def procurar_referencias(swagger, nome_schema):
+    """
+    Lista todos os schemas referenciados por um schema.
+    """
+
+    schemas = swagger.get("components",{}).get("schemas", {})
+
+    if nome_schema not in schemas:
+        print(f"\nSchema'{nome_schema}' não encontrado.")
+        return
+
+    propriedades = schemas[nome_schema].get("properties",{})
+
+    print(f"\n=====REFERÊNCIAS DE {nome_schema} =====\n")
+
+    encontrou = False
+
+    for campo, info in propriedades.items():
+
+        if "$ref" in info:
+
+            referencia = info["$ref"].split("/")[-1]
+
+            print(f"{campo}")
+            print(f"   └── {referencia}\n")
+
+            encontrou = True
+
+        elif "items" in info:
+
+            items = info["items"]
+
+            if "$ref" in items:
+
+                referencia = items["$ref"].split("/")[-1]
+
+                print(f"{campo}")
+                print(f"   └── Lista de {referencia}\n")
+
+                encontrou = True
+
+    if not encontrou:
+        print(f"Este schema não referencia outros schemas.")
+
+
+
 def procurar_codigo_descricao(swagger):
     """
     Procura schemas que possuem campos de código e descrição.
@@ -357,6 +403,234 @@ def procurar_codigo_descricao(swagger):
             print(nome)
 
 
+def arvore_schema(swagger, nome_schema, nivel=0, visitados=None):
+    """
+    Exibe recursivamente a árvore de um schema.
+    """
+
+    if visitados is None:
+        visitados = set()
+
+    schemas = (
+        swagger
+        .get("components",{})
+        .get("schemas",{})
+    )
+
+    if nome_schema not in schemas:
+        print(" " * nivel + f"{nome_schema} (não encontrado)")
+        return
+
+    if nome_schema in visitados:
+        print(" " * nivel + f"{nome_schema} (já exibido)")
+        return
+
+    visitados.add(nome_schema)
+
+    print(" " * nivel + nome_schema)
+
+    propriedades = schemas[nome_schema].get("properties",{})
+
+    for campo, info in propriedades.items():
+
+        prefixo = " " * (nivel + 4)
+
+         # Campo simples
+        if "$ref" not in info and "items" not in info:
+            print(f"{prefixo}├── {campo}")
+
+        # Campo que referencia outro schema
+        elif "$ref" in info:
+
+            referencia = info["$ref"].split("/")[-1]
+
+            print(f"{prefixo}├── {campo}")
+
+            arvore_schema(
+                swagger,
+                referencia,
+                nivel + 8,
+                visitados
+            )
+
+        # Lista de objetos
+        elif "items" in info:
+
+            items = info["items"]
+
+            if "$ref" in items:
+
+                referencia = items["$ref"].split("/")[-1]
+
+                print(f"{prefixo}├── {campo} []")
+
+                arvore_schema(
+                    swagger,
+                    referencia,
+                    nivel + 8,
+                    visitados
+                )
+
+            else:
+
+                print(f"{prefixo}├── {campo} []")
+
+
+def procurar_schema(swagger, nome_schema):
+    """
+    Procura quais endpoints utilizam determinado schema.
+    """
+
+    print(f"\n===== SCHEMA: {nome_schema} =====\n")
+
+    paths = swagger.get("paths",{})
+
+    encontrou = False
+
+    for endpoint, metodos in paths.items():
+
+        for metodo, info in metodos.items():
+
+            #
+            # Request Body
+            #
+
+            request = info.get("requestBody",{})
+
+            conteudos = request.get("content",{})
+
+            for media, dados in conteudos.items():
+
+                schema = dados.get("schema",{})
+
+                ref = schema.get("$ref")
+
+                if ref and ref.endswith(nome_schema):
+
+                    encontrou = False
+
+                    print(f"{metodo.upper():6} {endpoint}")
+                    print(f"    Request Body ({media})")
+                    print()
+
+            #
+            # Responses
+            #
+
+            responses = info.get("responses",{})
+
+            for codigo, resposta in responses.items():
+
+                conteudos = resposta.get("content",{})
+
+                for media, dados in conteudos.items():
+
+                    schema = dados.get("schema",{})
+
+                    ref = schema.get("$ref")
+
+                    if ref and ref.endswith(nome_schema):
+
+                        encontrou = True
+
+                        print(f"{metodo.upper():6} {endpoint}")
+                        print(f"   Response {codigo} ({media})")
+                        print()
+
+                    #
+                    # Arrays
+                    #
+
+                    items = schema.get("items", {})
+
+                    ref = items.get("$ref")
+
+                    if ref and ref.endswith(nome_schema):
+
+                        encontrou = True
+
+                        print(f"{metodo.upper():6} {endpoint}")
+                        print(f"   Response {codigo} (Lista)")
+                        print()
+
+    if not encontrou:
+        print("Nenhum endpoint utiliza este schema.")
+
+
+def mapear_endpoint(swagger, endpoint):
+    """
+    Mostra todos os Schemas utilizados por um endpoint.
+    """
+
+    paths = swagger.get("paths",{})
+
+    if endpoint not in paths:
+        print(f"\n Endpoint '{endpoint} não encontrado em {paths}")
+        return
+
+    print("\n=====MAPA DO ENDPOINT=====")
+    print(endpoint)
+
+    for metodo, info in paths[endpoint].items():
+
+        print(f"\n{metodo.upper()}")
+
+        #
+        # Request
+        #
+
+        request = info.get("requestBody", {})
+
+        conteudos = request.get("content", {})
+
+        for media, dados in conteudos.items():
+
+            schema = dados.get("schema", {})
+
+            ref = schema.get("$ref")
+
+            if ref:
+
+                print("\nRequest Body")
+
+                print(ref.split("/")[-1])
+
+        #
+        # Responses
+        #
+
+        responses = info.get("responses", {})
+
+        print("\nResponses")
+
+        for codigo, resposta in responses.items():
+
+            conteudos = resposta.get("content", {})
+
+            for media, dados in conteudos.items():
+
+                schema = dados.get("schema", {})
+
+                if "$ref" in schema:
+
+                    print(
+                        f"{codigo} -> "
+                        f"{schema['$ref'].split('/')[-1]}"
+                    )
+
+                elif "items" in schema:
+
+                    items = schema["items"]
+
+                    if "$ref" in items:
+
+                        print(
+                            f"{codigo} -> Lista de "
+                            f"{items['$ref'].split('/')[-1]}"
+                        )
+
+
+
 
 
 if __name__ == "__main__":
@@ -367,7 +641,7 @@ if __name__ == "__main__":
 
     # listar_endpoints(swagger)
 
-    pesquisar_endpoints(swagger, "compra")
+    # pesquisar_endpoints(swagger, "modalidade")
 
     # listar_schemas(swagger)
 
@@ -377,6 +651,16 @@ if __name__ == "__main__":
 
     # procurar_endpoint(swagger, "unidade")
 
-    inspecionar_endpoint(swagger, "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens")
+    # procurar_referencias(swagger, "RecuperarCompraItemSigiloDTO")
 
-    #listar_campos_schemas(swagger, "Compra")
+    # inspecionar_endpoint(swagger, "/v1/modalidades/{id}")
+
+    listar_campos_schemas(swagger, "DominioGenericoDTO")
+
+    # arvore_schema(swagger, "IncluirDominioGenericoDTO")
+
+    # procurar_schema(swagger, "IncluirDominioGenericoDTO")
+
+    # mapear_endpoint(swagger, "")
+
+
