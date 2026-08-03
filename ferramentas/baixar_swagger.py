@@ -15,7 +15,7 @@ session = criar_sessao()
 
 SWAGGERS = {
     "consulta": {
-        "url": "https://pncp.gov.br/api/consulta/swagger-ui/index.html",
+        "url": "https://pncp.gov.br/api/pncp/swagger-ui/index.html",
         "arquivo": "swagger_consulta.json"
 
     },
