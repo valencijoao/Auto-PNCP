@@ -1,96 +1,58 @@
 import requests
+import json
+from pathlib import Path
 
 BASE_URL = "https://pncp.gov.br/api/pncp"
+PASTA_DADOS = Path("dados")
+PASTA_DADOS.mkdir(exist_ok=True)
 
 from explorar_swagger import carregar_swagger
 
 
-def gerar_modelo_requisicao(swagger, endpoint):
-    """
-    Gera um modelo de requisição para um endpoint.
-    """
 
-    paths = swagger.get("paths",{})
-
-    if endpoint not in paths:
-        print(f"Endpoint '{endpoint}' não encontrado. ")
-        return
-
-    print(f"\n===== {endpoint} =====\n")
-
-    for metodo, info in paths[endpoint].items():
-
-        print(f"{metodo.upper()}")
-
-        parametros = info.get("parameters",[])
-
-        path = []
-        query = []
-
-        for parametro in parametros:
-
-            nome = parametro.get("name")
-            local = parametro.get("in")
-
-            if local == "path":
-                path.append(nome)
-
-            elif local == "query":
-                query.append(nome)
-
-        print("\nPATH")
-
-        for p in path:
-            print("-", p)
-
-        print("\nQUERY")
-
-        if query:
-            for q in query:
-                print("-", q)
-
-        else:
-            print("Nenhum")
-
-        url = endpoint
-
-        if query:
-
-            url += "?"
-
-            url += "&".join( 
-                f"{q}={{{q}}}"
-                for q in query
-                )
-
-        print("\nModelo da URL")
-
-        print(url)
-
-        print()
-
-
-def executar_endpoint(endpoint, parametros=None):
+def executar_endpoint(endpoint, path=None, query=None, metodo="GET"):
     """
     Executa um endpoint GET da API do PNCP.
     """
 
-    url = BASE_URL + endpoint
+    path = path or {}
+    query = query or {}
 
-    print(url)
+    url = BASE_URL + endpoint.format(**path)
 
-    resposta = requests.get(
+    print(f"\n{metodo}{url}")
+
+    resposta = requests.request(
+        metodo,
         url,
-        params=parametros,
+        params=query,
         timeout=60
     )
 
-    print(f"URL: {resposta.url}")
-    print(f"Status: {resposta.status_code}")
+    print(f"Status:",resposta.status_code)
 
     resposta.raise_for_status()
 
-    return resposta.json()
+    if resposta.content:
+        return resposta.json()
+
+    return None
+
+
+def salvar_json(nome, dados):
+    """
+    Salva os dados recuperados dos endpoints em um arquivo JSON.
+    """
+
+    caminho = PASTA_DADOS / nome
+
+    with open(caminho,"w",encoding="utf-8") as f:
+        json.dump(
+            dados,
+            f,
+            indent=4,
+            ensure_ascii=False
+        )
 
 
 
@@ -98,21 +60,15 @@ if __name__ == "__main__":
 
     swagger = carregar_swagger("consulta")
 
-    # gerar_modelo_requisicao(swagger, "endpoint")
 
-#     executar_endpoint(
-#      "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens",
-#     path={
-#         "cnpj": "...",
-#         "ano": 2025,
-#         "sequencial": 15
-#     },
-#     query={
-#         "pagina": 1,
-#         "tamanhoPagina": 50
-#     }
-# )
 
-executar_endpoint("/v1/modalidades")
+
+    dados = executar_endpoint("/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens", path={
+        "cnpj":"06553937000170",
+        "ano":"2026",
+        "sequencial":64
+    })
+
+    salvar_json("itens_compra.json",dados)
 
 
