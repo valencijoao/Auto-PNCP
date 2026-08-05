@@ -29,6 +29,8 @@ def salvar_json(caminho, dados):
             ensure_ascii=False
         )
 
+    print(f"Salvo em: {caminho}")
+
 
 
 def carregar_json(caminho):
@@ -49,7 +51,7 @@ def carregar_json(caminho):
         return json.load()
 
 
-def salvar_compra(cnpj, ano, sequencial, nome, dados):
+def salvar_compra(cnpj, ano, sequencial, dados):
     """
     Salva um recurso relacionado à uma compra.
     """
@@ -60,7 +62,7 @@ def salvar_compra(cnpj, ano, sequencial, nome, dados):
     )
 
     salvar_json(
-        pasta / f"{nome}.json",
+        pasta / f"{cnpj}_{ano}_{sequencial}.json",
         dados
     )
 
