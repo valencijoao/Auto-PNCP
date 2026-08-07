@@ -44,10 +44,14 @@ def baixar_compra_completa(cnpj, ano, sequencial):
         path=path
     )
 
+    salvar_compra(cnpj, ano, sequencial, "dados", dados)
+
     itens = executar_endpoint(
         "pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens",
         path=path
     )
+
+    salvar_compra(cnpj, ano, sequencial, "itens", itens)
 
     #
     # ENDPOINTS OPCIONAIS
@@ -58,32 +62,21 @@ def baixar_compra_completa(cnpj, ano, sequencial):
         path=path
     )
 
+    salvar_compra(cnpj, ano, sequencial, "arquivos", arquivos)
+
     historico = tentar_endpoint(
         "pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico",
         path=path
     )
+
+    salvar_compra(cnpj, ano, sequencial, "historico", historico)
 
     fontes_orcamentarias = tentar_endpoint(
         "pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria",
         path=path
     )
 
-    compra = {
-        "dados": dados,
-        "itens": itens,
-        "arquivos": arquivos,
-        "historico": historico,
-        "fontes_orcamentarias": fontes_orcamentarias
-    }
-
-    salvar_compra(
-        cnpj,
-        ano,
-        sequencial,
-        compra
-    )
-
-    return compra
+    salvar_compra(cnpj, ano, sequencial, "fontes_orcamentarias", fontes_orcamentarias)
 
 
 if __name__ == '__main__':
