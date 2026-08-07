@@ -1,0 +1,24 @@
+{
+    "tipoDocumento": {
+        "2": "Edital",
+        "16": "Outros Documentos"
+    },
+    "modalidade": {
+        "6": "Pregão - Eletrônico"
+    },
+    "modoDisputa": {
+        "1": "Aberto"
+    },
+    "amparoLegal": {
+        "1": "Lei 14.133/2021, Art. 28, I"
+    },
+    "situacaoCompra": {
+        "1": "Divulgada no PNCP"
+    },
+    "itemCategoria": {
+        "3": "Não se aplica"
+    },
+    "criterioJulgamento": {
+        "1": "Menor preço"
+    }
+}
