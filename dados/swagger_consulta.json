@@ -25383,12 +25383,12 @@
                     "dataAberturaProposta": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataEncerramentoProposta": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "codigoUnidadeCompradora": {
                         "type": "string"
@@ -25592,7 +25592,7 @@
                     "dataCotacaoMoedaEstrangeira": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "timezoneCotacaoMoedaEstrangeira": {
                         "type": "string"
@@ -25696,7 +25696,7 @@
                     "dataCancelamento": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "justificativa": {
                         "maxLength": 255,
@@ -25733,7 +25733,7 @@
                     "dataCancelamento": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "cancelado": {
                         "type": "boolean"
@@ -25741,22 +25741,22 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacaoGlobal": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "sequencialAta": {
                         "type": "integer",
@@ -26026,12 +26026,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
@@ -26122,7 +26122,7 @@
                     "dataHoraRegistro": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -26154,7 +26154,7 @@
                     "dataValidacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -26170,7 +26170,7 @@
                     "dataHoraRegistro": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -26200,12 +26200,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
@@ -26497,7 +26497,7 @@
                     "dataEmissaoEmpenho": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "valorTotal": {
                         "minimum": 0.01,
@@ -26736,7 +26736,7 @@
                     "dataCotacaoMoedaEstrangeira": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "timezoneCotacaoMoedaEstrangeira": {
                         "type": "string"
@@ -27286,7 +27286,7 @@
                     "dataSituacaoEmpenho": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "tipoPessoa": {
                         "type": "string",
@@ -27319,7 +27319,7 @@
                     "dataEmissaoEmpenho": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "valorTotal": {
                         "minimum": 0.01,
@@ -27377,7 +27377,7 @@
                     "dataSituacaoEmpenho": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "tipoPessoa": {
                         "type": "string",
@@ -27402,7 +27402,7 @@
                     "dataEmissaoEmpenho": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "valorTotal": {
                         "type": "number"
@@ -27416,12 +27416,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "justificativa": {
                         "type": "string"
@@ -27504,12 +27504,12 @@
                     "dataAberturaProposta": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataEncerramentoProposta": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "codigoUnidadeCompradora": {
                         "type": "string"
@@ -27675,7 +27675,7 @@
                     "dataCancelamento": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "justificativa": {
                         "maxLength": 255,
@@ -27765,12 +27765,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
@@ -27793,12 +27793,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
@@ -27821,12 +27821,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
@@ -27864,12 +27864,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
@@ -27906,7 +27906,7 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -27926,12 +27926,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
@@ -27972,7 +27972,7 @@
                     "dataValidacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "validado": {
                         "type": "boolean"
@@ -27980,12 +27980,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "descricaoNaturezaJuridica": {
                         "type": "string"
@@ -28036,13 +28036,28 @@
                     "pdmCodigo": {
                         "type": "string"
                     },
+                    "pdmDescricao": {
+                        "type": "string"
+                    },
+                    "codigoItem": {
+                        "type": "string"
+                    },
+                    "unidadeRequisitante": {
+                        "type": "string"
+                    },
+                    "grupoContratacaoCodigo": {
+                        "type": "string"
+                    },
+                    "grupoContratacaoNome": {
+                        "type": "string"
+                    },
                     "descricao": {
                         "type": "string"
                     },
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "numeroItem": {
                         "type": "integer",
@@ -28051,7 +28066,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "cnpj": {
                         "type": "string"
@@ -28059,7 +28074,7 @@
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "codigoUnidade": {
                         "type": "string"
@@ -28077,21 +28092,6 @@
                     "sequencialPca": {
                         "type": "integer",
                         "format": "int32"
-                    },
-                    "pdmDescricao": {
-                        "type": "string"
-                    },
-                    "codigoItem": {
-                        "type": "string"
-                    },
-                    "unidadeRequisitante": {
-                        "type": "string"
-                    },
-                    "grupoContratacaoCodigo": {
-                        "type": "string"
-                    },
-                    "grupoContratacaoNome": {
-                        "type": "string"
                     },
                     "classificacaoSuperiorCodigo": {
                         "type": "string"
@@ -28115,12 +28115,12 @@
                         "type": "string",
                         "format": "date"
                     },
+                    "nomeCatalogo": {
+                        "type": "string"
+                    },
                     "categoriaItemPcaid": {
                         "type": "integer",
                         "format": "int32"
-                    },
-                    "nomeCatalogo": {
-                        "type": "string"
                     },
                     "nomeClassificacao": {
                         "type": "string"
@@ -28164,13 +28164,28 @@
                     "pdmCodigo": {
                         "type": "string"
                     },
+                    "pdmDescricao": {
+                        "type": "string"
+                    },
+                    "codigoItem": {
+                        "type": "string"
+                    },
+                    "unidadeRequisitante": {
+                        "type": "string"
+                    },
+                    "grupoContratacaoCodigo": {
+                        "type": "string"
+                    },
+                    "grupoContratacaoNome": {
+                        "type": "string"
+                    },
                     "descricao": {
                         "type": "string"
                     },
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "numeroItem": {
                         "type": "integer",
@@ -28179,7 +28194,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "cnpj": {
                         "type": "string"
@@ -28187,7 +28202,7 @@
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "codigoUnidade": {
                         "type": "string"
@@ -28205,21 +28220,6 @@
                     "sequencialPca": {
                         "type": "integer",
                         "format": "int32"
-                    },
-                    "pdmDescricao": {
-                        "type": "string"
-                    },
-                    "codigoItem": {
-                        "type": "string"
-                    },
-                    "unidadeRequisitante": {
-                        "type": "string"
-                    },
-                    "grupoContratacaoCodigo": {
-                        "type": "string"
-                    },
-                    "grupoContratacaoNome": {
-                        "type": "string"
                     },
                     "classificacaoSuperiorCodigo": {
                         "type": "string"
@@ -28243,12 +28243,12 @@
                         "type": "string",
                         "format": "date"
                     },
+                    "nomeCatalogo": {
+                        "type": "string"
+                    },
                     "categoriaItemPcaid": {
                         "type": "integer",
                         "format": "int32"
-                    },
-                    "nomeCatalogo": {
-                        "type": "string"
                     },
                     "nomeClassificacao": {
                         "type": "string"
@@ -28308,17 +28308,17 @@
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacaoGlobalPCA": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "codigoUnidade": {
                         "type": "string"
@@ -28360,7 +28360,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "cnpj": {
                         "type": "string"
@@ -28368,7 +28368,7 @@
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "anoPca": {
                         "type": "integer",
@@ -28397,7 +28397,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "codigoUnidade": {
                         "type": "string"
@@ -28421,12 +28421,12 @@
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacaoGlobalPCA": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "esfera": {
                         "type": "string"
@@ -28472,13 +28472,14 @@
             "RecuperarContratoDTO": {
                 "type": "object",
                 "properties": {
-                    "usuarioNome": {
-                        "type": "string"
+                    "numeroRetificacao": {
+                        "type": "integer",
+                        "format": "int32"
                     },
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "anoContrato": {
                         "type": "integer",
@@ -28523,7 +28524,7 @@
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "tipoPessoa": {
                         "type": "string",
@@ -28569,13 +28570,6 @@
                             "PE"
                         ]
                     },
-                    "numeroRetificacao": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "numeroControlePNCP": {
-                        "type": "string"
-                    },
                     "receita": {
                         "type": "boolean"
                     },
@@ -28610,12 +28604,18 @@
                     "dataAtualizacaoGlobal": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "identificadorCipi": {
                         "type": "string"
                     },
                     "urlCipi": {
+                        "type": "string"
+                    },
+                    "numeroControlePNCP": {
+                        "type": "string"
+                    },
+                    "numeroControlePncpCompra": {
                         "type": "string"
                     },
                     "codigoPaisFornecedor": {
@@ -28624,7 +28624,7 @@
                     "numeroControlePncpAta": {
                         "type": "string"
                     },
-                    "numeroControlePncpCompra": {
+                    "usuarioNome": {
                         "type": "string"
                     }
                 }
@@ -28658,12 +28658,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "unidade": {
                         "$ref": "#/components/schemas/RecuperarUnidadeOrgaoDTO"
@@ -28698,7 +28698,7 @@
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "tipoPessoa": {
                         "type": "string",
@@ -28735,6 +28735,19 @@
                             "PE"
                         ]
                     },
+                    "numeroParcelas": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "nomeFornecedorSubContratado": {
+                        "type": "string"
+                    },
+                    "valorParcela": {
+                        "type": "number"
+                    },
+                    "valorGlobal": {
+                        "type": "number"
+                    },
                     "qualificacaoAcrescimoSupressao": {
                         "type": "boolean"
                     },
@@ -28766,19 +28779,6 @@
                     "valorAcrescido": {
                         "type": "number"
                     },
-                    "numeroParcelas": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "nomeFornecedorSubContratado": {
-                        "type": "string"
-                    },
-                    "valorParcela": {
-                        "type": "number"
-                    },
-                    "valorGlobal": {
-                        "type": "number"
-                    },
                     "tipoTermoContratoNome": {
                         "type": "string"
                     }
@@ -28801,7 +28801,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "cnpj": {
                         "type": "string"
@@ -28865,10 +28865,7 @@
                     "logManutencaoDataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
-                    },
-                    "usuarioNome": {
-                        "type": "string"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "tipoLogManutencaoNome": {
                         "type": "string"
@@ -28891,7 +28888,14 @@
                         "type": "integer",
                         "format": "int32"
                     },
+                    "usuarioNome": {
+                        "type": "string"
+                    },
                     "sequencialDocumentoTermoContrato": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sequencialDocumentoContrato": {
                         "type": "integer",
                         "format": "int32"
                     },
@@ -28899,10 +28903,6 @@
                         "type": "string"
                     },
                     "contratoAno": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "sequencialDocumentoContrato": {
                         "type": "integer",
                         "format": "int32"
                     },
@@ -28946,7 +28946,7 @@
                     "dataSituacaoEmpenho": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "numeroEmpenho": {
                         "type": "string"
@@ -28974,7 +28974,7 @@
                     "dataEmissaoEmpenho": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "valorTotal": {
                         "type": "number"
@@ -28998,17 +28998,17 @@
                     "dataConsultaEmenda": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "emendaParlamentar": {
                         "$ref": "#/components/schemas/EmendaParlamentarDTO"
@@ -29067,12 +29067,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -29119,7 +29119,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "cnpj": {
                         "type": "string"
@@ -29185,7 +29185,7 @@
                     "dataConsultaNFe": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusResponseNFe": {
                         "type": "string"
@@ -29199,12 +29199,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -29315,12 +29315,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "itens": {
                         "type": "array",
@@ -29382,12 +29382,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
@@ -29484,12 +29484,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "temResultado": {
                         "type": "boolean"
@@ -29594,22 +29594,22 @@
             "RecuperarCompraItemResultadoDTO": {
                 "type": "object",
                 "properties": {
+                    "situacaoCompraItemResultadoId": {
+                        "type": "string",
+                        "enum": [
+                            "1",
+                            "2",
+                            "3",
+                            "4"
+                        ]
+                    },
                     "indicadorSubcontratacao": {
                         "type": "boolean"
-                    },
-                    "reservaRemanescente": {
-                        "$ref": "#/components/schemas/RecuperarReservaRemanescenteDTO"
-                    },
-                    "timezoneCotacaoMoedaEstrangeira": {
-                        "type": "string"
-                    },
-                    "moedaEstrangeira": {
-                        "$ref": "#/components/schemas/MoedaResumidoDTO"
                     },
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "numeroItem": {
                         "type": "integer",
@@ -29621,12 +29621,12 @@
                     "dataCancelamento": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "tipoPessoa": {
                         "type": "string",
@@ -29642,13 +29642,22 @@
                     "valorTotalHomologado": {
                         "type": "number"
                     },
+                    "reservaRemanescente": {
+                        "$ref": "#/components/schemas/RecuperarReservaRemanescenteDTO"
+                    },
+                    "timezoneCotacaoMoedaEstrangeira": {
+                        "type": "string"
+                    },
+                    "moedaEstrangeira": {
+                        "$ref": "#/components/schemas/MoedaResumidoDTO"
+                    },
                     "valorNominalMoedaEstrangeira": {
                         "type": "number"
                     },
                     "dataCotacaoMoedaEstrangeira": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "codigoPais": {
                         "type": "string"
@@ -29689,20 +29698,17 @@
                     "motivoCancelamento": {
                         "type": "string"
                     },
-                    "numeroControlePNCPCompra": {
-                        "type": "string"
+                    "aplicacaoMargemPreferencia": {
+                        "type": "boolean"
+                    },
+                    "aplicacaoBeneficioMeEpp": {
+                        "type": "boolean"
+                    },
+                    "aplicacaoCriterioDesempate": {
+                        "type": "boolean"
                     },
                     "naturezaJuridicaId": {
                         "type": "string"
-                    },
-                    "situacaoCompraItemResultadoId": {
-                        "type": "string",
-                        "enum": [
-                            "1",
-                            "2",
-                            "3",
-                            "4"
-                        ]
                     },
                     "porteFornecedorNome": {
                         "type": "string"
@@ -29720,14 +29726,8 @@
                     "localidadeFornecedor": {
                         "$ref": "#/components/schemas/MunicipioDTO"
                     },
-                    "aplicacaoMargemPreferencia": {
-                        "type": "boolean"
-                    },
-                    "aplicacaoBeneficioMeEpp": {
-                        "type": "boolean"
-                    },
-                    "aplicacaoCriterioDesempate": {
-                        "type": "boolean"
+                    "numeroControlePNCPCompra": {
+                        "type": "string"
                     }
                 }
             },
@@ -29749,6 +29749,19 @@
                     "url": {
                         "type": "string"
                     },
+                    "numeroItem": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "dataPublicacaoPncp": {
+                        "type": "string"
+                    },
+                    "titulo": {
+                        "type": "string"
+                    },
+                    "textoAlternativo": {
+                        "type": "string"
+                    },
                     "idContratacaoPncp": {
                         "type": "string"
                     },
@@ -29757,19 +29770,6 @@
                         "format": "int32"
                     },
                     "legenda": {
-                        "type": "string"
-                    },
-                    "numeroItem": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "dataPublicacaoPncp": {
-                        "type": "string"
-                    },
-                    "textoAlternativo": {
-                        "type": "string"
-                    },
-                    "titulo": {
                         "type": "string"
                     }
                 }
@@ -29813,7 +29813,17 @@
                     "logManutencaoDataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
+                    },
+                    "itemResultadoSequencial": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tipoLogManutencaoNome": {
+                        "type": "string"
+                    },
+                    "categoriaLogManutencaoNome": {
+                        "type": "string"
                     },
                     "usuarioNome": {
                         "type": "string"
@@ -29825,15 +29835,11 @@
                         "type": "integer",
                         "format": "int32"
                     },
-                    "itemNumero": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "itemResultadoSequencial": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
                     "compraSequencial": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "itemNumero": {
                         "type": "integer",
                         "format": "int32"
                     },
@@ -29850,12 +29856,6 @@
                     "documentoSequencial": {
                         "type": "integer",
                         "format": "int32"
-                    },
-                    "tipoLogManutencaoNome": {
-                        "type": "string"
-                    },
-                    "categoriaLogManutencaoNome": {
-                        "type": "string"
                     }
                 }
             },
@@ -29871,7 +29871,7 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -29914,21 +29914,7 @@
                     "logManutencaoDataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
-                    },
-                    "usuarioNome": {
-                        "type": "string"
-                    },
-                    "compraOrgaoCnpj": {
-                        "type": "string"
-                    },
-                    "compraAno": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "compraSequencial": {
-                        "type": "integer",
-                        "format": "int32"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "tipoLogManutencaoNome": {
                         "type": "string"
@@ -29947,6 +29933,20 @@
                         "format": "int32"
                     },
                     "documentoAtaSequencial": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "usuarioNome": {
+                        "type": "string"
+                    },
+                    "compraOrgaoCnpj": {
+                        "type": "string"
+                    },
+                    "compraAno": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "compraSequencial": {
                         "type": "integer",
                         "format": "int32"
                     }
@@ -29975,7 +29975,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "cnpj": {
                         "type": "string"
@@ -30055,7 +30055,7 @@
                     "dataCancelamento": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "cancelado": {
                         "type": "boolean"
@@ -30063,22 +30063,22 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacaoGlobal": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "sequencialAta": {
                         "type": "integer",
@@ -30180,7 +30180,7 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "tipoParteEnvolvida": {
                         "$ref": "#/components/schemas/TipoParteEnvolvidaDTO"
@@ -30254,7 +30254,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "usuario": {
                         "$ref": "#/components/schemas/UsuarioDTO"
@@ -30313,7 +30313,7 @@
                     "dataPublicacaoPncp": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "sequencialDocumento": {
                         "type": "integer",
@@ -30339,7 +30339,7 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -30355,7 +30355,7 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -30374,7 +30374,7 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     }
                 }
             },
@@ -30397,12 +30397,12 @@
                     "dataInclusao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "dataAtualizacao": {
                         "type": "string",
                         "format": "date-time",
-                        "example": "2026-07-31T09:55:08"
+                        "example": "2026-08-03T11:58:14"
                     },
                     "statusAtivo": {
                         "type": "boolean"
