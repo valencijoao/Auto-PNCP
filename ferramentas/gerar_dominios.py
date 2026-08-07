@@ -1,6 +1,5 @@
 import json
 from pathlib import Path
-from collections import defaultdict
 
 from ferramentas.cliente_api import executar_endpoint
 
