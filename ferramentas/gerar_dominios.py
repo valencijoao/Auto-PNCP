@@ -17,12 +17,34 @@ def carregar_dominios():
         with open(ARQUIVO, encoding="utf=8") as f:
             return json.load(f)
 
-    return{}
+
+def ordenar_dominios(dominios):
+    """
+    Ordena os domínios e seus respectivos códigos.
+    """
+
+    dominios_ordenados = {}
+
+    for dominio in sorted(dominios):
+
+        pares = dominios[dominio]
+
+        dominios_ordenados[dominio] = dict(
+            sorted(
+                pares.items(),
+                key=lambda item: int(item[0])
+            )
+        )
+
+    return dominios_ordenados
+
 
 def salvar_dominios(dominios):
     """
     Salva novos domínios encontrados na consulta à API.
     """
+
+    dominios = ordenar_dominios(dominios)
 
     with open(
         ARQUIVO,
@@ -154,14 +176,12 @@ def minerar_arquivo(caminho, dominios):
     with open(caminho, encoding="utf-8") as f:
         dados = json.load(f)
 
-    dominios = carregar_dominios()
-
+    
     extrair_pares(
         dados,
         dominios
     )
 
-    salvar_dominios(dominios)
 
 def minerar_pasta():
     """
@@ -170,11 +190,24 @@ def minerar_pasta():
 
     dominios = carregar_dominios()
 
+    for pasta in PASTA_COMPRAS.iterdir():
 
+        if not pasta.is_dir():
+            continue
+
+        print(f"\nCompras:{pasta.name}")
+
+        for arquivo in pasta.glob("*.json"):
+
+            print(f" Minerando {arquivo.name}")
+
+            minerar_arquivo(arquivo, dominios)
+
+        salvar_dominios(dominios)
+
+        print("\nDominios atualizados.")
 
 
 if __name__ == "__main__":
 
-    minerar_arquivo(
-        Path(r"dados\compras\39215827000158-2026-8\itens.json")
-        )
+    minerar_pasta()
