@@ -1,6 +1,5 @@
 import requests
-import json
-from pathlib import Path
+
 
 BASE_URL = "https://pncp.gov.br/api/"
 
@@ -16,7 +15,7 @@ def executar_endpoint(endpoint, path=None, query=None, metodo="GET"):
 
     url = BASE_URL + endpoint.format(**path)
 
-    print(f"\n{metodo}{url}")
+    print(f"\n{metodo} {url}")
 
     resposta = requests.request(
         metodo,
