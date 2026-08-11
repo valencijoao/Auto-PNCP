@@ -105,15 +105,30 @@ def traduzir_pasta(pasta):
 
     for arquivo in pasta.glob("*.json"):
 
-        print(f"Traduzindo {arquivo.name}...")
+        print(f" ↳ Traduzindo {arquivo.name}...")
 
         traduzir_arquivo(arquivo)
+
+def traduzir_compras(compras):
+    """
+    Traduz os JSON de todas as compras da pasta.
+    """
+
+    compras = Path(compras)
+
+    for pasta in compras.glob("*-2026-*"):
+
+        print(f"\n===== Traduzindo compra: {pasta.name} =====")
+        print("-" * 40)
+       
+
+        traduzir_pasta(pasta)
 
 
 
 if __name__== "__main__":
 
-    traduzir_pasta(r"dados\compras\39215827000158-2026-8")
+    traduzir_compras(r"dados\compras")
 
 
 
