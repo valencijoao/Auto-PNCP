@@ -175,7 +175,7 @@ def inspecionar_endpoint(swagger, endpoint):
     paths = swagger.get("paths", {})
 
     if endpoint not in paths:
-        print("Endpoint '{endpoint}' não encontrado")
+        print(f"Endpoint '{endpoint}' não encontrado")
 
     print(f"\n====='{endpoint}'=====\n")
 
@@ -639,7 +639,7 @@ if __name__ == "__main__":
 
     # resumo_api(swagger)
 
-    # listar_endpoints(swagger)
+    listar_endpoints(swagger)
 
     # pesquisar_endpoints(swagger, "modalidade")
 
@@ -653,9 +653,9 @@ if __name__ == "__main__":
 
     # procurar_referencias(swagger, "RecuperarCompraItemSigiloDTO")
 
-    # inspecionar_endpoint(swagger, "/v1/modalidades/{id}")
+   # inspecionar_endpoint(swagger, "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens")
 
-    listar_campos_schemas(swagger, "DominioGenericoDTO")
+    # listar_campos_schemas(swagger, "DominioGenericoDTO")
 
     # arvore_schema(swagger, "IncluirDominioGenericoDTO")
 
