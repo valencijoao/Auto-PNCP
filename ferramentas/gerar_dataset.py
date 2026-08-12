@@ -4,10 +4,15 @@ import pandas as pd
 import hashlib
 
 PASTA_COMPRAS = Path("dados/compras")
+PASTA_DATASETS = Path("dados/datasets")
+PASTA_CLIENTES = Path("dados/enviadas")
 
-from util.portais import identificar_portal
+from util.portais import identificar_portal, traduzir_portal
+from excel.formatacao import formatar_planilha
 
-def gerar_id_interno(cnpj, ano, sequencial, portal):
+
+
+def gerar_id_interno(cnpj, ano, sequencial, origem):
     """
     Gera um identificador interno determinístico para uma contratação.
     """
@@ -18,7 +23,7 @@ def gerar_id_interno(cnpj, ano, sequencial, portal):
         base.encode("utf-8")
     ).hexdigest()[:12]
 
-    return f"{portal}-{hash_id.upper()}"
+    return f"{origem}-{hash_id.upper()}"
 
 
 
@@ -31,12 +36,35 @@ def carregar_compra(pasta):
 
     for arquivo in pasta.glob("*.json"):
 
+        nome = arquivo.stem
+
+        if nome.startswith("dados"):
+            chave = "dados"
+
+        elif nome.startswith("itens"):
+            chave = "itens"
+
+        elif nome.startswith("arquivos"):
+            chave = "arquivos"
+
+        elif nome.startswith("fontes_orcamentarias"):
+            chave = "fontes_orcamentarias"
+
+        elif nome.startswith("historico"):
+            chave = "historico"
+
+        elif nome.startswith("clientes"):
+            chave = "clientes"
+
+        else:
+            chave = nome
+
         with open(
             arquivo,
             encoding="utf-8"
         ) as f:
 
-            dados[arquivo.stem] = json.load(f)
+            dados[chave] = json.load(f)
 
     return dados
 
@@ -53,6 +81,8 @@ def extrair_dados_compra(compra):
     sequencial_compra = dados.get("sequencialCompra")
 
     link_portal = dados.get("linkSistemaOrigem")
+
+    link_pncp = f"https://pncp.gov.br/app/editais/{cnpj}/{ano_compra}/{sequencial_compra}"
 
     origem = identificar_portal(
         link_portal
@@ -117,6 +147,8 @@ def extrair_dados_compra(compra):
         "NUMERO_COMPRA": numero_compra,
         "ANO_COMPRA": ano_compra,
         "SEQUENCIAL_COMPRA": sequencial_compra,
+        "ESTADO": estado,
+        "UNIDADE": nome_unidade,
         "CNPJ": cnpj,
         "ORGAO": nome_orgao,
         "ESFERA": esfera,
@@ -129,27 +161,238 @@ def extrair_dados_compra(compra):
         "MODO_DISPUTA": modo_disputa,
         "SITUACAO": situacao,
         "SRP": srp,
-        "LINK_PNCP": None,
+        "LINK_PNCP": link_pncp,
         "LINK_PORTAL": link_portal,
         "PORTAL": origem
     }
 
 
+def gerar_dataset():
+    """
+    Percorre todas as compras e gera o dataset interno.
+    """
+
+    registros = []
+
+    for pasta in PASTA_COMPRAS.iterdir():
+
+        if not pasta.is_dir():
+            continue
+
+        print(f"\nProcessando compra: {pasta.name}")
+
+        compra = carregar_compra(pasta)
+
+        registro = extrair_dados_compra(compra)
+
+        clientes = compra.get(
+            "clientes",
+            []
+        )
+
+        for cliente in clientes:
+
+            registro_cliente = registro.copy()
+
+            registro_cliente["CLIENTE"] = cliente
+
+            registros.append(registro_cliente)
+
+    df = pd.DataFrame(registros)
+
+    colunas = list(df.columns)
+
+    colunas.remove("CLIENTE")
+
+    colunas.insert(1, "CLIENTE")
+
+    df = df[colunas]
+
+    return df
 
 
 
+def salvar_dataset(df):
+    """
+    Salva o dataset interno como CSV.
+    """
 
+    caminho = PASTA_DATASETS / "dataset_interno.csv"
 
-if __name__ == "__main__":
-
-    pasta = Path(
-        "dados/compras/39215827000158-2026-8"
+    df.to_csv(
+        caminho,
+        index=False,
+        encoding="utf-8-sig"
     )
 
-    compra = carregar_compra(pasta)
+    print(f"\nDataset salvo em: {caminho}")
 
-    registro = extrair_dados_compra(
-        compra
+def filtrar_novas_contratacoes(df, novas_contratacoes):
+    """
+    Retorna somente as contratações incluídas nesta execução.
+    """
+
+    df_novas = df[
+        df["ID_INTERNO"].isin(novas_contratacoes)
+    ].copy()
+
+    return df_novas
+
+
+def gerar_dataset_cliente(df, cliente):
+    """
+    Gera o dataset destinado a um cliente específico.
+    """
+
+    df_cliente = df[
+        df["CLIENTE"] == cliente
+    ].copy()
+
+    df_cliente["ID"] = (
+        df_cliente["NUMERO_COMPRA"].astype(str)
+        + "/"
+        + df_cliente["ANO_COMPRA"].astype(str)
     )
 
-    print(registro)
+    df_cliente["ITEM"] = ""
+
+    df_cliente["PORTAL"] = (
+    df_cliente["PORTAL"]
+    .apply(traduzir_portal)
+    )
+
+    df_cliente["DATA_DISPUTA"] = pd.to_datetime(
+        df_cliente["DATA_DISPUTA"],
+        errors="coerce"
+    ).dt.strftime("%d/%m/%Y")
+
+    df_cliente = df_cliente[
+        [
+            "CLIENTE",
+            "ID",
+            "ITEM",
+            "MODALIDADE",
+            "VALOR_ESTIMADO",
+            "ORGAO",
+            "DATA_DISPUTA",
+            "PORTAL",
+            "LINK_PORTAL",
+            "LINK_PNCP"
+            
+        ]
+    ]
+
+    return df_cliente
+
+
+
+def salvar_dataset_cliente(df_cliente, cliente):
+    """
+    Adiciona novas contratações ao dataset existente do cliente.
+    """
+
+    caminho = PASTA_CLIENTES / f"{cliente}.xlsx"
+
+    if caminho.exists():
+
+        df_existente = pd.read_excel(
+            caminho
+        )
+
+        df_cliente = pd.concat(
+            [
+                df_existente,
+                df_cliente
+            ],
+            ignore_index=True
+        )
+
+        df_cliente = df_cliente.drop_duplicates(
+            subset=[
+                "ID",
+                "CLIENTE"
+            ]
+        )
+
+    df_cliente["DATA_DISPUTA"] = pd.to_datetime(
+        df_cliente["DATA_DISPUTA"],
+        errors="coerce"
+    ).dt.strftime("%d/%m/%Y")
+
+    df_cliente["VALOR_ESTIMADO"] = df_cliente[
+        "VALOR_ESTIMADO"
+    ].apply(
+        lambda x: "Sigiloso"
+        if pd.notna(x) and float(x) == 0
+        else x
+    )
+
+    df_cliente.to_excel(
+        caminho,
+        index=False
+    )
+
+    formatar_planilha(
+        caminho
+    )
+
+    print(
+        f"Dataset de {cliente} salvo em: {caminho}"
+    )
+
+
+def atualizar_datasets_clientes():
+    """
+    Atualiza a formatação dos datasets de clientes existentes.
+    """
+
+    for arquivo in PASTA_CLIENTES.glob("*.xlsx"):
+
+        print(
+            f"Atualizando: {arquivo.name}"
+        )
+
+        df = pd.read_excel(
+            arquivo
+        )
+
+        if "DATA_DISPUTA" in df.columns:
+
+            df["DATA_DISPUTA"] = pd.to_datetime(
+                df["DATA_DISPUTA"],
+                errors="coerce"
+            ).dt.strftime("%d/%m/%Y")
+
+        if "VALOR_ESTIMADO" in df.columns:
+
+            df["VALOR_ESTIMADO"] = df[
+                "VALOR_ESTIMADO"
+            ].apply(
+                lambda x:
+                    "Sigiloso"
+
+                    if( pd.notna(x) 
+                    
+                    and x != "Sigiloso"
+                    and float(x) == 0
+            )
+            else x
+        )
+            
+                
+        df.to_excel(
+            arquivo,
+            index=False
+        )
+
+        formatar_planilha(
+            arquivo
+        )
+
+        print(
+            f"Atualizado com sucesso: {arquivo.name}"
+        )
+
+if __name__=="__main__":
+    atualizar_datasets_clientes()
+ 
