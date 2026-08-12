@@ -2,11 +2,14 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-CAMINHO_JSON = Path(__file__).parent.parent / "dados" / "portais.json"
+CAMINHO_TRATADOS = Path(__file__).parent.parent / "dados" / "portais_tratados.json"
+CAMINHO_PADRAO = Path(__file__).parent.parent / "dados" / "portais.json"
 
-with open(CAMINHO_JSON, 'r', encoding='utf-8') as arquivo:
+with open(CAMINHO_PADRAO, 'r', encoding='utf-8') as arquivo:
     PORTAIS = json.load(arquivo)
 
+with open(CAMINHO_TRATADOS, 'r', encoding='utf-8') as arquivo:
+    PORTAIS_TRATADOS = json.load(arquivo)
 # levantamento de portais não cadastrados
 
 PORTAIS_DESCONHECIDOS = set()
@@ -32,6 +35,20 @@ def identificar_portal(link):
     return None
 
 
+def traduzir_portal(portal):
+    """
+    Traduz o código do portal para o nome correspondente.
+    """
+
+    if not portal:
+        return None
+
+    return PORTAIS_TRATADOS.get(
+        portal,
+        portal
+    )
+
+
 def listar_desconhecidos():
     """
     Exibe os portais encontrados que ainda não existem
@@ -46,4 +63,10 @@ def listar_desconhecidos():
     for portal in sorted(PORTAIS_DESCONHECIDOS):
         print(portal)
 
+
+def carregar_portais():
+    """
+    Carrega o dicionário de padronização dos portais.
+    """
+    
         
