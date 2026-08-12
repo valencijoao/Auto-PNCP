@@ -17,12 +17,18 @@ def executar_endpoint(endpoint, path=None, query=None, metodo="GET"):
 
     print(f"\n{metodo} {url}")
 
-    resposta = requests.request(
-        metodo,
-        url,
-        params=query,
-        timeout=60
-    )
+    try:
+        resposta = requests.request(
+            metodo,
+            url,
+            params=query,
+            timeout=60
+        )
+
+    except requests.exceptions.Timeout:
+        print(f"Timeout ao acessar: {url}")
+
+        return None
 
     print(f"Status:",resposta.status_code)
 
@@ -37,10 +43,6 @@ def executar_endpoint(endpoint, path=None, query=None, metodo="GET"):
 if __name__ == "__main__":
 
     
-
-
-
-
     dados = executar_endpoint("/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados", path={
         "cnpj":"92457217000143",
         "ano":"2026",
