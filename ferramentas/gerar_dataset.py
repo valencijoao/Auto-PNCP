@@ -31,7 +31,7 @@ def gerar_id_interno(cnpj, ano, sequencial, origem):
 
 def carregar_compra(pasta):
     """
-    Carrega os arquivos JSON de uma compras.
+    Carrega os arquivos JSON de uma compra.
     """
 
     dados = {}
@@ -67,6 +67,20 @@ def carregar_compra(pasta):
         ) as f:
 
             dados[chave] = json.load(f)
+
+        if isinstance(dados.get("clientes"), dict):
+
+            dados_clientes = dados["clientes"]
+
+            dados["clientes"] = dados_clientes.get(
+                "clientes",
+                []
+            )
+
+            dados["item"] = dados_clientes.get(
+                "item",
+                ""
+            )
 
     return dados
 
