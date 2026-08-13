@@ -192,11 +192,18 @@ def gerar_dataset():
             []
         )
 
+        item = compra.get(
+            "item",
+            []
+        )
+
         for cliente in clientes:
 
             registro_cliente = registro.copy()
 
             registro_cliente["CLIENTE"] = cliente
+            registro_cliente["ITEM"] = item
+
 
             registros.append(registro_cliente)
 
