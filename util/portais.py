@@ -66,9 +66,29 @@ def listar_desconhecidos():
         print(portal)
 
 
-def carregar_portais():
+def obter_origem(dados):
     """
-    Carrega o dicionário de padronização dos portais.
+    Obtém a origem da contratação.
+
+    Prioriza o portal identificado pelo link do sistema de origem.
+    Caso não exista, utiliza a UF da unidade do órgão.
     """
-    
-        
+
+    link_portal = dados.get(
+        "linkSistemaOrigem"
+    )
+
+    origem = identificar_portal(
+        link_portal
+    )
+
+    if origem is None:
+
+        origem = dados.get(
+            "unidadeOrgao",
+            {}
+        ).get(
+            "ufSigla"
+        )
+
+    return origem
