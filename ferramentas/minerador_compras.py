@@ -146,21 +146,37 @@ def baixar_compra_completa(
         exist_ok=True
     )
 
-    clientes = obter_dados_contratacao(pasta)
+    dados_contratacao = obter_dados_contratacao(pasta)
 
-    if clientes is None:
+    if dados_contratacao is None:
 
-        clientes = solicitar_clientes()
+        clientes, item = solicitar_clientes()
 
         salvar_dados_contratacao(
             pasta,
-            clientes
+            clientes,
+            item
         )
 
     else:
 
+        clientes = dados_contratacao.get(
+            "cliente",
+            []
+        )
+
+        item = dados_contratacao.get(
+            "item",
+            []
+        )
+
         print(
-            f"Clientes já associados: {', '.join(clientes)}"
+            f"Clientes já associados: "
+            f"{', '.join(clientes)}"
+        )
+
+        print(
+            f"Item já associado: {item}"
         )
 
     print("\n=== Baixando contratação ===")
@@ -174,10 +190,6 @@ def baixar_compra_completa(
         path=path
     )
 
-
-    link_portal = dados.get(
-    "linkSistemaOrigem"
-    )
 
     origem = obter_origem(dados)
 
