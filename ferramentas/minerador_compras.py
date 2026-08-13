@@ -55,23 +55,25 @@ def solicitar_clientes():
         )
 
 
-def obter_clientes(pasta):
+def obter_dados_contratacao(pasta):
     """
     Retorna os clientes associados à contratação.
     """
 
     caminho = pasta / "clientes.json"
 
-    if caminho.exists():
+    if not caminho.exists():
+        return None
 
-        with open(
-            caminho,
-            encoding="utf-8"
-        ) as f:
+    with open(
+        caminho,
+        "r",
+        encoding="utf-8"
+    ) as f:
 
-            return json.load(f)
+        return json.load(f)
 
-    return None
+    
 
 
 def salvar_dados_contratacao(pasta, clientes, item):
@@ -144,7 +146,7 @@ def baixar_compra_completa(
         exist_ok=True
     )
 
-    clientes = obter_clientes(pasta)
+    clientes = obter_dados_contratacao(pasta)
 
     if clientes is None:
 
