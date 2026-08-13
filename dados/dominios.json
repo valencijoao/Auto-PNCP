@@ -1,24 +1,27 @@
 {
-    "tipoDocumento": {
-        "2": "Edital",
-        "16": "Outros Documentos"
-    },
-    "modalidade": {
-        "6": "Pregão - Eletrônico"
-    },
-    "modoDisputa": {
-        "1": "Aberto"
-    },
     "amparoLegal": {
-        "1": "Lei 14.133/2021, Art. 28, I"
+        "1": "Lei 14.133/2021, Art. 28, I",
+        "18": "Lei 14.133/2021, Art. 75, I"
     },
-    "situacaoCompra": {
-        "1": "Divulgada no PNCP"
+    "criterioJulgamento": {
+        "1": "Menor preço"
     },
     "itemCategoria": {
         "3": "Não se aplica"
     },
-    "criterioJulgamento": {
-        "1": "Menor preço"
+    "modalidade": {
+        "6": "Pregão - Eletrônico",
+        "8": "Dispensa"
+    },
+    "modoDisputa": {
+        "1": "Aberto",
+        "4": "Dispensa Com Disputa"
+    },
+    "situacaoCompra": {
+        "1": "Divulgada no PNCP"
+    },
+    "tipoDocumento": {
+        "2": "Edital",
+        "16": "Outros Documentos"
     }
 }
