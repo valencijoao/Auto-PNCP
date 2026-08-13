@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from util.portais import identificar_portal
 from config.caminhos import COMPRAS
+from util.portais import obter_origem
 
 PASTA_COMPRAS = COMPRAS
 
@@ -37,7 +38,7 @@ def solicitar_clientes():
     while True:
 
         entrada = input(
-            "Clientes à enviar: "
+            "Informe os clientes: "
         )
 
         clientes = [
@@ -149,7 +150,7 @@ def baixar_compra_completa(
     "linkSistemaOrigem"
     )
 
-    origem = identificar_portal(link_portal)
+    origem = obter_origem(dados)
 
     id_interno = gerar_id_interno(cnpj,
     ano,
@@ -234,9 +235,11 @@ if __name__ == "__main__":
     novas_contratacoes = []
 
     baixar_compra_completa(
-"18296699000144",2026,278,
+"46523130000100",2026,199,
         novas_contratacoes
     )
+
+    # python -m ferramentas.minerador_compras
 
 
 

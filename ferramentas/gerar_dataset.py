@@ -8,8 +8,9 @@ PASTA_COMPRAS = COMPRAS
 PASTA_DATASETS = DATASETS
 PASTA_CLIENTES = CLIENTES
 
-from util.portais import identificar_portal, traduzir_portal
+from util.portais import identificar_portal, traduzir_portal, obter_origem
 from excel.formatacao import formatar_planilha
+
 
 
 
@@ -85,8 +86,8 @@ def extrair_dados_compra(compra):
 
     link_pncp = f"https://pncp.gov.br/app/editais/{cnpj}/{ano_compra}/{sequencial_compra}"
 
-    origem = identificar_portal(
-        link_portal
+    origem = obter_origem(
+        dados
     )
 
     if origem is None:
@@ -286,6 +287,30 @@ def gerar_dataset_cliente(df, cliente):
     return df_cliente
 
 
+def tratar_valor(x):
+
+    if pd.isna(x):
+        return x
+
+    if isinstance(x, str):
+
+        if x.strip().lower() == "sigiloso":
+            return "Sigiloso"
+
+        try:
+            valor = float(x)
+        except ValueError:
+            return x
+
+    else:
+        valor = x
+
+    if valor == 0:
+        return "Sigiloso"
+
+    return x
+
+
 
 def salvar_dataset_cliente(df_cliente, cliente):
     """
@@ -321,12 +346,8 @@ def salvar_dataset_cliente(df_cliente, cliente):
     ).dt.strftime("%d/%m/%Y")
 
     df_cliente["VALOR_ESTIMADO"] = df_cliente[
-        "VALOR_ESTIMADO"
-    ].apply(
-        lambda x: "Sigiloso"
-        if pd.notna(x) and float(x) == 0
-        else x
-    )
+    "VALOR_ESTIMADO"
+].apply(tratar_valor)
 
     df_cliente.to_excel(
         caminho,
