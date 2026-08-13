@@ -1,8 +1,10 @@
 from pathlib import Path
 import json
 
-PASTA = Path("dados/compras")
-PASTA_COMPRAS = Path("dados/compras")
+from config.caminhos import COMPRAS
+
+PASTA = COMPRAS
+PASTA_COMPRAS = COMPRAS
 
 def salvar_json(caminho, dados):
     """

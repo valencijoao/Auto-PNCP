@@ -2,12 +2,12 @@ import json
 from pathlib import Path
 
 from api.session import criar_sessao
+from config.caminhos import DADOS
 
 
 URL_SWAGGER = "https://pncp.gov.br/pncp-api/v3/api-docs"
 
-PASTA_DADOS = Path('dados')
-PASTA_DADOS.mkdir(exist_ok=True)
+PASTA_DADOS = DADOS
 
 ARQUIVO_SAIDA = PASTA_DADOS / 'swagger.json'
 

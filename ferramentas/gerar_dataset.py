@@ -2,10 +2,11 @@ import json
 from pathlib import Path
 import pandas as pd
 import hashlib
+from config.caminhos import (COMPRAS, DATASETS, CLIENTES)
 
-PASTA_COMPRAS = Path("dados/compras")
-PASTA_DATASETS = Path("dados/datasets")
-PASTA_CLIENTES = Path("dados/enviadas")
+PASTA_COMPRAS = COMPRAS
+PASTA_DATASETS = DATASETS
+PASTA_CLIENTES = CLIENTES
 
 from util.portais import identificar_portal, traduzir_portal
 from excel.formatacao import formatar_planilha

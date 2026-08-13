@@ -2,8 +2,9 @@ import json
 from pathlib import Path
 
 from ferramentas.gerar_dominios import carregar_dominios
+from config.caminhos import TRADUZIDOS
 
-PASTA_TRADUZIDOS = Path("dados/traduzidos")
+PASTA_TRADUZIDOS = TRADUZIDOS
 
 def traduzir(dominio, codigo):
     """

@@ -2,10 +2,11 @@ import json
 from pathlib import Path
 
 from api.session import criar_sessao
+from config.caminhos import DADOS
 
 BASE = "https://pncp.gov.br/api/consulta/v1"
-PASTA = Path('dados')
-PASTA.mkdir(exist_ok=True)
+PASTA = DADOS
+
 
 session = criar_sessao()
 

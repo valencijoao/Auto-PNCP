@@ -2,9 +2,10 @@ import json
 from pathlib import Path
 
 from ferramentas.cliente_api import executar_endpoint
+from config.caminhos import DADOS, COMPRAS
 
-ARQUIVO = Path("dados/dominios.json")
-PASTA_COMPRAS = Path("dados/compras")
+ARQUIVO = DADOS / "dominios.json"
+PASTA_COMPRAS = COMPRAS
 
 def carregar_dominios():
     """

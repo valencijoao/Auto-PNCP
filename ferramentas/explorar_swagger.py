@@ -1,7 +1,8 @@
 import json
-from pathlib import Path
 
-PASTA =Path('dados')
+from config.caminhos import DADOS
+
+PASTA = DADOS
 
 def carregar_swagger(tipo='consulta'):
     """

@@ -4,8 +4,9 @@ from ferramentas.gerar_dataset import gerar_dataset, salvar_dataset, gerar_datas
 import json
 from pathlib import Path
 from util.portais import identificar_portal
+from config.caminhos import COMPRAS
 
-PASTA_COMPRAS = Path("dados/compras")
+PASTA_COMPRAS = COMPRAS
 
 
 

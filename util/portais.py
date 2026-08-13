@@ -2,8 +2,10 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-CAMINHO_TRATADOS = Path(__file__).parent.parent / "dados" / "portais_tratados.json"
-CAMINHO_PADRAO = Path(__file__).parent.parent / "dados" / "portais.json"
+from config.caminhos import DADOS
+
+CAMINHO_TRATADOS = DADOS / "portais_tratados.json"
+CAMINHO_PADRAO = DADOS / "portais.json"
 
 with open(CAMINHO_PADRAO, 'r', encoding='utf-8') as arquivo:
     PORTAIS = json.load(arquivo)
