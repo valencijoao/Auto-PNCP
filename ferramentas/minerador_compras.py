@@ -74,9 +74,14 @@ def obter_clientes(pasta):
     return None
 
 
-def salvar_clientes(pasta, clientes):
+def salvar_dados_contratacao(pasta, clientes, item):
 
     caminho = pasta / "clientes.json"
+
+    dados = {
+        "clientes": clientes,
+        "item": item
+    }
 
     with open(
         caminho,
@@ -145,7 +150,7 @@ def baixar_compra_completa(
 
         clientes = solicitar_clientes()
 
-        salvar_clientes(
+        salvar_dados_contratacao(
             pasta,
             clientes
         )
@@ -265,13 +270,18 @@ if __name__ == "__main__":
 
 
 
-    print("\n=== Atualizando dataset interno ===")
+    print(
+        "\n=== Atualizando dataset interno ===")
 
-    df = gerar_dataset()
+    df = gerar_dataset(
 
-    salvar_dataset(df)
+    )
 
-    print("\n=== Filtrando novas contratações ===")
+    salvar_dataset(
+        df)
+
+    print(
+        "\n=== Filtrando novas contratações ===")
 
     df_novas = filtrar_novas_contratacoes(
         df,
