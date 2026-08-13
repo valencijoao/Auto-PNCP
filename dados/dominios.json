@@ -1,10 +1,17 @@
 {
     "amparoLegal": {
         "1": "Lei 14.133/2021, Art. 28, I",
-        "18": "Lei 14.133/2021, Art. 75, I"
+        "18": "Lei 14.133/2021, Art. 75, I",
+        "19": "Lei 14.133/2021, Art. 75, II",
+        "113": "Lei 13.303/2016, Art. 32, IV"
     },
     "criterioJulgamento": {
         "1": "Menor preço"
+    },
+    "fontesOrcamentarias": {
+        "2": "Municipal",
+        "3": "Estadual",
+        "4": "Federal"
     },
     "itemCategoria": {
         "3": "Não se aplica"
@@ -15,13 +22,21 @@
     },
     "modoDisputa": {
         "1": "Aberto",
+        "2": "Fechado",
+        "3": "Aberto-Fechado",
         "4": "Dispensa Com Disputa"
     },
     "situacaoCompra": {
-        "1": "Divulgada no PNCP"
+        "1": "Divulgada no PNCP",
+        "4": "Suspensa"
     },
     "tipoDocumento": {
+        "1": "Aviso de Contratação Direta",
         "2": "Edital",
+        "3": "Minuta do Contrato",
+        "4": "Termo de Referência",
+        "7": "Estudo Técnico Preliminar",
+        "10": "DFD",
         "16": "Outros Documentos"
     }
 }
