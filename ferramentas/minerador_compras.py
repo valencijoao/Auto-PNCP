@@ -91,6 +91,28 @@ def salvar_clientes(pasta, clientes):
             indent=4
         )
 
+def solicitar_dados_contratacao():
+    """
+    Solicita os clientes e o item da contratação que será baixada.
+    """
+
+    entrada_clientes = input(
+        "Informe os clientes: "
+    )
+
+    clientes = [
+        cliente.strip()
+        for cliente in entrada_clientes.split(",")
+        if cliente.strip()
+    ]
+
+    item = input(
+        "Informe o item: "
+    ).strip()
+
+    return clientes, item
+
+
 
 def baixar_compra_completa(
     cnpj,
