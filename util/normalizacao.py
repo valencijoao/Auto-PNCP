@@ -296,4 +296,173 @@ def normalizar_dataset(df):
 
     return df
 
+def validar_dataset(df):
+    """
+    Valida a qualidade do dataset após a normalização.
+    Retorna um relatório com possíveis inconsistências.
+    """
+
+    relatorio = {}
+
+    relatorio["TOTAL_REGISTROS"] = len(df)
+
+    # ==========================================
+    # CNPJ
+    # ==========================================
+
+    if "CNPJ" in df.columns:
+
+        cnpj_vazio = df["CNPJ"].isna().sum()
+
+    def cnpj_valido(valor):
+
+        if pd.isna(valor):
+            return True
+
+        valor = str(valor).strip()
+
+        if valor.endswith(".0"):
+            valor = valor[:-2]
+
+        return (
+        valor.isdigit()
+        and len(valor) == 14
+    )   
+
+    cnpj_invalidos = df[
+        "CNPJ"
+        ].apply(
+    lambda x: not cnpj_valido(x)
+        ).sum()
+
+    relatorio["CNPJ_VAZIO"] = cnpj_vazio
+    relatorio["CNPJ_INVALIDO"] = cnpj_invalidos
+
+    # ==========================================
+    # DATAS
+    # ==========================================
+
+    for coluna in [
+        "DATA_PUBLICACAO",
+        "DATA_DISPUTA"
+    ]:
+
+        if coluna in df.columns:
+
+            relatorio[
+                f"{coluna}_INVALIDA"
+            ] = df[coluna].isna().sum()
+
+    # ==========================================
+    # VALORES
+    # ==========================================
+
+    for coluna in [
+    "VALOR_ESTIMADO",
+    "VALOR_HOMOLOGADO"
+    ]:
+
+        if coluna in df.columns:
+
+            preenchidos = df[
+                coluna
+            ].dropna()
+
+            valores_invalidos = pd.to_numeric(
+                preenchidos,
+                errors="coerce"
+            ).isna().sum()
+
+            relatorio[
+                f"{coluna}_VAZIO"
+            ] = df[coluna].isna().sum()
+
+            relatorio[
+                f"{coluna}_INVALIDO"
+            ] = valores_invalidos
+
+    # ==========================================
+    # ESTADO
+    # ==========================================
+
+    ufs_validas = {
+        "AC", "AL", "AP", "AM",
+        "BA", "CE", "DF", "ES",
+        "GO", "MA", "MT", "MS",
+        "MG", "PA", "PB", "PR",
+        "PE", "PI", "RJ", "RN",
+        "RS", "RO", "RR", "SC",
+        "SP", "SE", "TO"
+    }
+
+    if "ESTADO" in df.columns:
+
+        estados_invalidos = df[
+            "ESTADO"
+        ].dropna().apply(
+            lambda x: x not in ufs_validas
+        ).sum()
+
+        relatorio[
+            "ESTADO_INVALIDO"
+        ] = estados_invalidos
+
+    # ==========================================
+    # PORTAL
+    # ==========================================
+
+    if "PORTAL" in df.columns:
+
+        portais_vazios = df[
+            "PORTAL"
+        ].isna().sum()
+
+        relatorio[
+            "PORTAL_VAZIO"
+        ] = portais_vazios
+
+    # ==========================================
+    # ÓRGÃO
+    # ==========================================
+
+    if "ORGAO" in df.columns:
+
+        orgaos_vazios = df[
+            "ORGAO"
+        ].isna().sum()
+
+        relatorio[
+            "ORGAO_VAZIO"
+        ] = orgaos_vazios
+
+    return relatorio
+
+def exibir_validacao(relatorio):
+    """
+    Exibe o resultado da validação.
+    """
+
+    print(
+        "\n=== VALIDAÇÃO DO DATASET ==="
+    )
+
+    for campo, valor in relatorio.items():
+
+        print(
+            f"{campo}: {valor}"
+        )
+
+if __name__ == "__main__":
+
+    df = pd.read_csv(
+        "dados/datasets/dataset_interno.csv"
+    )
+
+    relatorio = validar_dataset(
+        df
+    )
+
+    exibir_validacao(
+        relatorio
+    )
 
