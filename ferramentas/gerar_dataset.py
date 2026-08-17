@@ -218,7 +218,7 @@ def gerar_dataset():
             continue
 
         print(
-            f"\nProcessando compra: {pasta.name}"
+            f"\nProcessando compras salvas."
         )
 
         compra = carregar_compra(
