@@ -27,7 +27,29 @@ def gerar_id_interno(cnpj, ano, sequencial, origem):
 
     return f"{origem}-{hash_id.upper()}"
 
-
+def tratar_valor(x):
+ 
+    if pd.isna(x):
+        return x
+ 
+    if isinstance(x, str):
+ 
+        if x.strip().lower() == "sigiloso":
+            return "Sigiloso"
+ 
+        try:
+            valor = float(x)
+        except ValueError:
+            return x
+ 
+    else:
+        valor = x
+ 
+    if valor == 0:
+        return "Sigiloso"
+ 
+    return x
+ 
 
 def carregar_compra(pasta):
     """
@@ -68,16 +90,16 @@ def carregar_compra(pasta):
 
             dados[chave] = json.load(f)
 
-        if isinstance(dados.get("clientes"), dict):
+    if isinstance(dados.get("clientes"), dict):
 
-            dados_clientes = dados["clientes"]
+        dados_clientes = dados["clientes"]
 
-            dados["clientes"] = dados_clientes.get(
+        dados["clientes"] = dados_clientes.get(
                 "clientes",
                 []
             )
 
-            dados["item"] = dados_clientes.get(
+        dados["item"] = dados_clientes.get(
                 "item",
                 ""
             )
@@ -195,19 +217,20 @@ def gerar_dataset():
         if not pasta.is_dir():
             continue
 
-        print(f"\nProcessando compra: {pasta.name}")
+        print(
+            f"\nProcessando compra: {pasta.name}"
+        )
 
-        compra = carregar_compra(pasta)
+        compra = carregar_compra(
+            pasta
+        )
 
-        registro = extrair_dados_compra(compra)
+        registro = extrair_dados_compra(
+            compra
+        )
 
         clientes = compra.get(
             "clientes",
-            []
-        )
-
-        item = compra.get(
-            "item",
             []
         )
 
@@ -216,18 +239,27 @@ def gerar_dataset():
             registro_cliente = registro.copy()
 
             registro_cliente["CLIENTE"] = cliente
-            registro_cliente["ITEM"] = item
 
+            registros.append(
+                registro_cliente
+            )
 
-            registros.append(registro_cliente)
+    df = pd.DataFrame(
+        registros
+    )
 
-    df = pd.DataFrame(registros)
+    colunas = list(
+        df.columns
+    )
 
-    colunas = list(df.columns)
+    colunas.remove(
+        "CLIENTE"
+    )
 
-    colunas.remove("CLIENTE")
-
-    colunas.insert(1, "CLIENTE")
+    colunas.insert(
+        1,
+        "CLIENTE"
+    )
 
     df = df[colunas]
 
@@ -271,17 +303,55 @@ def gerar_dataset_cliente(df, cliente):
         df["CLIENTE"] == cliente
     ].copy()
 
+    itens = []
+
+    for _, linha in df_cliente.iterrows():
+
+        pasta = (
+            PASTA_COMPRAS
+            / f"{linha['CNPJ']}-{int(linha['ANO_COMPRA'])}-{int(linha['SEQUENCIAL_COMPRA'])}"
+        )
+
+        caminho = pasta / "clientes.json"
+
+        item = ""
+
+        if caminho.exists():
+
+            with open(
+                caminho,
+                encoding="utf-8"
+            ) as arquivo:
+
+                dados_contratacao = json.load(
+                    arquivo
+                )
+
+            if isinstance(
+                dados_contratacao,
+                dict
+            ):
+
+                item = dados_contratacao.get(
+                    "item",
+                    ""
+                )
+
+        itens.append(
+            item
+        )
+
+    df_cliente["ITEM"] = itens
+
     df_cliente["ID"] = (
         df_cliente["NUMERO_COMPRA"].astype(str)
         + "/"
         + df_cliente["ANO_COMPRA"].astype(str)
     )
 
-    df_cliente["ITEM"] = ""
-
     df_cliente["PORTAL"] = (
-    df_cliente["PORTAL"]
-    .apply(traduzir_portal)
+        df_cliente["PORTAL"]
+        .apply(traduzir_portal)
     )
 
     df_cliente["DATA_DISPUTA"] = pd.to_datetime(
@@ -301,37 +371,10 @@ def gerar_dataset_cliente(df, cliente):
             "PORTAL",
             "LINK_PORTAL",
             "LINK_PNCP"
-            
         ]
     ]
 
     return df_cliente
-
-
-def tratar_valor(x):
-
-    if pd.isna(x):
-        return x
-
-    if isinstance(x, str):
-
-        if x.strip().lower() == "sigiloso":
-            return "Sigiloso"
-
-        try:
-            valor = float(x)
-        except ValueError:
-            return x
-
-    else:
-        valor = x
-
-    if valor == 0:
-        return "Sigiloso"
-
-    return x
-
-
 
 def salvar_dataset_cliente(df_cliente, cliente):
     """
@@ -367,8 +410,10 @@ def salvar_dataset_cliente(df_cliente, cliente):
     ).dt.strftime("%d/%m/%Y")
 
     df_cliente["VALOR_ESTIMADO"] = df_cliente[
-    "VALOR_ESTIMADO"
-].apply(tratar_valor)
+        "VALOR_ESTIMADO"
+    ].apply(
+        tratar_valor
+    )
 
     df_cliente.to_excel(
         caminho,
@@ -382,7 +427,6 @@ def salvar_dataset_cliente(df_cliente, cliente):
     print(
         f"Dataset de {cliente} salvo em: {caminho}"
     )
-
 
 def atualizar_datasets_clientes():
     """
