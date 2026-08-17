@@ -10,6 +10,11 @@ COMPRAS = DADOS / "compras"
 DATASETS = DADOS / "datasets"
 CLIENTES = DADOS / "enviadas"
 TRADUZIDOS = DADOS / "traduzidos"
+PASTA_DE_REDE = Path(
+    r"\\SERVIDOR\AutoPainel\datasets"
+)
+CAMINHO_DOMINIOS = DADOS / "dominios.json"
+CAMINHO_ORGAOS = DADOS/ "orgaos.json"
 
 DADOS.mkdir(exist_ok=True)
 
