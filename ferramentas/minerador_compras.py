@@ -77,6 +77,9 @@ def obter_dados_contratacao(pasta):
 
 
 def salvar_dados_contratacao(pasta, clientes, item):
+    """
+    Salva os clientes e o item associados à contratação.
+    """
 
     caminho = pasta / "clientes.json"
 
@@ -92,11 +95,15 @@ def salvar_dados_contratacao(pasta, clientes, item):
     ) as f:
 
         json.dump(
-            clientes,
+            dados,
             f,
             ensure_ascii=False,
             indent=4
         )
+
+    print("\nDados salvos:")
+    print("Clientes:", clientes)
+    print("Item:", item)
 
 def solicitar_dados_contratacao():
     """
@@ -137,20 +144,23 @@ def baixar_compra_completa(
         "sequencial": sequencial
     }
 
-    pasta = PASTA_COMPRAS / f"{cnpj}-{ano}-{sequencial}"
-
-    pasta_nova = not pasta.exists()
+    pasta = (
+        PASTA_COMPRAS
+        / f"{cnpj}-{ano}-{sequencial}"
+    )
 
     pasta.mkdir(
         parents=True,
         exist_ok=True
     )
 
-    dados_contratacao = obter_dados_contratacao(pasta)
+    dados_contratacao = obter_dados_contratacao(
+        pasta
+    )
 
     if dados_contratacao is None:
 
-        clientes, item = solicitar_clientes()
+        clientes, item = solicitar_dados_contratacao()
 
         salvar_dados_contratacao(
             pasta,
@@ -160,15 +170,25 @@ def baixar_compra_completa(
 
     else:
 
-        clientes = dados_contratacao.get(
-            "cliente",
-            []
-        )
+        if isinstance(
+            dados_contratacao,
+            list
+        ):
 
-        item = dados_contratacao.get(
-            "item",
-            []
-        )
+            clientes = dados_contratacao
+            item = ""
+
+        else:
+
+            clientes = dados_contratacao.get(
+                "clientes",
+                []
+            )
+
+            item = dados_contratacao.get(
+                "item",
+                ""
+            )
 
         print(
             f"Clientes já associados: "
@@ -179,7 +199,9 @@ def baixar_compra_completa(
             f"Item já associado: {item}"
         )
 
-    print("\n=== Baixando contratação ===")
+    print(
+        "\n=== Baixando contratação ==="
+    )
 
     #
     # ENDPOINTS OBRIGATÓRIOS
@@ -190,14 +212,14 @@ def baixar_compra_completa(
         path=path
     )
 
+    if not dados:
 
-    origem = obter_origem(dados)
+        print(
+            "Não foi possível obter os dados "
+            "principais da contratação."
+        )
 
-    id_interno = gerar_id_interno(cnpj,
-    ano,
-    sequencial,
-    origem
-    )
+        return
 
     salvar_compra(
         cnpj,
@@ -263,11 +285,26 @@ def baixar_compra_completa(
         fontes_orcamentarias
     )
 
-    if pasta_nova:
+    #
+    # ID INTERNO
+    #
 
-        novas_contratacoes.append(
-            id_interno
-        )
+    origem = obter_origem(
+        dados
+    )
+
+    id_interno = gerar_id_interno(
+        cnpj,
+        ano,
+        sequencial,
+        origem
+    )
+
+    novas_contratacoes.append(
+        id_interno
+    )
+
+
 
 
 
@@ -276,7 +313,7 @@ if __name__ == "__main__":
     novas_contratacoes = []
 
     baixar_compra_completa(
-"46523130000100",2026,199,
+"18712158000150",2026,34,
         novas_contratacoes
     )
 
@@ -325,7 +362,7 @@ if __name__ == "__main__":
 
             salvar_dataset_cliente(
                 df_cliente,
-                cliente
+                cliente,
             )
 
     else:

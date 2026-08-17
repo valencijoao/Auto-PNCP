@@ -3,6 +3,7 @@ from pathlib import Path
 import pandas as pd
 import hashlib
 from config.caminhos import (COMPRAS, DATASETS, CLIENTES)
+from util.normalizacao import normalizar_dataset
 
 PASTA_COMPRAS = COMPRAS
 PASTA_DATASETS = DATASETS
@@ -152,7 +153,7 @@ def extrair_dados_compra(compra):
     esfera = orgao.get("esferaId")
 
     unidade = dados.get("unidadeOrgao", {})
-    estado = unidade.get("ufNome")
+    estado = unidade.get("UfSigla")
     nome_unidade = unidade.get("nomeUnidade")
     municipio = unidade.get("municipioNome")
 
@@ -274,12 +275,14 @@ def salvar_dataset(df):
 
     caminho = PASTA_DATASETS / "dataset_interno.csv"
 
+    df = normalizar_dataset(df)
+
     df.to_csv(
         caminho,
         index=False,
         encoding="utf-8-sig"
     )
-
+    
     print(f"\nDataset salvo em: {caminho}")
 
 def filtrar_novas_contratacoes(df, novas_contratacoes):
