@@ -6,7 +6,8 @@
         "113": "Lei 13.303/2016, Art. 32, IV"
     },
     "criterioJulgamento": {
-        "1": "Menor preço"
+        "1": "Menor preço",
+        "2": "Maior desconto"
     },
     "fontesOrcamentarias": {
         "2": "Municipal",
@@ -36,6 +37,8 @@
         "3": "Minuta do Contrato",
         "4": "Termo de Referência",
         "7": "Estudo Técnico Preliminar",
+        "8": "Projeto Executivo",
+        "9": "Mapa de Riscos",
         "10": "DFD",
         "16": "Outros Documentos"
     }
