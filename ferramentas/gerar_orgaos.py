@@ -22,21 +22,19 @@ def gerar_orgaos():
         if not pasta.is_dir():
             continue
 
-        arquivo_dados = pasta / next (
-            (
-                arquivo.name
-                for arquivo in pasta.glob("*.json")
-            ),
-            ""
+        arquivos_dados = next(
+            pasta.glob("dados*.json"),
+            None
         )
 
-        if not arquivo_dados:
+        if arquivos_dados is None:
             continue
+  
 
         try:
 
             with open(
-                arquivo_dados,
+                arquivos_dados,
                 encoding="utf-8",
                 ) as arquivo:
 
@@ -45,7 +43,7 @@ def gerar_orgaos():
         except Exception as e:
 
             print(
-                f"Erro ao carregar {arquivo_dados}: {e}"
+                f"Erro ao carregar {arquivos_dados}: {e}"
             )
 
             continue
@@ -92,3 +90,60 @@ def gerar_orgaos():
         orgaos[cnpj]["QTD_CONTRATACOES"] += 1
 
     return orgaos
+
+
+def salvar_orgao(orgaos):
+    """
+    Salva a documentação dos órgãos em JSON e CSV.
+    """
+
+    PASTA_COMPRAS.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    with open(
+        ARQUIVO_JSON,
+        "w",
+        encoding="utf-8"
+    ) as arquivo:
+
+        json.dump(
+            orgaos,
+            arquivo,
+            ensure_ascii=False,
+            indent=4
+        )
+
+
+    df = pd.DataFrame(
+        orgaos.values()
+    )
+
+    df.to_csv(
+        ARQUIVO_CSV,
+        index=False,
+        encoding="utf-8-sig"
+    )
+
+    print(
+        f"\nÓrgãos documentados: {len(orgaos)}"
+    )
+
+    print(
+        f"JSON salvo em: {ARQUIVO_JSON}"
+    )
+
+    print(
+        f"CSV salvo em: {ARQUIVO_CSV}"
+    )
+
+
+
+if __name__ == "__main__":
+
+    orgaos = gerar_orgaos()
+
+    salvar_orgao(
+        orgaos
+    )
