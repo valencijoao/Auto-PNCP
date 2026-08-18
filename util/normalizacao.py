@@ -2,10 +2,53 @@ import json
 import pandas as pd
 
 
-from config.caminhos import CAMINHO_DOMINIOS, CAMINHO_ORGAOS
+from config.caminhos import CAMINHO_ORGAOS, CAMINHO_PORTAIS_TRATADOS
 from ferramentas.gerar_dominios import carregar_dominios
-from util.portais import traduzir_portal 
+from util.portais import traduzir_portal
 
+
+UF_VALIDAS = {
+    "AC", "AL", "AP", "AM",
+    "BA", "CE", "DF", "ES",
+    "GO", "MA", "MT", "MS",
+    "MG", "PA", "PB", "PR",
+    "PE", "PI", "RJ", "RN",
+    "RS", "RO", "RR", "SC",
+    "SP", "SE", "TO"
+}
+COLUNAS_DATASET_INTERNO = [
+    "ID_INTERNO",
+    "CLIENTE",
+    "ID",
+    "NUMERO_COMPRA",
+    "ANO_COMPRA",
+    "SEQUENCIAL_COMPRA",
+    "ESTADO",
+    "UNIDADE",
+    "CNPJ",
+    "ORGAO",
+    "ESFERA",
+    "MUNICIPIO",
+    "VALOR_ESTIMADO",
+    "VALOR_HOMOLOGADO",
+    "DATA_PUBLICACAO",
+    "DATA_DISPUTA",
+    "MODALIDADE",
+    "MODO_DISPUTA",
+    "SITUACAO",
+    "SRP",
+    "LINK_PNCP",
+    "LINK_PORTAL",
+    "PORTAL"
+]
+PORTAIS_TRATADOS = CAMINHO_PORTAIS_TRATADOS
+with open(
+    PORTAIS_TRATADOS,
+    encoding="utf-8"
+) as arquivo:
+    PORTAIS_TRATADOS = json.load(
+        arquivo
+    )
 
 DOMINIOS = carregar_dominios()
 ORGAOS = CAMINHO_ORGAOS
@@ -39,7 +82,6 @@ def normalizar_texto(valor):
 
     return valor.strip()
 
-
 def normalizar_data(valor):
     """
     Converte as datas para o tipo datetime.
@@ -52,7 +94,6 @@ def normalizar_data(valor):
         valor,
         errors="coerce"
     )
-
 
 def normalizar_valores(valor):
     """
@@ -87,20 +128,25 @@ def normalizar_valores(valor):
 
 def normalizar_cnpj(valor):
     """
-    Normaliza unicamente os CNPJ de orgãos ou forncedores, mantendo somente números.
+    Normaliza o CNPJ mantendo somente os dígitos.
+    Não tenta reconstruir CNPJs incompletos.
     """
 
     if pd.isna(valor):
-        return valor
+        return pd.NA
 
-    valor = str(valor)
+    valor = str(valor).strip()
 
-    return "".join(
+    if valor.endswith(".0"):
+        valor = valor[:-2]
+
+    valor = "".join(
         caractere
         for caractere in valor
-        if caractere.isdigit() 
+        if caractere.isdigit()
     )
 
+    return valor
 
 def normalizar_dominio(valor, dominio):
     """
@@ -122,14 +168,13 @@ def normalizar_dominio(valor, dominio):
         valor
     )
 
-
 def normalizar_orgao(df):
     """
     Padroniza os dados do órgão utilizando o CNPJ
     como chave de relacionamento.
     """
 
-    if "CNPJ" in df.columns:
+    if "CNPJ" not in df.columns:
         return df
 
     for indice, linha in df.iterrows():
@@ -139,24 +184,36 @@ def normalizar_orgao(df):
         if pd.isna(cnpj):
             continue
 
-        cnpj = str(cnpj)
+        cnpj = str(cnpj).strip()
 
-        dados_orgao = ORGAO.get(
-            cnpj
-        )
+        if len(cnpj) != 14:
+            continue
+
+        dados_orgao = ORGAO.get(cnpj)
 
         if not dados_orgao:
             continue
 
         if dados_orgao.get("RAZAO_SOCIAL"):
+
             df.at[
                 indice,
-                "ORGAO",
+                "ORGAO"
+            ] = dados_orgao[
+                "RAZAO_SOCIAL"
+            ]
+
+        if dados_orgao.get("UF"):
+
+            df.at[
+                indice,
+                "ESTADO"
             ] = dados_orgao[
                 "UF"
             ]
 
         if dados_orgao.get("MUNICIPIO"):
+
             df.at[
                 indice,
                 "MUNICIPIO"
@@ -165,6 +222,7 @@ def normalizar_orgao(df):
             ]
 
         if dados_orgao.get("UNIDADE"):
+
             df.at[
                 indice,
                 "UNIDADE"
@@ -173,6 +231,147 @@ def normalizar_orgao(df):
             ]
 
     return df
+
+def validar_orgaos(df):
+    """
+    Valida a correspondência dos órgãos do dataset
+    com o cadastro de orgaos.json.
+    """
+
+    relatorio = {}
+
+    if "CNPJ" not in df.columns:
+
+        relatorio["CNPJ"] = "Coluna não encontrada"
+
+        return relatorio
+
+    cnpjs = df["CNPJ"]
+
+    cnpjs_normalizados = cnpjs.apply(
+        normalizar_cnpj
+    )
+
+    cnpjs_vazios = (
+        cnpjs_normalizados.isna()
+    ).sum()
+
+    cnpjs_validos = cnpjs_normalizados[
+        cnpjs_normalizados.notna()
+    ]
+
+    cnpjs_validos = cnpjs_validos[
+        cnpjs_validos.apply(
+            lambda x:
+                str(x).isdigit()
+                and len(str(x)) == 14
+        )
+    ]
+
+    encontrados = cnpjs_validos[
+        cnpjs_validos.isin(
+            ORGAO.keys()
+        )
+    ]
+
+    nao_encontrados = cnpjs_validos[
+        ~cnpjs_validos.isin(
+            ORGAO.keys()
+        )
+    ]
+
+    relatorio[
+        "TOTAL_REGISTROS"
+    ] = len(df)
+
+    relatorio[
+        "CNPJ_VAZIO"
+    ] = cnpjs_vazios
+
+    relatorio[
+        "CNPJ_VALIDO"
+    ] = len(cnpjs_validos)
+
+    relatorio[
+        "ORGAOS_ENCONTRADOS"
+    ] = len(encontrados)
+
+    relatorio[
+        "ORGAOS_NAO_ENCONTRADOS"
+    ] = len(nao_encontrados)
+
+    relatorio[
+        "TAXA_CORRESPONDENCIA"
+    ] = (
+        len(encontrados)
+        / len(cnpjs_validos)
+        * 100
+        if len(cnpjs_validos) > 0
+        else 0
+    )
+
+    relatorio[
+        "CNPJS_NAO_ENCONTRADOS"
+    ] = sorted(
+        nao_encontrados.unique()
+    )
+
+    return relatorio
+
+def exibir_validacao_orgaos(relatorio):
+    """
+    Exibe o resultado da validação dos órgãos.
+    """
+
+    print(
+        "\n=== VALIDAÇÃO DOS ÓRGÃOS ==="
+    )
+
+    print(
+        f"Total de registros: "
+        f"{relatorio['TOTAL_REGISTROS']}"
+    )
+
+    print(
+        f"CNPJ vazio: "
+        f"{relatorio['CNPJ_VAZIO']}"
+    )
+
+    print(
+        f"CNPJ válido: "
+        f"{relatorio['CNPJ_VALIDO']}"
+    )
+
+    print(
+        f"Órgãos encontrados: "
+        f"{relatorio['ORGAOS_ENCONTRADOS']}"
+    )
+
+    print(
+        f"Órgãos não encontrados: "
+        f"{relatorio['ORGAOS_NAO_ENCONTRADOS']}"
+    )
+
+    print(
+        f"Taxa de correspondência: "
+        f"{relatorio['TAXA_CORRESPONDENCIA']:.2f}%"
+    )
+
+    if relatorio[
+        "CNPJS_NAO_ENCONTRADOS"
+    ]:
+
+        print(
+            "\nCNPJs não encontrados:"
+        )
+
+        for cnpj in relatorio[
+            "CNPJS_NAO_ENCONTRADOS"
+        ]:
+
+            print(
+                cnpj
+            )
 
 def normalizar_portal(valor):
     """
@@ -192,6 +391,156 @@ def normalizar_portal(valor):
         valor
     )
 
+def validar_portais(df):
+    """
+    Valida os portais presentes no dataset.
+
+    UFs são consideradas origens válidas quando a contratação
+    não possui link do sistema de origem.
+    """
+
+    relatorio = {}
+
+    if "PORTAL" not in df.columns:
+
+        relatorio["PORTAL"] = "Coluna não encontrada"
+
+        return relatorio
+
+    portais = df["PORTAL"]
+
+    portais_validos = portais[
+        portais.notna()
+    ].astype(str).str.strip()
+
+    portais_validos = portais_validos[
+        portais_validos != ""
+    ]
+
+    cadastrados = set(
+        PORTAIS_TRATADOS.values()
+    )
+
+    encontrados = portais_validos[
+        portais_validos.isin(
+            cadastrados
+        )
+    ]
+
+    origens_uf = portais_validos[
+        portais_validos.isin(
+            UF_VALIDAS
+        )
+    ]
+
+    desconhecidos = portais_validos[
+        ~portais_validos.isin(cadastrados)
+        & ~portais_validos.isin(UF_VALIDAS)
+    ]
+
+    relatorio["TOTAL_REGISTROS"] = len(df)
+
+    relatorio["PORTAL_VAZIO"] = (
+        portais.isna()
+        | portais.astype(str).str.strip().eq("")
+    ).sum()
+
+    relatorio["PORTAIS_ENCONTRADOS"] = len(
+        encontrados
+    )
+
+    relatorio["ORIGENS_UF"] = len(
+        origens_uf
+    )
+
+    relatorio["PORTAIS_DESCONHECIDOS"] = len(
+        desconhecidos
+    )
+
+    relatorio["TIPOS_DE_PORTAIS"] = (
+        portais_validos.nunique()
+    )
+
+    relatorio["ORIGENS_UF_ENCONTRADAS"] = sorted(
+        origens_uf.unique()
+    )
+
+    relatorio["PORTAIS_NAO_CADASTRADOS"] = sorted(
+        desconhecidos.unique()
+    )
+
+    return relatorio
+
+def exibir_validacao_portais(relatorio):
+    """
+    Exibe o resultado da validação dos portais.
+    """
+
+    print(
+        "\n=== VALIDAÇÃO DOS PORTAIS ==="
+    )
+
+    print(
+        f"Total de registros: "
+        f"{relatorio['TOTAL_REGISTROS']}"
+    )
+
+    print(
+        f"Portal vazio: "
+        f"{relatorio['PORTAL_VAZIO']}"
+    )
+
+    print(
+        f"Tipos de origens: "
+        f"{relatorio['TIPOS_DE_PORTAIS']}"
+    )
+
+    print(
+        f"Portais cadastrados: "
+        f"{relatorio['PORTAIS_ENCONTRADOS']}"
+    )
+
+    print(
+        f"Origens por UF: "
+        f"{relatorio['ORIGENS_UF']}"
+    )
+
+    print(
+        f"Portais desconhecidos: "
+        f"{relatorio['PORTAIS_DESCONHECIDOS']}"
+    )
+
+    if relatorio[
+        "ORIGENS_UF_ENCONTRADAS"
+    ]:
+
+        print(
+            "\nOrigens por UF:"
+        )
+
+        for uf in relatorio[
+            "ORIGENS_UF_ENCONTRADAS"
+        ]:
+
+            print(
+                f"- {uf}"
+            )
+
+    if relatorio[
+        "PORTAIS_NAO_CADASTRADOS"
+    ]:
+
+        print(
+            "\nPortais não cadastrados:"
+        )
+
+        for portal in relatorio[
+            "PORTAIS_NAO_CADASTRADOS"
+        ]:
+
+            print(
+                f"- {portal}"
+            )
 
 def normalizar_dataset(df):
     """
@@ -335,6 +684,19 @@ def validar_dataset(df):
     lambda x: not cnpj_valido(x)
         ).sum()
 
+    print("\n=== CNPJs considerados inválidos ===")
+
+    for valor in df["CNPJ"]:
+
+        if pd.isna(valor):
+            continue
+
+        if not cnpj_valido(valor):
+
+            print(
+                repr(valor)
+            )
+
     relatorio["CNPJ_VAZIO"] = cnpj_vazio
     relatorio["CNPJ_INVALIDO"] = cnpj_invalidos
 
@@ -452,17 +814,191 @@ def exibir_validacao(relatorio):
             f"{campo}: {valor}"
         )
 
+def validar_estrutura_dataset(df):
+    """
+    Valida a estrutura do dataset interno.
+    """
+
+    relatorio = {}
+
+    colunas_atuais = list(df.columns)
+
+    colunas_faltantes = [
+        coluna
+        for coluna in COLUNAS_DATASET_INTERNO
+        if coluna not in colunas_atuais
+    ]
+
+    colunas_extras = [
+        coluna
+        for coluna in colunas_atuais
+        if coluna not in COLUNAS_DATASET_INTERNO
+    ]
+
+    relatorio["COLUNAS_FALTANTES"] = colunas_faltantes
+    relatorio["COLUNAS_EXTRAS"] = colunas_extras
+
+    relatorio["ORDEM_CORRETA"] = (
+        colunas_atuais == COLUNAS_DATASET_INTERNO
+    )
+
+    relatorio["TOTAL_COLUNAS"] = len(
+        colunas_atuais
+    )
+
+    relatorio["TOTAL_REGISTROS"] = len(
+        df
+    )
+
+    return relatorio
+
+def validar_ids_dataset(df):
+    """
+    Valida a unicidade da combinação ID_INTERNO + CLIENTE.
+    """
+
+    relatorio = {}
+
+    colunas = [
+        "ID_INTERNO",
+        "CLIENTE"
+    ]
+
+    if not all(
+        coluna in df.columns
+        for coluna in colunas
+    ):
+
+        relatorio["ERRO"] = (
+            "ID_INTERNO ou CLIENTE ausente"
+        )
+
+        return relatorio
+
+    relatorio["ID_INTERNO_VAZIO"] = (
+        df["ID_INTERNO"].isna().sum()
+    )
+
+    relatorio["CLIENTE_VAZIO"] = (
+        df["CLIENTE"].isna().sum()
+    )
+
+    duplicados = df.duplicated(
+        subset=colunas,
+        keep=False
+    )
+
+    relatorio["REGISTROS_DUPLICADOS"] = (
+        duplicados.sum()
+    )
+
+    relatorio["COMBINACOES_UNICAS"] = (
+        df[
+            colunas
+        ].drop_duplicates().shape[0]
+    )
+
+    return relatorio
+
+def validar_estrutura_completa(df):
+    """
+    Executa todas as validações estruturais do dataset.
+    """
+
+    return {
+        "ESTRUTURA": validar_estrutura_dataset(df),
+        "IDS": validar_ids_dataset(df)
+    }
+
+def exibir_validacao_estrutura(relatorio):
+    """
+    Exibe a validação estrutural do dataset.
+    """
+
+    estrutura = relatorio[
+        "ESTRUTURA"
+    ]
+
+    ids = relatorio[
+        "IDS"
+    ]
+
+    print(
+        "\n=== VALIDAÇÃO DA ESTRUTURA ==="
+    )
+
+    print(
+        f"Total de registros: "
+        f"{estrutura['TOTAL_REGISTROS']}"
+    )
+
+    print(
+        f"Total de colunas: "
+        f"{estrutura['TOTAL_COLUNAS']}"
+    )
+
+    print(
+        f"Ordem correta: "
+        f"{estrutura['ORDEM_CORRETA']}"
+    )
+
+    print(
+        f"ID_INTERNO vazio: "
+        f"{ids['ID_INTERNO_VAZIO']}"
+    )
+
+    print(
+        f"CLIENTE vazio: "
+        f"{ids['CLIENTE_VAZIO']}"
+    )
+
+    print(
+        f"Registros duplicados: "
+        f"{ids['REGISTROS_DUPLICADOS']}"
+    )
+
+    if estrutura["COLUNAS_FALTANTES"]:
+
+        print(
+            "\nColunas faltantes:"
+        )
+
+        for coluna in estrutura[
+            "COLUNAS_FALTANTES"
+        ]:
+
+            print(
+                f"- {coluna}"
+            )
+
+    if estrutura["COLUNAS_EXTRAS"]:
+
+        print(
+            "\nColunas extras:"
+        )
+
+        for coluna in estrutura[
+            "COLUNAS_EXTRAS"
+        ]:
+
+            print(
+                f"- {coluna}"
+            )
+
 if __name__ == "__main__":
+
+
+    
 
     df = pd.read_csv(
         "dados/datasets/dataset_interno.csv"
     )
 
-    relatorio = validar_dataset(
+    relatorio = validar_estrutura_completa(
         df
     )
 
-    exibir_validacao(
+    exibir_validacao_estrutura(
         relatorio
     )
 
