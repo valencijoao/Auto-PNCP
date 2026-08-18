@@ -107,6 +107,53 @@ def carregar_compra(pasta):
 
     return dados
 
+def analisar_itens(itens):
+    """
+    Analisa o itens.json de uma contratação selecionada.
+    """
+
+    if not isinstance(itens, list) or not itens:
+
+        return {
+            "TIPO_ITENS": "Não identificado",
+            "POSSUI_MATERIAL": False,
+            "POSSUI_SERVICO": False,
+            "QTD_ITENS": 0
+        }
+
+    tipos = set()
+
+    for item in itens:
+
+        tipo = item.get("materialOuServico")
+
+        if tipo == "M":
+            tipos.add("M")
+
+        elif tipo == "S":
+            tipos.add("F")
+
+    possui_material = "M" in tipos
+    possui_servico = "S" in tipos
+
+    if possui_material and possui_servico:
+        tipo_itens = "Misto"
+    elif possui_material:
+        tipo_itens = "Material"
+    elif possui_servico:
+        tipo_itens = "Serviço"
+    else:
+        tipo_itens = "Não identificado"
+
+    return {
+        "TIPO_ITENS": tipo_itens,
+        "POSSUI_SERVICO": possui_servico,
+        "POSSUI_MATERIAL": possui_material,
+        "QTD_ITENS": len(itens)
+    }
+
+    
+    
 
 def extrair_dados_compra(compra):
     """
