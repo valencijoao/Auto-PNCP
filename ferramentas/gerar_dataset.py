@@ -152,8 +152,6 @@ def analisar_itens(itens):
         "QTD_ITENS": len(itens)
     }
 
-    
-    
 
 def extrair_dados_compra(compra):
     """
@@ -258,7 +256,6 @@ def extrair_dados_compra(compra):
         "PORTAL": origem
     }
 
-
 def gerar_dataset():
     """
     Percorre todas as compras e gera o dataset interno.
@@ -296,11 +293,24 @@ def gerar_dataset():
             []
         )
 
+        itens = compra.get(
+            "itens",
+            []
+        )
+
+        analise_itens = analisar_itens(
+            itens
+        )
+
         for cliente in clientes:
 
             registro_cliente = registro.copy()
 
             registro_cliente["CLIENTE"] = cliente
+
+            registro_cliente.update(
+                analise_itens
+            )
 
             registros.append(
                     registro_cliente
@@ -327,8 +337,6 @@ def gerar_dataset():
     df = df[colunas]
 
     return df
-
-
 
 def salvar_dataset(df):
     """
@@ -357,7 +365,6 @@ def filtrar_novas_contratacoes(df, novas_contratacoes):
     ].copy()
 
     return df_novas
-
 
 def gerar_dataset_cliente(df, cliente):
     """
