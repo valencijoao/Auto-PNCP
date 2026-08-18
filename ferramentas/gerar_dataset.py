@@ -119,6 +119,9 @@ def extrair_dados_compra(compra):
     ano_compra = dados.get("anoCompra")
     sequencial_compra = dados.get("sequencialCompra")
 
+    if not cnpj or not ano_compra or not sequencial_compra:
+        return None
+
     link_portal = dados.get("linkSistemaOrigem")
 
     link_pncp = f"https://pncp.gov.br/app/editais/{cnpj}/{ano_compra}/{sequencial_compra}"
@@ -132,6 +135,9 @@ def extrair_dados_compra(compra):
             "unidadeOrgao",{}
         ).get("ufSigla"
     )
+
+    if not origem:
+        return None
 
     id_interno = gerar_id_interno(
         cnpj,
@@ -213,14 +219,15 @@ def gerar_dataset():
 
     registros = []
 
+    print(
+    f"\nProcessando compras salvas."
+    )
+
+
     for pasta in PASTA_COMPRAS.iterdir():
 
         if not pasta.is_dir():
             continue
-
-        print(
-            f"\nProcessando compras salvas."
-        )
 
         compra = carregar_compra(
             pasta
@@ -244,6 +251,7 @@ def gerar_dataset():
             registros.append(
                 registro_cliente
             )
+
 
     df = pd.DataFrame(
         registros
