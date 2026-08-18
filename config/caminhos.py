@@ -15,6 +15,7 @@ PASTA_DE_REDE = Path(
 )
 CAMINHO_DOMINIOS = DADOS / "dominios.json"
 CAMINHO_ORGAOS = DADOS/ "orgaos.json"
+CAMINHO_PORTAIS_TRATADOS = DADOS / "portais_tratados.json"
 
 DADOS.mkdir(exist_ok=True)
 
