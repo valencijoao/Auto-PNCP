@@ -237,6 +237,13 @@ def gerar_dataset():
             compra
         )
 
+        if registro is None:
+
+            print(
+            f"Compra ignorada: {pasta.name}"
+        )
+            continue
+
         clientes = compra.get(
             "clientes",
             []
@@ -249,8 +256,8 @@ def gerar_dataset():
             registro_cliente["CLIENTE"] = cliente
 
             registros.append(
-                registro_cliente
-            )
+                    registro_cliente
+                )
 
 
     df = pd.DataFrame(
