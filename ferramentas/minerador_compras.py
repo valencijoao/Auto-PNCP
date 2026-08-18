@@ -304,16 +304,68 @@ def baixar_compra_completa(
         id_interno
     )
 
+def baixar_compras(contratacoes, novas_contratacoes):
+    """
+    Baixa uma lista de contratações, ou uma contratação individual.
 
+    O parâmetro exigido é:
 
+    'CNPJ/ANO/SEQUENCIAL'
+    
+    """
 
+    for contratacao in contratacoes:
+
+        contratacao = contratacao.strip()
+
+        partes = contratacao.split("/")
+
+        if len(partes) != 3:
+
+            print(
+                f"Contratação inválida: {contratacao}"
+            )
+
+            continue
+
+        cnpj = partes[0].strip()
+        ano = partes[1].strip()
+        sequencial = partes[2].strip()
+
+        try:
+
+            ano = int(ano)
+            sequencial = int(sequencial)
+
+        except ValueError:
+
+            print(
+                f"Contratação inválida: {contratacao}"
+            )
+
+            continue
+
+        print(f"\n==== Processando contratação: {contratacao} ====")
+
+        baixar_compra_completa(
+            cnpj,
+            ano,
+            sequencial,
+            novas_contratacoes
+        )
 
 if __name__ == "__main__":
 
     novas_contratacoes = []
 
-    baixar_compra_completa(
-"18712158000150",2026,34,
+    contratacoes = [
+            "00394502000144/2026/10002", 
+            "/03985113000181/2026/62" 
+            
+    ]
+
+    baixar_compras(
+        contratacoes,
         novas_contratacoes
     )
 
