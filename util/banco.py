@@ -49,7 +49,7 @@ def criar_banco():
 
             id_interno TEXT PRIMARY KEY,
             id TEXT,
-            numero_compras TEXT,
+            numero_compra TEXT,
             ano_compra INTEGER,
             sequencial_compra INTEGER,
             cnpj TEXT,
@@ -112,6 +112,87 @@ def criar_banco():
     print(
         f"Banco criado em: {ARQUIVO_BANCO}"
     )
+
+
+def inserir_orgaos(orgaos):
+    conn = conectar()
+    cursor = conn.cursor()
+
+    for cnpj, orgao in orgaos.items():
+        cursor.execute("""
+            INSERT OR IGNORE INTO orgaos (
+                cnpj,
+                orgao,
+                estado,
+                unidade,
+                esfera,
+                municipio
+            )
+            VALUES(?,?,?,?,?,?)
+        """, (
+            orgao.get('CNPJ'),
+            orgao.get('RAZAO_SOCIAL'),
+            orgao.get('UF'),
+            orgao.get('UNIDADE'),
+            orgao.get('ESFERA'),
+            orgao.get('MUNICIPIO')
+    ))
+
+    conn.commit()
+    conn.close()
+
+    print(f"{len(orgaos)} órgãos processados.")
+
+
+def inserir_contratacoes(df):
+    conn = conectar()
+    cursor = conn.cursor()
+
+    for _, row in df.iterrows():
+        cursor.execute("""
+            INSERT OR IGNORE INTO contratacoes (
+                id_interno,
+                id,
+                numero_compra,
+                ano_compra,
+                sequencial_compra,
+                cnpj,
+                valor_estimado,
+                valor_homologado,
+                data_publicacao,
+                data_disputa,
+                modalidade,
+                modo_disputa,
+                situacao,
+                srp,
+                link_pncp,
+                link_portal
+            )
+            VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        """, (
+            row["ID_INTERNO"],
+            row["ID"],
+            row["NUMERO_COMPRA"],
+            row["ANO_COMPRA"],
+            row["SEQUENCIAL_COMPRA"],
+            row["CNPJ"],
+            row["VALOR_ESTIMADO"],
+            row["VALOR_HOMOLOGADO"],
+            row["DATA_PUBLICACAO"],
+            row["DATA_DISPUTA"],
+            row["MODALIDADE"],
+            row["MODO_DISPUTA"],
+            row["SITUACAO"],
+            row["SRP"],
+            row["LINK_PNCP"],
+            row["LINK_PORTAL"]
+            
+        ))
+
+    conn.commit()
+    conn.close()
+
+    print(f"{len(df)} contratações processadas.")
 
 
 if __name__ =="__main__":

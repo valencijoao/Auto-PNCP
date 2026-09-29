@@ -1,11 +1,8 @@
 from pathlib import Path
 
-from pathlib import Path
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 DADOS = BASE_DIR / "dados"
-
 COMPRAS = DADOS / "compras"
 DATASETS = DADOS / "datasets"
 CLIENTES = DADOS / "enviadas"

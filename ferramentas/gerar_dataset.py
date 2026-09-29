@@ -107,58 +107,22 @@ def carregar_compra(pasta):
 
     return dados
 
-def analisar_itens(itens):
-    """
-    Analisa o itens.json de uma contratação selecionada.
-    """
-
-    if not isinstance(itens, list) or not itens:
-
-        return {
-            "TIPO_ITENS": "Não identificado",
-            "POSSUI_MATERIAL": False,
-            "POSSUI_SERVICO": False,
-            "QTD_ITENS": 0
-        }
-
-    tipos = set()
-
-    for item in itens:
-
-        tipo = item.get("materialOuServico")
-
-        if tipo == "M":
-            tipos.add("M")
-
-        elif tipo == "S":
-            tipos.add("F")
-
-    possui_material = "M" in tipos
-    possui_servico = "S" in tipos
-
-    if possui_material and possui_servico:
-        tipo_itens = "Misto"
-    elif possui_material:
-        tipo_itens = "Material"
-    elif possui_servico:
-        tipo_itens = "Serviço"
-    else:
-        tipo_itens = "Não identificado"
-
-    return {
-        "TIPO_ITENS": tipo_itens,
-        "POSSUI_SERVICO": possui_servico,
-        "POSSUI_MATERIAL": possui_material,
-        "QTD_ITENS": len(itens)
-    }
-
-
 def extrair_dados_compra(compra):
     """
     Extrai os dados necessários de uma contratação.
     """
 
     dados = compra.get("dados",{})
+
+    itens = compra.get(
+        "itens",
+        []
+    )
+
+    analise_itens = analisar_itens(
+        itens
+        )
+
 
     cnpj = dados.get("orgaoEntidade",{}).get("cnpj")
     ano_compra = dados.get("anoCompra")
@@ -204,7 +168,7 @@ def extrair_dados_compra(compra):
     esfera = orgao.get("esferaId")
 
     unidade = dados.get("unidadeOrgao", {})
-    estado = unidade.get("UfSigla")
+    estado = unidade.get("ufSigla")
     nome_unidade = unidade.get("nomeUnidade")
     municipio = unidade.get("municipioNome")
 
@@ -231,6 +195,7 @@ def extrair_dados_compra(compra):
     )
 
 
+
     return {
         "ID_INTERNO": id_interno,
         "ID": id_processo,
@@ -253,7 +218,91 @@ def extrair_dados_compra(compra):
         "SRP": srp,
         "LINK_PNCP": link_pncp,
         "LINK_PORTAL": link_portal,
-        "PORTAL": origem
+        "PORTAL": origem,
+        **analise_itens
+    }
+
+def analisar_itens(itens):
+    """
+    Analisa os itens de uma contratação.
+    """
+
+    if not isinstance(itens, list) or not itens:
+
+        return {
+            "TIPO_ITENS": "Não identificado",
+            "POSSUI_MATERIAL": False,
+            "POSSUI_SERVICO": False,
+            "QTD_ITENS": 0,
+            "TIPOS_BENEFICIO": "Não identificado",
+            "POSSUI_BENEFICIO": False
+        }
+
+    tipos = set()
+    beneficios = set()
+
+    for item in itens:
+
+        tipo = item.get(
+            "materialOuServico"
+        )
+
+        if tipo == "M":
+            tipos.add("M")
+
+        elif tipo == "S":
+            tipos.add("S")
+
+        beneficio = item.get(
+            "tipoBeneficioNome"
+        )
+
+        if beneficio:
+            beneficios.add(
+                beneficio
+            )
+
+    possui_material = "M" in tipos
+    possui_servico = "S" in tipos
+
+    if possui_material and possui_servico:
+
+        tipo_itens = "Misto"
+
+    elif possui_material:
+
+        tipo_itens = "Material"
+
+    elif possui_servico:
+
+        tipo_itens = "Serviço"
+
+    else:
+
+        tipo_itens = "Não identificado"
+
+    if beneficios:
+
+        tipos_beneficio = "; ".join(
+            sorted(beneficios)
+        )
+
+    else:
+
+        tipos_beneficio = "Não identificado"
+
+    possui_beneficio = any(
+        beneficio.lower() != "sem benefício"
+        for beneficio in beneficios
+    )
+
+    return {
+        "TIPO_ITENS": tipo_itens,
+        "POSSUI_MATERIAL": possui_material,
+        "POSSUI_SERVICO": possui_servico,
+        "QTD_ITENS": len(itens),
+        "TIPOS_BENEFICIO": tipos_beneficio,
+        "POSSUI_BENEFICIO": possui_beneficio
     }
 
 def gerar_dataset():
@@ -264,9 +313,8 @@ def gerar_dataset():
     registros = []
 
     print(
-    f"\nProcessando compras salvas."
+        "\nProcessando compras salvas."
     )
-
 
     for pasta in PASTA_COMPRAS.iterdir():
 
@@ -284,9 +332,12 @@ def gerar_dataset():
         if registro is None:
 
             print(
-            f"Compra ignorada: {pasta.name}"
-        )
+                f"Compra ignorada: {pasta.name}"
+            )
+
             continue
+
+        print(f"ID interno: {registro['ID_INTERNO']}")
 
         clientes = compra.get(
             "clientes",
@@ -313,9 +364,8 @@ def gerar_dataset():
             )
 
             registros.append(
-                    registro_cliente
-                )
-
+                registro_cliente
+            )
 
     df = pd.DataFrame(
         registros
@@ -343,17 +393,47 @@ def salvar_dataset(df):
     Salva o dataset interno como CSV.
     """
 
-    caminho = PASTA_DATASETS / "dataset_interno.csv"
+    caminho_csv = PASTA_DATASETS / "dataset_interno.csv"
+    # caminho_excel = PASTA_DATASETS / "dataset_interno.xlsx"
 
     df = normalizar_dataset(df)
 
     df.to_csv(
-        caminho,
+        caminho_csv,
         index=False,
         encoding="utf-8-sig"
+
     )
     
-    print(f"\nDataset salvo em: {caminho}")
+    print(f"\nDataset salvo")
+
+def excluir_compra_dataset(id_interno):
+    """Remove do dataset interno todas as linhas de uma compra pelo ID_INTERNO."""
+    caminho_csv = PASTA_DATASETS / "dataset_interno.csv"
+
+    if not caminho_csv.exists():
+        print(f"Dataset não encontrado: {caminho_csv}")
+        return 0
+
+    df = pd.read_csv(caminho_csv, dtype={"ID_INTERNO": str})
+
+    if "ID_INTERNO" not in df.columns:
+        raise ValueError("O dataset não contém a coluna ID_INTERNO.")
+
+    id_interno = str(id_interno).strip()
+    if not id_interno:
+        raise ValueError("Informe um ID_INTERNO válido.")
+
+    linhas_removidas = int(df["ID_INTERNO"].astype(str).str.strip().eq(id_interno).sum())
+
+    if linhas_removidas == 0:
+        print(f"Nenhuma linha encontrada para o ID_INTERNO {id_interno}.")
+        return 0
+
+    df = df[df["ID_INTERNO"].astype(str).str.strip() != id_interno]
+    df.to_csv(caminho_csv, index=False, encoding="utf-8-sig")
+    print(f"Compra {id_interno} removida: {linhas_removidas} linha(s).")
+    return linhas_removidas
 
 def filtrar_novas_contratacoes(df, novas_contratacoes):
     """
@@ -428,8 +508,9 @@ def gerar_dataset_cliente(df, cliente):
 
     df_cliente["DATA_DISPUTA"] = pd.to_datetime(
         df_cliente["DATA_DISPUTA"],
-        errors="coerce"
-    ).dt.strftime("%d/%m/%Y")
+        errors="coerce",
+        dayfirst=True
+    )
 
     df_cliente = df_cliente[
         [
@@ -478,8 +559,9 @@ def salvar_dataset_cliente(df_cliente, cliente):
 
     df_cliente["DATA_DISPUTA"] = pd.to_datetime(
         df_cliente["DATA_DISPUTA"],
-        errors="coerce"
-    ).dt.strftime("%d/%m/%Y")
+        errors="coerce",
+        dayfirst=True
+    )
 
     df_cliente["VALOR_ESTIMADO"] = df_cliente[
         "VALOR_ESTIMADO"
@@ -519,8 +601,9 @@ def atualizar_datasets_clientes():
 
             df["DATA_DISPUTA"] = pd.to_datetime(
                 df["DATA_DISPUTA"],
-                errors="coerce"
-            ).dt.strftime("%d/%m/%Y")
+                errors="coerce",
+                dayfirst=True
+            )
 
         if "VALOR_ESTIMADO" in df.columns:
 
