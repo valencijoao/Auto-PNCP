@@ -195,6 +195,60 @@ def inserir_contratacoes(df):
     print(f"{len(df)} contratações processadas.")
 
 
+def inserir_clientes(df):
+    """
+    Insere os cliente no banco de dados relacioando ao projeto.
+    """
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    clientes = df['CLIENTE'].dropna().unique()
+
+    for cliente in clientes:
+        cursor.execute("""
+            INSERT OR IGNORE INTO clientes (
+                cliente
+            )
+            VALUES (?)
+
+    """,(cliente,))
+
+    conn.commit()
+    conn.close()
+
+    print(f'{len(clientes)} clientes processados.')
+
+
+def inserir_vinculos_clientes(df):
+    """
+    Cria os vínculos entre clientes e ID_INTERNO.
+    """   
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    for _, row in df.iterrows():
+        cursor.execute("""
+            INSERT OR IGNORE INTO contratacao_cliente(  
+                id_interno,
+                cliente
+            )
+            VALUES (?, ?)
+    """, (
+        row['ID_INTERNO'],
+        row['CLIENTE']
+    )
+    )
+
+    conn.commit()
+    conn.close()
+
+    print(f"{len(df)} vínculos processados.")
+
+
+
+
 if __name__ =="__main__":
 
     criar_banco()
