@@ -303,6 +303,7 @@ def baixar_compra_completa(
     novas_contratacoes.append(
         id_interno
     )
+    print(f"ID interno da nova contratação: {id_interno}")
 
 def baixar_compras(contratacoes, novas_contratacoes):
     """
@@ -362,7 +363,7 @@ if __name__ == "__main__":
 
 
 
-        '03238862000145/2026/84', ' 04696490000163/2026/132'
+        '46522983000127/2026/355'
 
     ]
 

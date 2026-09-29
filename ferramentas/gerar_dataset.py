@@ -337,8 +337,6 @@ def gerar_dataset():
 
             continue
 
-        print(f"ID interno: {registro['ID_INTERNO']}")
-
         clientes = compra.get(
             "clientes",
             []
