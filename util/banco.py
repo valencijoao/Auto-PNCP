@@ -246,6 +246,156 @@ def inserir_vinculos_clientes(df):
 
     print(f"{len(df)} vínculos processados.")
 
+def inserir_compra(compra):
+    """
+    Insere uma contratação desejada no banco de dados.
+    """
+
+    from ferramentas.gerar_dataset import extrair_dados_compra
+
+    registro = extrair_dados_compra(compra)
+
+    if registro is None:
+        print("Compra sem dados suficientes. Não inserida.")
+        return
+    
+    clientes = compra.get("clientes",{})
+
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        INSERT OR IGNORE INTO orgaos (
+        cnpj,
+        orgao,
+        estado,
+        unidade,
+        esfera,
+        municipio
+        )
+        VALUES (?, ?, ?, ?, ?, ?)
+    """,(
+        registro["CNPJ"],
+        registro["ORGAO"],
+        registro["ESTADO"],
+        registro["UNIDADE"],
+        registro["ESFERA"],
+        registro["MUNICIPIO"]
+    ))
+
+    cursor.execute("""
+        INSERT OR IGNORE INTO contratacoes (
+            id_interno,
+            id,
+            numero_compra,
+            ano_compra,
+            sequencial_compra,
+            cnpj,
+            valor_estimado,
+            valor_homologado,
+            data_publicacao,
+            data_disputa,
+            modalidade,
+            modo_disputa,
+            situacao,
+            srp,
+            link_pncp,
+            link_portal
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        registro["ID_INTERNO"],
+        registro["ID"],
+        registro["NUMERO_COMPRA"],
+        registro["ANO_COMPRA"],
+        registro["SEQUENCIAL_COMPRA"],
+        registro["CNPJ"],
+        registro["VALOR_ESTIMADO"],
+        registro["VALOR_HOMOLOGADO"],
+        registro["DATA_PUBLICACAO"],
+        registro["DATA_DISPUTA"],
+        registro["MODALIDADE"],
+        registro["MODO_DISPUTA"],
+        registro["SITUACAO"],
+        registro["SRP"],
+        registro["LINK_PNCP"],
+        registro["LINK_PORTAL"]
+    ))
+
+    for cliente in clientes:
+    
+        cursor.execute("""
+            INSERT OR IGNORE INTO clientes (
+                cliente
+            )
+            VALUES(?)
+        """, (cliente,))
+
+        cursor.execute("""
+            INSERT OR IGNORE INTO contratacao_cliente (
+                id_interno,
+                cliente
+            )
+            VALUES (?, ?)
+    """, (
+        registro['ID_INTERNO'],
+        cliente
+    ))
+
+    conn.commit()
+    conn.close()
+
+    print(f"Compra inserida: {registro['ID_INTERNO']}")
+    
+
+def consultar_contratacao(cnpj,ano,sequencial):
+    """
+    Encontra um processo no banco de dados.
+    """
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            c.id_interno,
+            c.id,
+            c.numero_compra,
+            c.sequencial_compra,
+            c.cnpj,
+            c.valor_estimado,
+            c.valor_homologado,
+            c.data_publicacao,
+            c.data_disputa,
+            c.modalidade,
+            c.modo_disputa,
+            c.situacao,
+            c.srp,
+            c.link_pncp,
+            c.link_portal,
+            o.orgao,
+            o.estado,
+            o.unidade,
+            o.esfera,
+            o.municipio
+        FROM contratacoes c
+        LEFT JOIN orgaos o
+            ON c.cnpj = o.cnpj
+        WHERE c.cnpj = ?
+            AND c.ano_compra = ?
+            AND c.sequencial_compra = ?
+    """, (
+        cnpj,
+        ano,
+        sequencial
+    ))
+
+    resultado = cursor.fetchone()
+
+    conn.close()
+
+    return resultado
 
 
 
