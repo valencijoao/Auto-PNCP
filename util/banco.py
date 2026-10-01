@@ -10,6 +10,13 @@ PASTA_BANCO = DADOS / "banco"
 
 ARQUIVO_BANCO = PASTA_BANCO / "compras.db"
 
+def definir_banco(caminho):
+    """Define o arquivo SQLite utilizado pelas conexões seguintes."""
+    global ARQUIVO_BANCO, PASTA_BANCO
+    ARQUIVO_BANCO = Path(caminho).expanduser().resolve()
+    PASTA_BANCO = ARQUIVO_BANCO.parent
+    return ARQUIVO_BANCO
+
 def conectar():
     """
     Conectar ao banco de dados SQLite.
@@ -365,10 +372,10 @@ def obter_pasta_contratacao(id_interno):
         SELECT
             cnpj,
             ano_compra,
-            sequencial_compras,
+            sequencial_compra
         FROM contratacoes
         WHERE id_interno = ?
-    """,(id_interno))
+    """, (id_interno,))
 
     resultado = cursor.fetchone()
 
@@ -429,7 +436,43 @@ def consultar_contratacao(cnpj,ano,sequencial):
 
     conn.close()
 
-    return dict(resultado)
+    return dict(resultado) if resultado is not None else None
+
+def consultar_clientes_contratacao(id_interno):
+    """Retorna os nomes dos clientes associados a uma contratação."""
+    conn = conectar()
+    cursor = conn.cursor()
+    cursor.execute("SELECT cliente FROM contratacao_cliente WHERE id_interno = ? ORDER BY cliente", (id_interno,))
+    clientes = [row[0] for row in cursor.fetchall()]
+    conn.close()
+    return clientes
+
+def consultar_contratacoes_filtro(filtro, valor):
+    """Consulta contratações por estado, órgão, cliente ou situação."""
+    campos = {
+        "estado": "o.estado",
+        "orgao": "o.orgao",
+        "cliente": "cc.cliente",
+        "situacao": "c.situacao",
+    }
+    if filtro not in campos:
+        raise ValueError("Filtro não suportado.")
+    conn = conectar()
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(f"""
+        SELECT DISTINCT c.id_interno, c.id, c.numero_compra, c.ano_compra,
+            c.sequencial_compra, c.cnpj, o.orgao, o.estado, c.situacao,
+            c.valor_estimado, c.link_pncp
+        FROM contratacoes c
+        LEFT JOIN orgaos o ON c.cnpj = o.cnpj
+        LEFT JOIN contratacao_cliente cc ON c.id_interno = cc.id_interno
+        WHERE {campos[filtro]} LIKE ?
+        ORDER BY c.ano_compra DESC, c.sequencial_compra
+    """, (f"%{valor}%",))
+    resultados = [dict(row) for row in cursor.fetchall()]
+    conn.close()
+    return resultados
 
 def adicionar_cliente_contratacao(id_interno, cliente):
     """

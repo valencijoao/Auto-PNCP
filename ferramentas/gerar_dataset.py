@@ -399,7 +399,7 @@ def salvar_dataset(df):
     df.to_csv(
         caminho_csv,
         index=False,
-        encoding="utf-8-sig"
+
 
     )
     

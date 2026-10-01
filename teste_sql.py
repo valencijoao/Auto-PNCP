@@ -1,41 +1,28 @@
 from ferramentas.gerar_orgaos import gerar_orgaos 
 from ferramentas.gerar_dataset import gerar_dataset
-from util.banco import inserir_orgaos, inserir_contratacoes, inserir_vinculos_clientes, inserir_clientes
+from util.banco import inserir_orgaos, inserir_contratacoes, inserir_vinculos_clientes, inserir_clientes, consultar_contratacao
 import sqlite3
 
 df = gerar_dataset()
 
-inserir_contratacoes(df)
-inserir_clientes(df)
-inserir_vinculos_clientes(df)
+from util.banco import consultar_contratacao
 
-conn = sqlite3.connect("dados/banco/compras.db")
+from ferramentas.gerar_dataset import carregar_compra
+from util.banco import inserir_compra, adicionar_cliente_contratacao, remover_cliente_contratacao
+from config.caminhos import COMPRAS
 
-cursor = conn.cursor()
+import sqlite3
 
-cursor.execute("""
-    SELECT
-        o.estado,
-        COUNT(c.id_interno)
-    FROM contratacoes c
-    JOIN orgaos o
-        ON c.cnpj = o.cnpj
-    GROUP BY o.estado
-    ORDER BY COUNT(c.id_interno) DESC
-""")
+from util.banco import (
+    inserir_orgaos,
+    inserir_contratacoes,
+    inserir_vinculos_clientes,
+    inserir_clientes,
+    consultar_contratacao
+)
 
-for estado, quantidade in cursor.fetchall():
-    print(estado, quantidade)
 
-cursor.execute("""
-    SELECT
-        COUNT(*) AS total_linhas,
-        COUNT(DISTINCT c.id_interno) AS contratacoes_unicas
-    FROM contratacoes c
-    JOIN orgaos o
-        ON c.cnpj = o.cnpj
-""")
+pasta = COMPRAS / "45787660000100-2026-268"
 
-print(cursor.fetchone())
-
-conn.close()
+resultado = consultar_contratacao("18315218000109",2026,67)
+print(resultado)

@@ -1,6 +1,9 @@
 .venv/
 
+teste_sql.py
 clientes/
+enviadas/
+datasets/
 compras/
 traduzidos
 escopo.txt
@@ -12,6 +15,8 @@ dados/portais_tratados.json
 dados/portais.json
 dados/dominios.json
 df_enviadas
+
+
 
 
 __pycache__/

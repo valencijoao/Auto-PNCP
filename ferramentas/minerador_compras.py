@@ -1,11 +1,13 @@
 from ferramentas.cliente_api import executar_endpoint
 from util.cache import salvar_compra
-from ferramentas.gerar_dataset import gerar_dataset, salvar_dataset, gerar_dataset_cliente, salvar_dataset_cliente, filtrar_novas_contratacoes, gerar_id_interno
+from ferramentas.gerar_dataset import gerar_dataset, salvar_dataset, gerar_dataset_cliente, salvar_dataset_cliente, filtrar_novas_contratacoes, gerar_id_interno, carregar_compra
 import json
 from pathlib import Path
 from util.portais import identificar_portal
 from config.caminhos import COMPRAS
 from util.portais import obter_origem
+from util.banco import inserir_compra
+
 
 PASTA_COMPRAS = COMPRAS
 
@@ -300,6 +302,12 @@ def baixar_compra_completa(
         origem
     )
 
+    compra = carregar_compra(
+        pasta
+    )
+    
+    inserir_compra(compra)
+
     novas_contratacoes.append(
         id_interno
     )
@@ -361,9 +369,7 @@ if __name__ == "__main__":
 
     contratacoes = [
 
-
-
-        '46522983000127/2026/355'
+        '89848949000150/2026/1174', '18338855000192/2026/37', '85361863000147/2026/143', '17161837000115/2026/9', '75442756000190/2026/113', '76285345000109/2026/255', '29138294000102/2026/811', '07693989000105/2026/62', '18244087000108/2026/15', '18025981000197/2026/102', '95640520000175/2026/47', '87849923000109/2026/336', 
 
     ]
 
