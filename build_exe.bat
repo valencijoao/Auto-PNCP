@@ -9,4 +9,4 @@ if errorlevel 1 (
     exit /b 1
 )
 
-echo Executavel criado em: %~dp0AutoPainel.exe
+echo Executavel criado em: %~dp0AutoPainel_atualizado.exe

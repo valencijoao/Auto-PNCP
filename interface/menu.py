@@ -1,6 +1,7 @@
 from pathlib import Path
 import shutil
 import sys
+from datetime import datetime
 
 from config.caminhos import DADOS
 from util import banco
@@ -20,6 +21,7 @@ def _mostrar_contratacao(dados):
         ("Sequencial", "sequencial_compra"), ("CNPJ", "cnpj"),
         ("Órgão", "orgao"), ("Estado", "estado"),
         ("Município", "municipio"), ("Valor estimado", "valor_estimado"),
+        ("Data de envio", "data_envio"),
         ("Situação", "situacao"), ("Link PNCP", "link_pncp"),
     ]
     for titulo, chave in campos:
@@ -134,9 +136,20 @@ def _gerar_excel():
     print(f"Excel gerado com {len(df)} registro(s): {caminho.resolve()}")
 
 
+def _criar_backup_banco():
+    origem = banco.ARQUIVO_BANCO
+    if not origem.is_file():
+        raise FileNotFoundError("O banco selecionado ainda não existe.")
+    pasta = DADOS / "backups"
+    pasta.mkdir(parents=True, exist_ok=True)
+    destino = pasta / f"{origem.stem}_backup_{datetime.now():%Y%m%d_%H%M%S_%f}.db"
+    shutil.copy2(origem, destino)
+    return destino
+
+
 def _configuracoes():
     while True:
-        print("\nCONFIGURAÇÕES\n1 - Criar novo banco padrão\n2 - Utilizar banco existente\n3 - Fazer backup do banco\n0 - Voltar")
+        print("\nCONFIGURAÇÕES\n1 - Criar novo banco padrão\n2 - Utilizar banco existente\n3 - Fazer backup do banco\n4 - Mesclar backup no banco selecionado\n0 - Voltar")
         opcao = input("Escolha: ").strip()
         if opcao == "0":
             return
@@ -150,18 +163,31 @@ def _configuracoes():
                 print("Arquivo .db não encontrado.")
                 continue
             banco.definir_banco(caminho)
+            banco.criar_banco()
             print(f"Banco selecionado: {banco.ARQUIVO_BANCO}")
             return
         if opcao == "3":
-            origem = banco.ARQUIVO_BANCO
-            if not origem.is_file():
-                print("O banco ainda não existe.")
-                continue
-            pasta = DADOS / "backups"
-            pasta.mkdir(parents=True, exist_ok=True)
-            destino = pasta / f"compras_backup_{__import__('datetime').datetime.now():%Y%m%d_%H%M%S}.db"
-            shutil.copy2(origem, destino)
+            destino = _criar_backup_banco()
             print(f"Backup salvo em: {destino}")
+            continue
+        if opcao == "4":
+            print(f"Banco de destino: {banco.ARQUIVO_BANCO}")
+            caminho = Path(input("Caminho do backup .db: ").strip().strip('"')).expanduser().resolve()
+            if not caminho.is_file() or caminho.suffix.lower() != ".db":
+                print("Arquivo de backup .db não encontrado.")
+                continue
+            if caminho == banco.ARQUIVO_BANCO.resolve():
+                print("Selecione um arquivo diferente do banco de destino.")
+                continue
+            print("Os registros ausentes serão adicionados. Em caso de conflito, os dados do banco de destino serão mantidos.")
+            if input("Fazer uma cópia de segurança do destino e continuar? (s/n): ").strip().lower() != "s":
+                continue
+            backup_destino = _criar_backup_banco()
+            adicionados = banco.mesclar_banco(caminho)
+            print(f"Cópia de segurança do destino: {backup_destino}")
+            print("Registros adicionados:")
+            for tabela, quantidade in adicionados.items():
+                print(f"- {tabela}: {quantidade}")
             continue
         print("Opção inválida.")
 

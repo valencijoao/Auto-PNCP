@@ -1,6 +1,6 @@
 from ferramentas.cliente_api import executar_endpoint
 from util.cache import salvar_compra
-from ferramentas.gerar_dataset import gerar_dataset, salvar_dataset, gerar_dataset_cliente, salvar_dataset_cliente, filtrar_novas_contratacoes, gerar_id_interno, carregar_compra
+from ferramentas.gerar_dataset import gerar_dataset, salvar_dataset, gerar_dataset_cliente, salvar_dataset_cliente, gerar_id_interno, carregar_compra
 import json
 from pathlib import Path
 from util.portais import identificar_portal
@@ -201,6 +201,13 @@ def baixar_compra_completa(
             f"Item já associado: {item}"
         )
 
+        resposta = input(
+            "Esta contratação já foi baixada. Deseja baixá-la novamente? (s/n): "
+        ).strip().lower()
+        if resposta not in {"s", "sim"}:
+            print("Download cancelado para esta contratação.")
+            return
+
     print(
         "\n=== Baixando contratação ==="
     )
@@ -364,27 +371,40 @@ def baixar_compras(contratacoes, novas_contratacoes):
         )
 
 def atualizar_datasets_mineracao(novas_contratacoes):
-    """Atualiza o dataset interno e os arquivos Excel dos clientes minerados."""
+    """Atualiza o dataset interno e gera/atualiza um Excel para cada cliente."""
     print("\n=== Atualizando dataset interno ===")
+    print(f"Contratações baixadas nesta execução: {len(novas_contratacoes)}")
     df = gerar_dataset()
     salvar_dataset(df)
 
-    print("\n=== Gerando datasets dos clientes das novas contratações ===")
-    df_novas = filtrar_novas_contratacoes(df, novas_contratacoes)
-
-    if df_novas.empty:
-        print("Nenhuma nova contratação com clientes para gerar arquivos.")
+    if df.empty or "CLIENTE" not in df.columns:
+        print("Não há contratações com clientes para gerar planilhas.")
         return
 
-    clientes = df_novas["CLIENTE"].dropna().unique()
+    print("\n=== Gerando planilhas individuais dos clientes ===")
+    df_clientes = df.loc[df["CLIENTE"].notna()].copy()
+    df_clientes["CLIENTE"] = df_clientes["CLIENTE"].astype(str).str.strip()
+    df_clientes = df_clientes[df_clientes["CLIENTE"] != ""]
+    clientes = df_clientes["CLIENTE"].unique()
     if not len(clientes):
-        print("As novas contratações não possuem clientes associados.")
+        print("Nenhuma contratação possui cliente associado.")
         return
 
     print(f"Clientes encontrados: {', '.join(clientes)}")
+    gerados = 0
+    falhas = []
     for cliente in clientes:
-        df_cliente = gerar_dataset_cliente(df_novas, cliente)
-        salvar_dataset_cliente(df_cliente, cliente)
+        try:
+            df_cliente = gerar_dataset_cliente(df_clientes, cliente)
+            salvar_dataset_cliente(df_cliente, cliente)
+            gerados += 1
+        except Exception as erro:
+            falhas.append(cliente)
+            print(f"Não foi possível gerar a planilha de '{cliente}': {erro}")
+
+    print(f"Planilhas geradas/atualizadas: {gerados} de {len(clientes)}.")
+    if falhas:
+        print(f"Clientes com falha: {', '.join(falhas)}")
 
 if __name__ == "__main__":
 

@@ -1,5 +1,6 @@
 import sqlite3
 from pathlib import Path
+from datetime import datetime
 from config.caminhos import DADOS
 import json
 from config.caminhos import COMPRAS
@@ -69,6 +70,7 @@ def criar_banco():
             valor_homologado REAL,
 
             data_publicacao TEXT,
+            data_envio TEXT,
             data_disputa TEXT,
 
             modalidade TEXT,
@@ -85,6 +87,18 @@ def criar_banco():
         
         )
 
+    """)
+
+    colunas_contratacoes = {
+        linha[1]
+        for linha in cursor.execute("PRAGMA table_info(contratacoes)")
+    }
+    if "data_envio" not in colunas_contratacoes:
+        cursor.execute("ALTER TABLE contratacoes ADD COLUMN data_envio TEXT")
+    cursor.execute("""
+        UPDATE contratacoes
+        SET data_envio = data_publicacao
+        WHERE data_envio IS NULL OR TRIM(data_envio) = ''
     """)
 
 
@@ -171,6 +185,7 @@ def inserir_contratacoes(df):
                 valor_estimado,
                 valor_homologado,
                 data_publicacao,
+                data_envio,
                 data_disputa,
                 modalidade,
                 modo_disputa,
@@ -179,7 +194,7 @@ def inserir_contratacoes(df):
                 link_pncp,
                 link_portal
             )
-            VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+            VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         """, (
             row["ID_INTERNO"],
             row["ID"],
@@ -190,6 +205,7 @@ def inserir_contratacoes(df):
             row["VALOR_ESTIMADO"],
             row["VALOR_HOMOLOGADO"],
             row["DATA_PUBLICACAO"],
+            datetime.now().isoformat(sep=" ", timespec="seconds"),
             row["DATA_DISPUTA"],
             row["MODALIDADE"],
             row["MODO_DISPUTA"],
@@ -306,6 +322,7 @@ def inserir_compra(compra):
             valor_estimado,
             valor_homologado,
             data_publicacao,
+            data_envio,
             data_disputa,
             modalidade,
             modo_disputa,
@@ -314,7 +331,7 @@ def inserir_compra(compra):
             link_pncp,
             link_portal
         )
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, (
         registro["ID_INTERNO"],
         registro["ID"],
@@ -325,6 +342,7 @@ def inserir_compra(compra):
         registro["VALOR_ESTIMADO"],
         registro["VALOR_HOMOLOGADO"],
         registro["DATA_PUBLICACAO"],
+        datetime.now().isoformat(sep=" ", timespec="seconds"),
         registro["DATA_DISPUTA"],
         registro["MODALIDADE"],
         registro["MODO_DISPUTA"],
@@ -408,6 +426,7 @@ def consultar_contratacao(cnpj,ano,sequencial):
             c.valor_estimado,
             c.valor_homologado,
             c.data_publicacao,
+            c.data_envio,
             c.data_disputa,
             c.modalidade,
             c.modo_disputa,
@@ -473,6 +492,74 @@ def consultar_contratacoes_filtro(filtro, valor):
     resultados = [dict(row) for row in cursor.fetchall()]
     conn.close()
     return resultados
+
+def mesclar_banco(caminho_backup):
+    """Mescla registros ausentes do backup no banco atualmente selecionado.
+
+    Em caso de conflito de chave primária, preserva o registro do banco de destino.
+    Retorna a quantidade de registros adicionados por tabela.
+    """
+    backup = Path(caminho_backup).expanduser().resolve()
+    destino = Path(ARQUIVO_BANCO).expanduser().resolve()
+    if not backup.is_file() or backup.suffix.lower() != ".db":
+        raise FileNotFoundError("O arquivo de backup .db não foi encontrado.")
+    if backup == destino:
+        raise ValueError("O backup selecionado é o próprio banco de destino.")
+
+    colunas = {
+        "orgaos": ("cnpj", "orgao", "estado", "unidade", "esfera", "municipio"),
+        "contratacoes": (
+            "id_interno", "id", "numero_compra", "ano_compra", "sequencial_compra",
+            "cnpj", "valor_estimado", "valor_homologado", "data_publicacao",
+            "data_envio", "data_disputa", "modalidade", "modo_disputa", "situacao", "srp",
+            "link_pncp", "link_portal",
+        ),
+        "clientes": ("cliente",),
+        "contratacao_cliente": ("id_interno", "cliente"),
+    }
+
+    conn = conectar()
+    try:
+        conn.execute("ATTACH DATABASE ? AS banco_backup", (str(backup),))
+        colunas_backup = {}
+        for tabela, esperadas in colunas.items():
+            encontradas = {
+                linha[1]
+                for linha in conn.execute(f"PRAGMA banco_backup.table_info({tabela})")
+            }
+            requeridas = set(esperadas)
+            if tabela == "contratacoes":
+                requeridas.discard("data_envio")
+            if not requeridas.issubset(encontradas):
+                raise ValueError(f"O arquivo selecionado não possui uma tabela AutoPainel válida: {tabela}.")
+            colunas_backup[tabela] = encontradas
+
+        conn.execute("PRAGMA foreign_keys = ON")
+        conn.execute("BEGIN IMMEDIATE")
+        adicionados = {}
+        for tabela, campos in colunas.items():
+            lista = ", ".join(campos)
+            fontes = []
+            for campo in campos:
+                if tabela == "contratacoes" and campo == "data_envio":
+                    if "data_envio" in colunas_backup[tabela]:
+                        fontes.append("COALESCE(NULLIF(data_envio, ''), data_publicacao)")
+                    else:
+                        fontes.append("data_publicacao")
+                else:
+                    fontes.append(campo)
+            cursor = conn.execute(
+                f"INSERT OR IGNORE INTO main.{tabela} ({lista}) "
+                f"SELECT {', '.join(fontes)} FROM banco_backup.{tabela}"
+            )
+            adicionados[tabela] = cursor.rowcount
+        conn.commit()
+        return adicionados
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
 
 def adicionar_cliente_contratacao(id_interno, cliente):
     """
