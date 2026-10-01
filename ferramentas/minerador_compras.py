@@ -1,6 +1,6 @@
 from ferramentas.cliente_api import executar_endpoint
 from util.cache import salvar_compra
-from ferramentas.gerar_dataset import gerar_dataset, salvar_dataset, gerar_dataset_cliente, salvar_dataset_cliente, gerar_id_interno, carregar_compra, filtrar_novas_contratacoes
+from ferramentas.gerar_dataset import gerar_dataset, gerar_dataset_cliente, salvar_dataset_cliente, gerar_id_interno, carregar_compra, filtrar_novas_contratacoes
 import json
 from pathlib import Path
 from util.portais import identificar_portal
@@ -376,10 +376,9 @@ def atualizar_datasets_mineracao(novas_contratacoes):
         print("Nenhuma contratação foi baixada; os datasets não foram alterados.")
         return
 
-    print("\n=== Atualizando dataset interno ===")
+    print("\n=== Preparando dados das novas contratações ===")
     print(f"Contratações baixadas nesta execução: {len(novas_contratacoes)}")
     df = gerar_dataset()
-    salvar_dataset(df)
 
     df_novas = filtrar_novas_contratacoes(df, novas_contratacoes)
     if df_novas.empty or "CLIENTE" not in df_novas.columns:
