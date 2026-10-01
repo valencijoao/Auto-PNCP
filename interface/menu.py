@@ -1,4 +1,3 @@
-"""Menu de terminal do AutoPainel; mantém a apresentação separada do negócio."""
 from pathlib import Path
 import shutil
 import sys
@@ -25,6 +24,8 @@ def _mostrar_contratacao(dados):
     ]
     for titulo, chave in campos:
         print(f"{titulo}: {dados.get(chave) or '—'}")
+    clientes = banco.consultar_clientes_contratacao(dados["id_interno"])
+    print(f"Clientes associados: {', '.join(clientes) if clientes else 'Nenhum'}")
     return True
 
 
