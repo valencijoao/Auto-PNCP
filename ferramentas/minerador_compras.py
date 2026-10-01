@@ -363,6 +363,29 @@ def baixar_compras(contratacoes, novas_contratacoes):
             novas_contratacoes
         )
 
+def atualizar_datasets_mineracao(novas_contratacoes):
+    """Atualiza o dataset interno e os arquivos Excel dos clientes minerados."""
+    print("\n=== Atualizando dataset interno ===")
+    df = gerar_dataset()
+    salvar_dataset(df)
+
+    print("\n=== Gerando datasets dos clientes das novas contratações ===")
+    df_novas = filtrar_novas_contratacoes(df, novas_contratacoes)
+
+    if df_novas.empty:
+        print("Nenhuma nova contratação com clientes para gerar arquivos.")
+        return
+
+    clientes = df_novas["CLIENTE"].dropna().unique()
+    if not len(clientes):
+        print("As novas contratações não possuem clientes associados.")
+        return
+
+    print(f"Clientes encontrados: {', '.join(clientes)}")
+    for cliente in clientes:
+        df_cliente = gerar_dataset_cliente(df_novas, cliente)
+        salvar_dataset_cliente(df_cliente, cliente)
+
 if __name__ == "__main__":
 
     novas_contratacoes = []
@@ -379,55 +402,4 @@ if __name__ == "__main__":
     )
 
     # python -m ferramentas.minerador_compras
-
-
-
-    print(
-        "\n=== Atualizando dataset interno ===")
-
-    df = gerar_dataset(
-
-    )
-
-    salvar_dataset(
-        df)
-
-    print(
-        "\n=== Filtrando novas contratações ===")
-
-    df_novas = filtrar_novas_contratacoes(
-        df,
-        novas_contratacoes
-    )
-
-    print(
-        f"Novas contratações: {len(novas_contratacoes)}"
-    )
-
-    if not df_novas.empty:
-
-        clientes = df_novas[
-            "CLIENTE"
-        ].dropna().unique()
-
-        print(
-            f"Clientes encontrados: {', '.join(clientes)}"
-        )
-
-        for cliente in clientes:
-
-            df_cliente = gerar_dataset_cliente(
-                df_novas,
-                cliente
-            )
-
-            salvar_dataset_cliente(
-                df_cliente,
-                cliente,
-            )
-
-    else:
-
-        print(
-            "Nenhuma nova contratação para gerar arquivos de clientes."
-        )
+    atualizar_datasets_mineracao(novas_contratacoes)

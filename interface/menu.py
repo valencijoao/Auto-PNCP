@@ -167,7 +167,10 @@ def _configuracoes():
 
 
 def _minerar():
-    from ferramentas.minerador_compras import baixar_compras
+    from ferramentas.minerador_compras import (
+        atualizar_datasets_mineracao,
+        baixar_compras,
+    )
     print("Informe uma ou mais contratações no formato CNPJ/ANO/SEQUENCIAL, separadas por vírgula.")
     entrada = input("Contratações: ").strip()
     contratacoes = [parte.strip() for parte in entrada.split(",") if parte.strip()]
@@ -176,6 +179,7 @@ def _minerar():
         return
     baixadas = []
     baixar_compras(contratacoes, baixadas)
+    atualizar_datasets_mineracao(baixadas)
     print(f"Processamento concluído. Contratações baixadas: {len(baixadas)}")
 
 
