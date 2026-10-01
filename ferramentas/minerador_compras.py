@@ -1,6 +1,6 @@
 from ferramentas.cliente_api import executar_endpoint
 from util.cache import salvar_compra
-from ferramentas.gerar_dataset import gerar_dataset, salvar_dataset, gerar_dataset_cliente, salvar_dataset_cliente, gerar_id_interno, carregar_compra
+from ferramentas.gerar_dataset import gerar_dataset, salvar_dataset, gerar_dataset_cliente, salvar_dataset_cliente, gerar_id_interno, carregar_compra, filtrar_novas_contratacoes
 import json
 from pathlib import Path
 from util.portais import identificar_portal
@@ -371,23 +371,28 @@ def baixar_compras(contratacoes, novas_contratacoes):
         )
 
 def atualizar_datasets_mineracao(novas_contratacoes):
-    """Atualiza o dataset interno e gera/atualiza um Excel para cada cliente."""
+    """Atualiza os datasets somente para contratações baixadas nesta execução."""
+    if not novas_contratacoes:
+        print("Nenhuma contratação foi baixada; os datasets não foram alterados.")
+        return
+
     print("\n=== Atualizando dataset interno ===")
     print(f"Contratações baixadas nesta execução: {len(novas_contratacoes)}")
     df = gerar_dataset()
     salvar_dataset(df)
 
-    if df.empty or "CLIENTE" not in df.columns:
-        print("Não há contratações com clientes para gerar planilhas.")
+    df_novas = filtrar_novas_contratacoes(df, novas_contratacoes)
+    if df_novas.empty or "CLIENTE" not in df_novas.columns:
+        print("Não foram encontrados registros para as novas contratações no dataset.")
         return
 
-    print("\n=== Gerando planilhas individuais dos clientes ===")
-    df_clientes = df.loc[df["CLIENTE"].notna()].copy()
+    print("\n=== Gerando planilhas dos clientes das novas contratações ===")
+    df_clientes = df_novas.loc[df_novas["CLIENTE"].notna()].copy()
     df_clientes["CLIENTE"] = df_clientes["CLIENTE"].astype(str).str.strip()
     df_clientes = df_clientes[df_clientes["CLIENTE"] != ""]
     clientes = df_clientes["CLIENTE"].unique()
     if not len(clientes):
-        print("Nenhuma contratação possui cliente associado.")
+        print("As novas contratações não possuem cliente associado.")
         return
 
     print(f"Clientes encontrados: {', '.join(clientes)}")
