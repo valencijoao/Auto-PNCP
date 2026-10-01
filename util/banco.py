@@ -1,8 +1,12 @@
 import sqlite3
 from pathlib import Path
 from config.caminhos import DADOS
+import json
+from config.caminhos import COMPRAS
 
 PASTA_BANCO = DADOS / "banco"
+
+
 
 ARQUIVO_BANCO = PASTA_BANCO / "compras.db"
 
@@ -347,7 +351,35 @@ def inserir_compra(compra):
     conn.close()
 
     print(f"Compra inserida: {registro['ID_INTERNO']}")
-    
+
+
+def obter_pasta_contratacao(id_interno):
+    """
+    Localiza a pasta de uma contratação a partir do ID_INTERNO.
+    """
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            cnpj,
+            ano_compra,
+            sequencial_compras,
+        FROM contratacoes
+        WHERE id_interno = ?
+    """,(id_interno))
+
+    resultado = cursor.fetchone()
+
+    conn.close()
+
+    if resultado is None:
+        return None
+
+    cnpj, ano, sequencial = resultado
+
+    return COMPRAS / f"{cnpj}-{ano}-{sequencial}"
 
 def consultar_contratacao(cnpj,ano,sequencial):
     """
@@ -355,6 +387,7 @@ def consultar_contratacao(cnpj,ano,sequencial):
     """
 
     conn = conectar()
+    conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
 
     cursor.execute("""
@@ -363,6 +396,7 @@ def consultar_contratacao(cnpj,ano,sequencial):
             c.id,
             c.numero_compra,
             c.sequencial_compra,
+            c.ano_compra,
             c.cnpj,
             c.valor_estimado,
             c.valor_homologado,
@@ -395,10 +429,167 @@ def consultar_contratacao(cnpj,ano,sequencial):
 
     conn.close()
 
-    return resultado
+    return dict(resultado)
+
+def adicionar_cliente_contratacao(id_interno, cliente):
+    """
+    Adiciona um cliente a uma contratação
+    no banco de dados e no clientes.json.
+    """
+
+    pasta = obter_pasta_contratacao(id_interno)
+
+    if pasta is None:
+        print(
+            f"Contratação '{id_interno}' não encontrada"
+        )
+        return
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        INSERT OR IGNORE INTO clientes (
+            cliente
+        )
+        VALUES (?)
+    """, (cliente,))
+
+    cursor.execute("""
+        INSERT OR IGNORE INTO contratacao_cliente (
+            id_interno,
+            cliente
+        )
+        VALUES (?, ?)
+    """, (
+        id_interno,
+        cliente
+    ))
+
+    conn.commit()
+
+    cursor.execute("""
+        SELECT cliente
+        FROM contratacao_cliente
+        WHERE id_interno = ?
+    """, (id_interno,))
+
+    clientes = [
+        row[0]
+        for row in cursor.fetchall()
+    ]
+
+    conn.close()
+
+    atualizar_clientes_json(
+        pasta,
+        clientes
+    )
+
+    print(
+        f"Cliente '{cliente}' associado à contratação "
+        f"{id_interno}."
+    )
+
+
+def remover_cliente_contratacao(id_interno, cliente):
+    """
+    Remove um cliente de uma contratação
+    no banco de dados e no clientes.json.
+    """
+
+    pasta = obter_pasta_contratacao(id_interno)
+
+    if pasta is None:
+        print(
+            f"Contratação: '{id_interno}' não encontrada."
+        )
+        return
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        DELETE FROM contratacao_cliente
+        WHERE id_interno = ?
+          AND cliente = ?
+    """, (
+        id_interno,
+        cliente
+    ))
+
+    removido = cursor.rowcount
+
+    if removido:
+        cursor.execute("""
+            SELECT cliente
+            FROM contratacao_cliente
+            WHERE id_interno = ?
+        """, (id_interno,))
+
+        clientes = [
+            row[0]
+            for row in cursor.fetchall()
+        ]
+
+    conn.commit()
+    conn.close()
+
+    if removido:
+        atualizar_clientes_json(
+            pasta,
+            clientes
+        )
+
+        print(
+            f"Cliente '{cliente}' removido da contratação "
+            f"{id_interno}."
+        )
+
+    else:
+        print(
+            f"Cliente '{cliente}' não está associado à contratação "
+            f"{id_interno}."
+        )
+
+
+
+
+def atualizar_clientes_json(pasta, clientes):
+    """
+    Atualiza a lista de clientes no clientes.json
+    de uma contratação.
+
+    Mantém os demais dados do arquivo, como o campo 'item'.
+    """
+
+    arquivo = pasta / "clientes.json"
+
+    if arquivo.exists():
+        with open(arquivo, "r", encoding="utf-8") as f:
+            dados = json.load(f)
+    else:
+        dados = {}
+
+    if isinstance(dados, list):
+        dados = {
+            "clientes": dados
+        }
+
+    dados["clientes"] = clientes
+
+    with open(arquivo, "w", encoding="utf-8") as f:
+        json.dump(
+            dados,
+            f,
+            ensure_ascii=False,
+            indent=4
+        )
 
 
 
 if __name__ =="__main__":
 
     criar_banco()
+ 
+ 
