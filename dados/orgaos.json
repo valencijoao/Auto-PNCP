@@ -12,10 +12,10 @@
         "CNPJ": "00348003000110",
         "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE PESQUISA AGROPECUARIA",
         "ESFERA": "F",
-        "UF": "Paraná",
-        "MUNICIPIO": "Colombo",
-        "UNIDADE": "EMBRAPA FLORESTAS/COLOMBO/PR",
-        "QTD_CONTRATACOES": 4
+        "UF": "Alagoas",
+        "MUNICIPIO": "Maceió",
+        "UNIDADE": "EMBRAPA ALIMENTOS E TERRITORIOS/MACEIO/AL",
+        "QTD_CONTRATACOES": 7
     },
     "00394429000100": {
         "CNPJ": "00394429000100",
@@ -24,7 +24,7 @@
         "UF": "Rio de Janeiro",
         "MUNICIPIO": "Rio de Janeiro",
         "UNIDADE": "GRUPAMENTO DE APOIO DOS AFONSOS",
-        "QTD_CONTRATACOES": 4
+        "QTD_CONTRATACOES": 6
     },
     "00394452000103": {
         "CNPJ": "00394452000103",
@@ -33,7 +33,16 @@
         "UF": "Espírito Santo",
         "MUNICIPIO": "Vila Velha",
         "UNIDADE": "38  BATALHAO DE INFANTARIA/MEX/ES",
-        "QTD_CONTRATACOES": 7
+        "QTD_CONTRATACOES": 13
+    },
+    "00394460000141": {
+        "CNPJ": "00394460000141",
+        "RAZAO_SOCIAL": "MINISTERIO DA FAZENDA",
+        "ESFERA": "F",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Paulo",
+        "UNIDADE": "SUP.REGIONAL RECEITA FEDERAL DA 8A.RF/SP",
+        "QTD_CONTRATACOES": 1
     },
     "00394494000136": {
         "CNPJ": "00394494000136",
@@ -44,6 +53,15 @@
         "UNIDADE": "DEPEN - DIRETORIA EXECUTIVA",
         "QTD_CONTRATACOES": 1
     },
+    "00394494011928": {
+        "CNPJ": "00394494011928",
+        "RAZAO_SOCIAL": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+        "ESFERA": "F",
+        "UF": "Distrito Federal",
+        "MUNICIPIO": "Brasília",
+        "UNIDADE": "MJ-DPRF-DEPART.DE POL.RODOVIARIA FEDERAL/DF",
+        "QTD_CONTRATACOES": 1
+    },
     "00394502000144": {
         "CNPJ": "00394502000144",
         "RAZAO_SOCIAL": "COMANDO DA MARINHA",
@@ -51,7 +69,7 @@
         "UF": "Rio de Janeiro",
         "MUNICIPIO": "São Pedro da Aldeia",
         "UNIDADE": "BASE AEREA NAVAL DE SAO PEDRO DA ALDEIA/RJ",
-        "QTD_CONTRATACOES": 3
+        "QTD_CONTRATACOES": 5
     },
     "00394544000185": {
         "CNPJ": "00394544000185",
@@ -69,7 +87,7 @@
         "UF": "Bahia",
         "MUNICIPIO": "Bom Jesus da Lapa",
         "UNIDADE": "CIA DE DESENV. DO VALE DO SAO FRANCISCO-BA",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 3
     },
     "00402552000126": {
         "CNPJ": "00402552000126",
@@ -89,6 +107,15 @@
         "UNIDADE": "INDUSTRIA DE MATERIAL BELICO DO BRASIL/FI",
         "QTD_CONTRATACOES": 1
     },
+    "00476612000155": {
+        "CNPJ": "00476612000155",
+        "RAZAO_SOCIAL": "CONSORCIO PUBLICO INTERMUNICIPAL DE SAUDE DO NORTE PIONEIRO",
+        "ESFERA": "N",
+        "UF": "Paraná",
+        "MUNICIPIO": "Jacarezinho",
+        "UNIDADE": "Unidade administrativa",
+        "QTD_CONTRATACOES": 1
+    },
     "00488478000102": {
         "CNPJ": "00488478000102",
         "RAZAO_SOCIAL": "SUPERIOR TRIBUNAL DE JUSTICA",
@@ -96,16 +123,25 @@
         "UF": "Distrito Federal",
         "MUNICIPIO": "Brasília",
         "UNIDADE": "STJ _ SUPERIOR TRIBUNAL DE JUSTICA/DF",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "00508903000188": {
         "CNPJ": "00508903000188",
         "RAZAO_SOCIAL": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
         "ESFERA": "F",
-        "UF": "Mato Grosso do Sul",
-        "MUNICIPIO": "Campo Grande",
-        "UNIDADE": "JUSTICA FEDERAL DE 1A. INSTANCIA/MS",
-        "QTD_CONTRATACOES": 3
+        "UF": "Espírito Santo",
+        "MUNICIPIO": "Vitória",
+        "UNIDADE": "JUSTICA FEDERAL DE 1A. INSTANCIA - ES",
+        "QTD_CONTRATACOES": 5
+    },
+    "00509018000113": {
+        "CNPJ": "00509018000113",
+        "RAZAO_SOCIAL": "TRIBUNAL SUPERIOR ELEITORAL",
+        "ESFERA": "F",
+        "UF": "Distrito Federal",
+        "MUNICIPIO": "Brasília",
+        "UNIDADE": "TSE _ TRIBUNAL SUPERIOR ELEITORAL/SEC.ADM/DF",
+        "QTD_CONTRATACOES": 2
     },
     "00509968000148": {
         "CNPJ": "00509968000148",
@@ -143,6 +179,42 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE MOZARLÂNDIA - GO",
         "QTD_CONTRATACOES": 1
     },
+    "01254422000156": {
+        "CNPJ": "01254422000156",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO FRANCISCO DO GUAPORE",
+        "ESFERA": "M",
+        "UF": "Rondônia",
+        "MUNICIPIO": "São Francisco do Guaporé",
+        "UNIDADE": "MUNICÍPIO DE SÃO FRANCISCO DO GUAPORÉ/RO",
+        "QTD_CONTRATACOES": 1
+    },
+    "01299692000183": {
+        "CNPJ": "01299692000183",
+        "RAZAO_SOCIAL": "MUNICIPIO DE VIANOPOLIS",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Vianópolis",
+        "UNIDADE": "MUNICIPIO DE VIANÓPOLIS/GO",
+        "QTD_CONTRATACOES": 1
+    },
+    "01321850000154": {
+        "CNPJ": "01321850000154",
+        "RAZAO_SOCIAL": "MUNICIPIO DE APIACAS",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Apiacás",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE APIACÁS - MT",
+        "QTD_CONTRATACOES": 1
+    },
+    "01409580000138": {
+        "CNPJ": "01409580000138",
+        "RAZAO_SOCIAL": "ESTADO DE GOIAS",
+        "ESFERA": "E",
+        "UF": "Goiás",
+        "MUNICIPIO": "Goiânia",
+        "UNIDADE": "SECRETARIA DE ESTADO DA SAUDE/GO",
+        "QTD_CONTRATACOES": 1
+    },
     "01450928000130": {
         "CNPJ": "01450928000130",
         "RAZAO_SOCIAL": "FUNDACAO PRO-ESPORTE DE SANTOS",
@@ -170,6 +242,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE CAPÃO ALTO - SC",
         "QTD_CONTRATACOES": 1
     },
+    "01606606000138": {
+        "CNPJ": "01606606000138",
+        "RAZAO_SOCIAL": "FUNDACAO DE APOIO A PESQ. CIENTIF. TECN. DA UFRRJ",
+        "ESFERA": "N",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Rio de Janeiro",
+        "UNIDADE": "FUNDAÇAO A.A PESQ.CIEN.E TEC.DA UFRRJ",
+        "QTD_CONTRATACOES": 1
+    },
     "01606852000190": {
         "CNPJ": "01606852000190",
         "RAZAO_SOCIAL": "MUNICIPIO DE BOCAINA DO SUL",
@@ -188,6 +269,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE GOIOXIM - PR",
         "QTD_CONTRATACOES": 1
     },
+    "01609408000128": {
+        "CNPJ": "01609408000128",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MARATAIZES",
+        "ESFERA": "M",
+        "UF": "Espírito Santo",
+        "MUNICIPIO": "Marataízes",
+        "UNIDADE": "Prefeitura Municipal de Marataízes",
+        "QTD_CONTRATACOES": 1
+    },
     "01609942000134": {
         "CNPJ": "01609942000134",
         "RAZAO_SOCIAL": "MUNICIPIO DE URUANA DE MINAS",
@@ -204,6 +294,15 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Taquaral",
         "UNIDADE": "MSP-PREFEITURA MUNICIPAL DE TAQUARAL",
+        "QTD_CONTRATACOES": 1
+    },
+    "01611137000145": {
+        "CNPJ": "01611137000145",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GOIANA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Goianá",
+        "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
     "01611213000112": {
@@ -242,6 +341,15 @@
         "UNIDADE": "MUNICÍPIO DE SARZEDO/MG",
         "QTD_CONTRATACOES": 1
     },
+    "01612516000150": {
+        "CNPJ": "01612516000150",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOAQUIM DE BICAS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "São Joaquim de Bicas",
+        "UNIDADE": "São Joaquim de Bicas",
+        "QTD_CONTRATACOES": 2
+    },
     "01612528000184": {
         "CNPJ": "01612528000184",
         "RAZAO_SOCIAL": "MUNICIPIO DE BANDEIRANTE",
@@ -258,6 +366,15 @@
         "UF": "Piauí",
         "MUNICIPIO": "Betânia do Piauí",
         "UNIDADE": "MUNICIPIO DE BETANIA DO PIAUI",
+        "QTD_CONTRATACOES": 2
+    },
+    "01612651000103": {
+        "CNPJ": "01612651000103",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GADO BRAVO",
+        "ESFERA": "M",
+        "UF": "Paraíba",
+        "MUNICIPIO": "Gado Bravo",
+        "UNIDADE": "MUNICÍPIO DE GADO BRAVO/PB",
         "QTD_CONTRATACOES": 1
     },
     "01612745000174": {
@@ -303,7 +420,16 @@
         "UF": "Mato Grosso",
         "MUNICIPIO": "Sapezal",
         "UNIDADE": "MUNICÍPIO DE SAPEZAL/MT",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
+    },
+    "01614521000100": {
+        "CNPJ": "01614521000100",
+        "RAZAO_SOCIAL": "MUNICIPIO DE NOVA UBIRATA",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Nova Ubiratã",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE NOVA UBIRATÃ-MT",
+        "QTD_CONTRATACOES": 1
     },
     "01615008000125": {
         "CNPJ": "01615008000125",
@@ -312,6 +438,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Frei Lagonegro",
         "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "01616520000196": {
+        "CNPJ": "01616520000196",
+        "RAZAO_SOCIAL": "MUNICIPIO DE AGUAS LINDAS DE GOIAS",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Águas Lindas de Goiás",
+        "UNIDADE": "SECRETARIA MUNICIPAL DE SAÚDE",
         "QTD_CONTRATACOES": 1
     },
     "01617441000108": {
@@ -341,6 +476,24 @@
         "UNIDADE": "SECRETARIA DE VIACAO, OBRAS E URBANISMO",
         "QTD_CONTRATACOES": 1
     },
+    "01786078000146": {
+        "CNPJ": "01786078000146",
+        "RAZAO_SOCIAL": "TOCANTINS PROCURADORIA GERAL DA JUSTICA",
+        "ESFERA": "E",
+        "UF": "Tocantins",
+        "MUNICIPIO": "Palmas",
+        "UNIDADE": "ETO-PROCURADORIA GERAL DA JUSTIÇA TOCANTINS",
+        "QTD_CONTRATACOES": 1
+    },
+    "01809474000141": {
+        "CNPJ": "01809474000141",
+        "RAZAO_SOCIAL": "MUNICIPIO DE NATIVIDADE",
+        "ESFERA": "M",
+        "UF": "Tocantins",
+        "MUNICIPIO": "Natividade",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE NATIVIDADE",
+        "QTD_CONTRATACOES": 1
+    },
     "01974088000105": {
         "CNPJ": "01974088000105",
         "RAZAO_SOCIAL": "MUNICIPIO DE PRIMAVERA DO LESTE",
@@ -359,6 +512,15 @@
         "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE JOVIANIA",
         "QTD_CONTRATACOES": 1
     },
+    "02075216000141": {
+        "CNPJ": "02075216000141",
+        "RAZAO_SOCIAL": "MUNICIPIO DE FORMOSO DO ARAGUAIA",
+        "ESFERA": "M",
+        "UF": "Tocantins",
+        "MUNICIPIO": "Formoso do Araguaia",
+        "UNIDADE": "Fundo Municipal de Saúde",
+        "QTD_CONTRATACOES": 1
+    },
     "02267698000131": {
         "CNPJ": "02267698000131",
         "RAZAO_SOCIAL": "MUNICIPIO DE MOSSAMEDES",
@@ -366,6 +528,15 @@
         "UF": "Goiás",
         "MUNICIPIO": "Mossâmedes",
         "UNIDADE": "FMS FUNDO MUNICIPAL DE SAUDE",
+        "QTD_CONTRATACOES": 2
+    },
+    "02319394000170": {
+        "CNPJ": "02319394000170",
+        "RAZAO_SOCIAL": "CISALP-CONSORCIO PUBLICO INTERMUNICIPAL DE SAUDE A MICRO-REGIAO DO ALTO PARANAIBA",
+        "ESFERA": "N",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Lagoa Formosa",
+        "UNIDADE": "CONSÓRCIO INTERMUNICIPAL DE SAÚDE DO ALTO PARANAÍBA - CISALP/MG",
         "QTD_CONTRATACOES": 1
     },
     "02489503000106": {
@@ -376,6 +547,33 @@
         "MUNICIPIO": "Vitória",
         "UNIDADE": "FUNDO ESPECIAL DE REEQUIPAMENTO DO CORPO DE BOMBEIROS MILITAR",
         "QTD_CONTRATACOES": 1
+    },
+    "03008521000183": {
+        "CNPJ": "03008521000183",
+        "RAZAO_SOCIAL": "CONSELHO REGIONAL DE MEDICINA DO ESTADO DE MATO GROSSO",
+        "ESFERA": "F",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Cuiabá",
+        "UNIDADE": "CONSELHO REGIONAL DE MEDICINA - MT",
+        "QTD_CONTRATACOES": 1
+    },
+    "03184041000173": {
+        "CNPJ": "03184041000173",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TRES LAGOAS",
+        "ESFERA": "M",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Três Lagoas",
+        "UNIDADE": "Prefeitura Municipal de Três Lagoas - MS",
+        "QTD_CONTRATACOES": 1
+    },
+    "03238862000145": {
+        "CNPJ": "03238862000145",
+        "RAZAO_SOCIAL": "MUNICIPIO DE VILA RICA",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Vila Rica",
+        "UNIDADE": "MUNICIPIO DE VILA RICA",
+        "QTD_CONTRATACOES": 2
     },
     "03238888000193": {
         "CNPJ": "03238888000193",
@@ -395,6 +593,42 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE GUARANTÃ DO NORTE - MT",
         "QTD_CONTRATACOES": 1
     },
+    "03342938000188": {
+        "CNPJ": "03342938000188",
+        "RAZAO_SOCIAL": "MUNICIPIO DE INOCENCIA",
+        "ESFERA": "M",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Inocência",
+        "UNIDADE": "Prefeitura Municipal de Inocência - MS",
+        "QTD_CONTRATACOES": 1
+    },
+    "03347127000170": {
+        "CNPJ": "03347127000170",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GUIRATINGA",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Guiratinga",
+        "UNIDADE": "MUNICIPIO DE GUIRATINGA/MT",
+        "QTD_CONTRATACOES": 1
+    },
+    "03347135000116": {
+        "CNPJ": "03347135000116",
+        "RAZAO_SOCIAL": "MUNICIPIO DE JACIARA",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Jaciara",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE JACIARA-MT",
+        "QTD_CONTRATACOES": 1
+    },
+    "03439239000150": {
+        "CNPJ": "03439239000150",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BARRA DO GARCAS",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Barra do Garças",
+        "UNIDADE": "MUNICÍPIO DE BARRA DO GARÇAS/MT",
+        "QTD_CONTRATACOES": 1
+    },
     "03501491000142": {
         "CNPJ": "03501491000142",
         "RAZAO_SOCIAL": "MUNICIPIO DE BANDEIRANTES",
@@ -402,6 +636,15 @@
         "UF": "Mato Grosso do Sul",
         "MUNICIPIO": "Bandeirantes",
         "UNIDADE": "Prefeitura Municipal de Bandeirantes - MS",
+        "QTD_CONTRATACOES": 2
+    },
+    "03501509000106": {
+        "CNPJ": "03501509000106",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAMPO GRANDE",
+        "ESFERA": "M",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Campo Grande",
+        "UNIDADE": "Secretaria Municipal de Assistência Social",
         "QTD_CONTRATACOES": 1
     },
     "03507415002864": {
@@ -413,6 +656,15 @@
         "UNIDADE": "SECRETARIA DE ESTADO DE SEGURANÇA PÚBLICA",
         "QTD_CONTRATACOES": 1
     },
+    "03576220000156": {
+        "CNPJ": "03576220000156",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BATAGUASSU",
+        "ESFERA": "M",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Bataguassu",
+        "UNIDADE": "MUNICÍPIO DE BATAGUASSU-MS",
+        "QTD_CONTRATACOES": 1
+    },
     "03643856000173": {
         "CNPJ": "03643856000173",
         "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - ADMINISTRACAO REGIONAL NO ESTADO DE MINAS GERAIS",
@@ -420,7 +672,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Belo Horizonte",
         "UNIDADE": "SERVICO SOCIAL DO COMERCIO - SESC AR/MG",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 3
     },
     "03755477000175": {
         "CNPJ": "03755477000175",
@@ -449,6 +701,60 @@
         "UNIDADE": "PREFEIRURA MUNICIPAL DE CRUZEIRO DO SUL - AC",
         "QTD_CONTRATACOES": 1
     },
+    "04034583000122": {
+        "CNPJ": "04034583000122",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIO BRANCO",
+        "ESFERA": "M",
+        "UF": "Acre",
+        "MUNICIPIO": "Rio Branco",
+        "UNIDADE": "CAC-PREFEITURA MUNICIPAL DE RIO BRANCO",
+        "QTD_CONTRATACOES": 1
+    },
+    "04045993000179": {
+        "CNPJ": "04045993000179",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ASSIS BRASIL",
+        "ESFERA": "M",
+        "UF": "Acre",
+        "MUNICIPIO": "Assis Brasil",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE ASSIS BRASIL - AC",
+        "QTD_CONTRATACOES": 1
+    },
+    "04092672000125": {
+        "CNPJ": "04092672000125",
+        "RAZAO_SOCIAL": "MUNICIPIO DE JI-PARANA",
+        "ESFERA": "M",
+        "UF": "Rondônia",
+        "MUNICIPIO": "Ji-Paraná",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE JI-PARANÁ",
+        "QTD_CONTRATACOES": 1
+    },
+    "04092680000171": {
+        "CNPJ": "04092680000171",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PIMENTA BUENO",
+        "ESFERA": "M",
+        "UF": "Rondônia",
+        "MUNICIPIO": "Pimenta Bueno",
+        "UNIDADE": "MUNICÍPIO DE PIMENTA BUENO/RO",
+        "QTD_CONTRATACOES": 1
+    },
+    "04144150000120": {
+        "CNPJ": "04144150000120",
+        "RAZAO_SOCIAL": "MUNICIPIO DE XINGUARA",
+        "ESFERA": "M",
+        "UF": "Pará",
+        "MUNICIPIO": "Xinguara",
+        "UNIDADE": "Fundo Municipal de Assistência Social - FMAS",
+        "QTD_CONTRATACOES": 1
+    },
+    "04213529000144": {
+        "CNPJ": "04213529000144",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CRUZALTENSE",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Cruzaltense",
+        "UNIDADE": "Prefeitura Municipal Cruzaltense",
+        "QTD_CONTRATACOES": 2
+    },
     "04213687000102": {
         "CNPJ": "04213687000102",
         "RAZAO_SOCIAL": "MUNICIPIO DE COLNIZA",
@@ -456,6 +762,15 @@
         "UF": "Mato Grosso",
         "MUNICIPIO": "Colniza",
         "UNIDADE": "PREFEITURA MUNICIPAL DE COLNIZA - MT",
+        "QTD_CONTRATACOES": 1
+    },
+    "04228734000183": {
+        "CNPJ": "04228734000183",
+        "RAZAO_SOCIAL": "FUNDACAO SERVICOS DE SAUDE DE MATO GROSSO DO SUL-SAUDE-MS",
+        "ESFERA": "E",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Campo Grande",
+        "UNIDADE": "Fundação Serviços de Saúde de MS",
         "QTD_CONTRATACOES": 1
     },
     "04329736000169": {
@@ -476,6 +791,15 @@
         "UNIDADE": "01",
         "QTD_CONTRATACOES": 1
     },
+    "04378626000197": {
+        "CNPJ": "04378626000197",
+        "RAZAO_SOCIAL": "FUNDACAO UNIVERSIDADE DO AMAZONAS",
+        "ESFERA": "F",
+        "UF": "Amazonas",
+        "MUNICIPIO": "Manaus",
+        "UNIDADE": "FUNDACAO UNIVERSIDADE DO AMAZONAS/AM",
+        "QTD_CONTRATACOES": 1
+    },
     "04581375000143": {
         "CNPJ": "04581375000143",
         "RAZAO_SOCIAL": "DEFENSORIA PUBLICA -GERAL DO ESTADO DO ACRE",
@@ -485,6 +809,15 @@
         "UNIDADE": "DEFENSORIA PÚBLICA GERAL DO ESTADO DO ACRE",
         "QTD_CONTRATACOES": 1
     },
+    "04597340000100": {
+        "CNPJ": "04597340000100",
+        "RAZAO_SOCIAL": "SERVICO AUTONOMO DE AGUA E ESGOTO DE PARINTINS SAAE",
+        "ESFERA": "M",
+        "UF": "Amazonas",
+        "MUNICIPIO": "Parintins",
+        "UNIDADE": "SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO DE PARINTINS/AM",
+        "QTD_CONTRATACOES": 1
+    },
     "04691691000178": {
         "CNPJ": "04691691000178",
         "RAZAO_SOCIAL": "SERVICO MUNICIPAL AUTONOMO DE AGUA E ESGOTO",
@@ -492,6 +825,33 @@
         "UF": "São Paulo",
         "MUNICIPIO": "São José do Rio Preto",
         "UNIDADE": "SERVICO MUNICIPAL AUTONOMO DE AGUA E ESGOTO",
+        "QTD_CONTRATACOES": 3
+    },
+    "04696490000163": {
+        "CNPJ": "04696490000163",
+        "RAZAO_SOCIAL": "SUP. EST. DE LICITACAO",
+        "ESFERA": "E",
+        "UF": "Rondônia",
+        "MUNICIPIO": "Porto Velho",
+        "UNIDADE": "SUPERINTEND.ESTAD.DE COMPRAS E LICITAÇÕES-RO",
+        "QTD_CONTRATACOES": 2
+    },
+    "04892707001000": {
+        "CNPJ": "04892707001000",
+        "RAZAO_SOCIAL": "DNIT-DEPARTAMENTO NACIONAL DE INFRAEST DE TRANSPORTES",
+        "ESFERA": "F",
+        "UF": "Espírito Santo",
+        "MUNICIPIO": "Vitória",
+        "UNIDADE": "SUPERINTENDÊNCIA REGIONAL DO DNIT - ES",
+        "QTD_CONTRATACOES": 1
+    },
+    "04892707001778": {
+        "CNPJ": "04892707001778",
+        "RAZAO_SOCIAL": "DNIT-DEPARTAMENTO NACIONAL DE INFRAEST DE TRANSPORTES",
+        "ESFERA": "F",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Paulo",
+        "UNIDADE": "SUPERINTENDÊNCIA REGIONAL DO DNIT - SP",
         "QTD_CONTRATACOES": 1
     },
     "04898488000177": {
@@ -501,6 +861,33 @@
         "UF": "Distrito Federal",
         "MUNICIPIO": "Brasília",
         "UNIDADE": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES",
+        "QTD_CONTRATACOES": 1
+    },
+    "04945341000190": {
+        "CNPJ": "04945341000190",
+        "RAZAO_SOCIAL": "COMPANHIA DE SANEAMENTO DO PARA",
+        "ESFERA": "N",
+        "UF": "Pará",
+        "MUNICIPIO": "Belém",
+        "UNIDADE": "COMPANHIA DE SANEAMENTO DO PARÁ",
+        "QTD_CONTRATACOES": 1
+    },
+    "05054861000176": {
+        "CNPJ": "05054861000176",
+        "RAZAO_SOCIAL": "ESTADO DO PARA",
+        "ESFERA": "E",
+        "UF": "Pará",
+        "MUNICIPIO": "Belém",
+        "UNIDADE": "EPA - POLÍCIA MILITAR DO PARÁ",
+        "QTD_CONTRATACOES": 1
+    },
+    "05054952000101": {
+        "CNPJ": "05054952000101",
+        "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DE SEGURANÇA PÚBLICA E DEFESA SOCIAL",
+        "ESFERA": "E",
+        "UF": "Pará",
+        "MUNICIPIO": "Belém",
+        "UNIDADE": "EPA - SECRETARIA ESTADO DE SEGURANÇA PÚBLICA",
         "QTD_CONTRATACOES": 1
     },
     "05054994000142": {
@@ -521,6 +908,15 @@
         "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE LIMOEIRO DO AJURU",
         "QTD_CONTRATACOES": 1
     },
+    "05193057000178": {
+        "CNPJ": "05193057000178",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PARAGOMINAS",
+        "ESFERA": "M",
+        "UF": "Pará",
+        "MUNICIPIO": "Paragominas",
+        "UNIDADE": "FUNDO MUNICIPAL DO MEIO AMBIENTE",
+        "QTD_CONTRATACOES": 1
+    },
     "05251632000141": {
         "CNPJ": "05251632000141",
         "RAZAO_SOCIAL": "MUNICIPIO DE TUCURUI",
@@ -530,6 +926,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE TUCURUÍ",
         "QTD_CONTRATACOES": 1
     },
+    "05469845000144": {
+        "CNPJ": "05469845000144",
+        "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DE GOVERNO",
+        "ESFERA": "E",
+        "UF": "Goiás",
+        "MUNICIPIO": "Goiânia",
+        "UNIDADE": "SECRETAIA DE RELAÇOES INSTITUCIONAIS/GO",
+        "QTD_CONTRATACOES": 1
+    },
     "05472936000139": {
         "CNPJ": "05472936000139",
         "RAZAO_SOCIAL": "SERVICO MUNICIPAL DE AGUA, SANEAMENTO BASICO E INFRA-ESTRUTURA",
@@ -537,7 +942,25 @@
         "UF": "Santa Catarina",
         "MUNICIPIO": "Itajaí",
         "UNIDADE": "SERVIÇO MUN. DE AGUA E SANEA BAS E INFRAE.",
+        "QTD_CONTRATACOES": 3
+    },
+    "05483912000185": {
+        "CNPJ": "05483912000185",
+        "RAZAO_SOCIAL": "ESTADO DO MARANHAO - PROCURADORIA GERAL DA JUSTICA",
+        "ESFERA": "E",
+        "UF": "Maranhão",
+        "MUNICIPIO": "São Luís",
+        "UNIDADE": "PROCURADORIA GERAL DE JUSTIÇA DO MARANHÃO",
         "QTD_CONTRATACOES": 2
+    },
+    "05514609000100": {
+        "CNPJ": "05514609000100",
+        "RAZAO_SOCIAL": "SERVICO AUTONOMO DE AGUA E ESGOTO",
+        "ESFERA": "M",
+        "UF": "Piauí",
+        "MUNICIPIO": "Campo Maior",
+        "UNIDADE": "Sistema Autônomo de Água e Esgoto de Campo Maior - SAAE",
+        "QTD_CONTRATACOES": 1
     },
     "05522917000170": {
         "CNPJ": "05522917000170",
@@ -548,6 +971,15 @@
         "UNIDADE": "PMPI-FUNDAÇÃO MUNICIPAL DE SAÚDE DE TERESINA",
         "QTD_CONTRATACOES": 1
     },
+    "05604369000127": {
+        "CNPJ": "05604369000127",
+        "RAZAO_SOCIAL": "SUBPREFEITURA CAMPO LIMPO",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Paulo",
+        "UNIDADE": "PMSP - SUBPREFEITURA CAMPO LIMPO",
+        "QTD_CONTRATACOES": 1
+    },
     "05802877000110": {
         "CNPJ": "05802877000110",
         "RAZAO_SOCIAL": "INSTITUICAO DE COOPERACAO INTERMUNICIPAL DO MEDIO PARAOPEBA",
@@ -555,6 +987,24 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "São Joaquim de Bicas",
         "UNIDADE": "ICISMEP",
+        "QTD_CONTRATACOES": 2
+    },
+    "05816630000152": {
+        "CNPJ": "05816630000152",
+        "RAZAO_SOCIAL": "FUNDO ESTADUAL DE SAUDE DO ESTADO DA BAHIA",
+        "ESFERA": "E",
+        "UF": "Bahia",
+        "MUNICIPIO": "Salvador",
+        "UNIDADE": "HOSPITAL GERAL ROBERTO SANTOS",
+        "QTD_CONTRATACOES": 2
+    },
+    "05832977000199": {
+        "CNPJ": "05832977000199",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTANA DO ARAGUAIA",
+        "ESFERA": "M",
+        "UF": "Pará",
+        "MUNICIPIO": "Santana do Araguaia",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE",
         "QTD_CONTRATACOES": 1
     },
     "05835939000190": {
@@ -593,6 +1043,42 @@
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
+    "06021810000100": {
+        "CNPJ": "06021810000100",
+        "RAZAO_SOCIAL": "MUNICIPIO DE LAGO DA PEDRA",
+        "ESFERA": "M",
+        "UF": "Maranhão",
+        "MUNICIPIO": "Lago da Pedra",
+        "UNIDADE": "Secretaria Municipal de Saúde",
+        "QTD_CONTRATACOES": 1
+    },
+    "06070075000125": {
+        "CNPJ": "06070075000125",
+        "RAZAO_SOCIAL": "CONVALES - CONSORCIO DE SAUDE E DESENVOLVIMENTO DOS VALES DO NOROESTE DE MINAS",
+        "ESFERA": "N",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Arinos",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "06080394000111": {
+        "CNPJ": "06080394000111",
+        "RAZAO_SOCIAL": "MUNICIPIO DE FORTALEZA DOS NOGUEIRAS",
+        "ESFERA": "M",
+        "UF": "Maranhão",
+        "MUNICIPIO": "Fortaleza dos Nogueiras",
+        "UNIDADE": "Prefeitura Municipal de Fortaleza dos Nogueiras",
+        "QTD_CONTRATACOES": 1
+    },
+    "06082820000156": {
+        "CNPJ": "06082820000156",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAXIAS",
+        "ESFERA": "M",
+        "UF": "Maranhão",
+        "MUNICIPIO": "Caxias",
+        "UNIDADE": "SECRETARIA MUNICIPAL DE SAÚDE.",
+        "QTD_CONTRATACOES": 1
+    },
     "06189344000177": {
         "CNPJ": "06189344000177",
         "RAZAO_SOCIAL": "MUNICIPIO DE PINDARE MIRIM",
@@ -600,6 +1086,15 @@
         "UF": "Maranhão",
         "MUNICIPIO": "Pindaré-Mirim",
         "UNIDADE": "Fundo de Manutenção e Desenvolvimento da Educação Básica",
+        "QTD_CONTRATACOES": 1
+    },
+    "06302492000156": {
+        "CNPJ": "06302492000156",
+        "RAZAO_SOCIAL": "TRIBUNAL REGIONAL ELEITORAL DE SAO PAULO",
+        "ESFERA": "F",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Paulo",
+        "UNIDADE": "ESP-TRIBUNAL REGIONAL ELEITORAL DE SAO PAULO",
         "QTD_CONTRATACOES": 1
     },
     "06354468000160": {
@@ -638,6 +1133,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE PIRIPIRI - PI",
         "QTD_CONTRATACOES": 1
     },
+    "06554083000147": {
+        "CNPJ": "06554083000147",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GUADALUPE",
+        "ESFERA": "M",
+        "UF": "Piauí",
+        "MUNICIPIO": "Guadalupe",
+        "UNIDADE": "Guadalupe",
+        "QTD_CONTRATACOES": 1
+    },
     "06554893000101": {
         "CNPJ": "06554893000101",
         "RAZAO_SOCIAL": "MUNICIPIO DE PIMENTEIRAS",
@@ -656,6 +1160,33 @@
         "UNIDADE": "Fundo Municipal de Saúde",
         "QTD_CONTRATACOES": 1
     },
+    "07226794000155": {
+        "CNPJ": "07226794000155",
+        "RAZAO_SOCIAL": "COMPANHIA AGUAS DE JOINVILLE",
+        "ESFERA": "N",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Joinville",
+        "UNIDADE": "COMPANHIA AGUAS DE JOINVILE - SC",
+        "QTD_CONTRATACOES": 2
+    },
+    "07306549000158": {
+        "CNPJ": "07306549000158",
+        "RAZAO_SOCIAL": "CONSORCIO MULTIFINALITARIO DO BAIXO JEQUITINHONHA",
+        "ESFERA": "N",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Jacinto",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "07424905000138": {
+        "CNPJ": "07424905000138",
+        "RAZAO_SOCIAL": "AGENCIA DE MODERNIZACAO DA GESTAO DE PROCESSOS",
+        "ESFERA": "E",
+        "UF": "Alagoas",
+        "MUNICIPIO": "Maceió",
+        "UNIDADE": "EAL-AGENCIA DE MODERNIZACAO DA GEST. PROCESSO",
+        "QTD_CONTRATACOES": 1
+    },
     "07528292000189": {
         "CNPJ": "07528292000189",
         "RAZAO_SOCIAL": "MUNICIPIO DE BEBERIBE",
@@ -665,6 +1196,24 @@
         "UNIDADE": "Secretaria Municipal de Saúde",
         "QTD_CONTRATACOES": 1
     },
+    "07533946000162": {
+        "CNPJ": "07533946000162",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TRAIRI",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Trairi",
+        "UNIDADE": "SECRETARIA DE SAÚDE",
+        "QTD_CONTRATACOES": 1
+    },
+    "07547821000191": {
+        "CNPJ": "07547821000191",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ACARAU",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Acaraú",
+        "UNIDADE": "SECRETARIA MUNICIPAL DE SAÚDE",
+        "QTD_CONTRATACOES": 1
+    },
     "07551179000114": {
         "CNPJ": "07551179000114",
         "RAZAO_SOCIAL": "MUNICIPIO DE QUITERIANOPOLIS",
@@ -672,6 +1221,15 @@
         "UF": "Ceará",
         "MUNICIPIO": "Quiterianópolis",
         "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE",
+        "QTD_CONTRATACOES": 2
+    },
+    "07570518000100": {
+        "CNPJ": "07570518000100",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PEREIRO",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Pereiro",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE PEREIRO - CE",
         "QTD_CONTRATACOES": 1
     },
     "07587975000107": {
@@ -683,6 +1241,78 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE CRATO - CE",
         "QTD_CONTRATACOES": 1
     },
+    "07616162000106": {
+        "CNPJ": "07616162000106",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAUCAIA",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Caucaia",
+        "UNIDADE": "Secretaria de Saúde",
+        "QTD_CONTRATACOES": 1
+    },
+    "07655277000100": {
+        "CNPJ": "07655277000100",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MILAGRES",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Milagres",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE MILAGRES",
+        "QTD_CONTRATACOES": 1
+    },
+    "07658917000127": {
+        "CNPJ": "07658917000127",
+        "RAZAO_SOCIAL": "MUNICIPIO DE POTENGI",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Potengi",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE POTENGI - CE",
+        "QTD_CONTRATACOES": 1
+    },
+    "07683188000169": {
+        "CNPJ": "07683188000169",
+        "RAZAO_SOCIAL": "MUNICIPIO DE IRAUCUBA",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Irauçuba",
+        "UNIDADE": "SECRETARIA DO DESENVOLVIMENTO RURAL, MEIO AMBIENTE E RECURSOS HÍDRICOS",
+        "QTD_CONTRATACOES": 1
+    },
+    "07693989000105": {
+        "CNPJ": "07693989000105",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MONSENHOR TABOSA",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Monsenhor Tabosa",
+        "UNIDADE": "Secretaria Municipal de Planejamento, Administração e Finanças",
+        "QTD_CONTRATACOES": 1
+    },
+    "07705817000104": {
+        "CNPJ": "07705817000104",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TAMBORIL",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Tamboril",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE TAMBORIL - CE",
+        "QTD_CONTRATACOES": 1
+    },
+    "07750478000188": {
+        "CNPJ": "07750478000188",
+        "RAZAO_SOCIAL": "SERVICO AUTONOMO DE AGUA, ESGOTO E MEIO AMBIENTE DE SERTAOZINHO - SAEMAS",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Sertãozinho",
+        "UNIDADE": "SERVIÇO AUT DE AGUA ESGOTO MEIO AMBIENTE",
+        "QTD_CONTRATACOES": 1
+    },
+    "07847379000119": {
+        "CNPJ": "07847379000119",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ACOPIARA",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Acopiara",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE",
+        "QTD_CONTRATACOES": 1
+    },
     "07891682000119": {
         "CNPJ": "07891682000119",
         "RAZAO_SOCIAL": "MUNICIPIO DE TABULEIRO DO NORTE",
@@ -692,6 +1322,15 @@
         "UNIDADE": "CONTROLADORIA GERAL DO MUNICÍPIO",
         "QTD_CONTRATACOES": 1
     },
+    "07911696000157": {
+        "CNPJ": "07911696000157",
+        "RAZAO_SOCIAL": "MUNICIPIO DE AQUIRAZ",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Aquiraz",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE AQUIRAZ - CE",
+        "QTD_CONTRATACOES": 1
+    },
     "07954480000179": {
         "CNPJ": "07954480000179",
         "RAZAO_SOCIAL": "ESTADO DO CEARA",
@@ -699,6 +1338,33 @@
         "UF": "Ceará",
         "MUNICIPIO": "Fortaleza",
         "UNIDADE": "GOVERNO DO ESTADO DO CEARÁ",
+        "QTD_CONTRATACOES": 2
+    },
+    "08083086000175": {
+        "CNPJ": "08083086000175",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Bela Vista de Goiás",
+        "UNIDADE": "FMS BELA VISTA DE GOIAS",
+        "QTD_CONTRATACOES": 1
+    },
+    "08086662000138": {
+        "CNPJ": "08086662000138",
+        "RAZAO_SOCIAL": "MUNICIPIO DE JARDIM DO SERIDO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Norte",
+        "MUNICIPIO": "Jardim do Seridó",
+        "UNIDADE": "Prefeitura",
+        "QTD_CONTRATACOES": 1
+    },
+    "08088247000113": {
+        "CNPJ": "08088247000113",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTANA DO SERIDO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Norte",
+        "MUNICIPIO": "Santana do Seridó",
+        "UNIDADE": "MUNICÍPIO DE SANTANA DO SERIDÓ",
         "QTD_CONTRATACOES": 1
     },
     "08096083000176": {
@@ -708,6 +1374,24 @@
         "UF": "Rio Grande do Norte",
         "MUNICIPIO": "São José do Seridó",
         "UNIDADE": "Prefeitura Municipal de São José do Seridó",
+        "QTD_CONTRATACOES": 1
+    },
+    "08096372000175": {
+        "CNPJ": "08096372000175",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SERRA NEGRA DO NORTE",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Norte",
+        "MUNICIPIO": "Serra Negra do Norte",
+        "UNIDADE": "Municipio de Serra Negra do Norte",
+        "QTD_CONTRATACOES": 2
+    },
+    "08096612000131": {
+        "CNPJ": "08096612000131",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO FERNANDO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Norte",
+        "MUNICIPIO": "São Fernando",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SÃO FERNANDO/RN",
         "QTD_CONTRATACOES": 1
     },
     "08194799000106": {
@@ -744,7 +1428,7 @@
         "UF": "Rio Grande do Norte",
         "MUNICIPIO": "Natal",
         "UNIDADE": "ERN-SECRETARIA DE ESTADO DA AGRICULTURA DA PECUÁRIA E PESCA",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "08288700000135": {
         "CNPJ": "08288700000135",
@@ -755,6 +1439,15 @@
         "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE DE CACHOEIRA ALTA/GO",
         "QTD_CONTRATACOES": 1
     },
+    "08290223000142": {
+        "CNPJ": "08290223000142",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PUREZA",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Norte",
+        "MUNICIPIO": "Pureza",
+        "UNIDADE": "Prefeitura Municipal de Pureza",
+        "QTD_CONTRATACOES": 1
+    },
     "08334385000135": {
         "CNPJ": "08334385000135",
         "RAZAO_SOCIAL": "COMPANHIA DE AGUAS E ESGOTOS DO RIO GRANDE DO NORTE",
@@ -762,6 +1455,15 @@
         "UF": "Rio Grande do Norte",
         "MUNICIPIO": "Natal",
         "UNIDADE": "ERN - COMPANHIA DE ÁGUAS E ESGOTOS DO RN",
+        "QTD_CONTRATACOES": 3
+    },
+    "08348989000130": {
+        "CNPJ": "08348989000130",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ANTONIO MARTINS",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Norte",
+        "MUNICIPIO": "Antônio Martins",
+        "UNIDADE": "Antônio Martins",
         "QTD_CONTRATACOES": 1
     },
     "08361788000173": {
@@ -771,6 +1473,24 @@
         "UF": "Santa Catarina",
         "MUNICIPIO": "São João Batista",
         "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE DE SÃO JOÃO BATISTA",
+        "QTD_CONTRATACOES": 2
+    },
+    "08364655000150": {
+        "CNPJ": "08364655000150",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIACHUELO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Norte",
+        "MUNICIPIO": "Riachuelo",
+        "UNIDADE": "Prefeitura Municipal de Riachuelo",
+        "QTD_CONTRATACOES": 1
+    },
+    "08680752000152": {
+        "CNPJ": "08680752000152",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE MARAIAL",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Maraial",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE MARAIAL",
         "QTD_CONTRATACOES": 1
     },
     "08732174000150": {
@@ -782,6 +1502,69 @@
         "UNIDADE": "MUNICIPIO DE CUITÉ/PB",
         "QTD_CONTRATACOES": 1
     },
+    "08741399000173": {
+        "CNPJ": "08741399000173",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PICUI",
+        "ESFERA": "M",
+        "UF": "Paraíba",
+        "MUNICIPIO": "Picuí",
+        "UNIDADE": "Prefeitura Municipal de Picuí",
+        "QTD_CONTRATACOES": 1
+    },
+    "08742264000122": {
+        "CNPJ": "08742264000122",
+        "RAZAO_SOCIAL": "MUNICIPIO DE QUEIMADAS",
+        "ESFERA": "M",
+        "UF": "Paraíba",
+        "MUNICIPIO": "Queimadas",
+        "UNIDADE": "Prefeitura Municipal de Queimadas",
+        "QTD_CONTRATACOES": 1
+    },
+    "08754111000103": {
+        "CNPJ": "08754111000103",
+        "RAZAO_SOCIAL": "MUNICIPIO DE AREIA",
+        "ESFERA": "M",
+        "UF": "Paraíba",
+        "MUNICIPIO": "Areia",
+        "UNIDADE": "Prefeitura Municipal de Areia",
+        "QTD_CONTRATACOES": 1
+    },
+    "08865636000108": {
+        "CNPJ": "08865636000108",
+        "RAZAO_SOCIAL": "MUNICIPIO DE AROEIRAS",
+        "ESFERA": "M",
+        "UF": "Paraíba",
+        "MUNICIPIO": "Aroeiras",
+        "UNIDADE": "Setor de Compras - PMA",
+        "QTD_CONTRATACOES": 1
+    },
+    "08869489000144": {
+        "CNPJ": "08869489000144",
+        "RAZAO_SOCIAL": "MUNICIPIO DE UMBUZEIRO",
+        "ESFERA": "M",
+        "UF": "Paraíba",
+        "MUNICIPIO": "Umbuzeiro",
+        "UNIDADE": "Prefeitura Municipal de Umbuzeiro",
+        "QTD_CONTRATACOES": 1
+    },
+    "08892295000160": {
+        "CNPJ": "08892295000160",
+        "RAZAO_SOCIAL": "ESTADO DO MARANHAO - SECRETARIA DE ESTADO DA INFRAESTRUTURA",
+        "ESFERA": "E",
+        "UF": "Maranhão",
+        "MUNICIPIO": "São Luís",
+        "UNIDADE": "EMA - SECRETARIA EST.DA INFRAEST. DE SÃO LUIS",
+        "QTD_CONTRATACOES": 1
+    },
+    "08924528000169": {
+        "CNPJ": "08924528000169",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE SAO FELIX",
+        "ESFERA": "M",
+        "UF": "Bahia",
+        "MUNICIPIO": "São Félix",
+        "UNIDADE": "FUNDO MUNCIPAL DE SAÚDE DE SÃO FELIX",
+        "QTD_CONTRATACOES": 1
+    },
     "08924581000160": {
         "CNPJ": "08924581000160",
         "RAZAO_SOCIAL": "MUNICIPIO DE BAYEUX",
@@ -789,6 +1572,24 @@
         "UF": "Paraíba",
         "MUNICIPIO": "Bayeux",
         "UNIDADE": "PREFEITURA MUNICIPAL DE BAYEUX",
+        "QTD_CONTRATACOES": 1
+    },
+    "08979143000107": {
+        "CNPJ": "08979143000107",
+        "RAZAO_SOCIAL": "CONSORCIO INTERMUNICIPAL DE DESENVOLVIMENTO ECONOMICO, SOCIAL, AMBIENTAL E TURISTICO DO COMPLEXO NASCENTES DO PANTANAL",
+        "ESFERA": "N",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "São José dos Quatro Marcos",
+        "UNIDADE": "CONSORCIO INTERMUNICIPAL DE DESENVOLVIMENTO ECONOMICO, SOCIAL, AMBIENTAL E TURISTICO DO COMPLEXO NASCENTES DO PANTANAL/MT",
+        "QTD_CONTRATACOES": 1
+    },
+    "08993909000108": {
+        "CNPJ": "08993909000108",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ESPERANCA",
+        "ESFERA": "M",
+        "UF": "Paraíba",
+        "MUNICIPIO": "Esperança",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE ESPERANÇA",
         "QTD_CONTRATACOES": 1
     },
     "08999674000153": {
@@ -827,6 +1628,15 @@
         "UNIDADE": "Autarquia Municipal de Saúde de Itapecerica da Serra",
         "QTD_CONTRATACOES": 1
     },
+    "09680315000100": {
+        "CNPJ": "09680315000100",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ILHA DE ITAMARACA",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Ilha de Itamaracá",
+        "UNIDADE": "PREFEITURA MUNICIPAL DA ILHA DE ITAMARACÁ",
+        "QTD_CONTRATACOES": 1
+    },
     "10091510000175": {
         "CNPJ": "10091510000175",
         "RAZAO_SOCIAL": "MUNICIPIO DE BEZERROS",
@@ -834,6 +1644,24 @@
         "UF": "Pernambuco",
         "MUNICIPIO": "Bezerros",
         "UNIDADE": "PREFEITURA MUNICIPAL DE BEZERROS",
+        "QTD_CONTRATACOES": 1
+    },
+    "10091528000177": {
+        "CNPJ": "10091528000177",
+        "RAZAO_SOCIAL": "MUNICIPIO DO BREJO DA MADRE DE DEUS",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Brejo da Madre de Deus",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE BREJO DA MADRE DE DEUS",
+        "QTD_CONTRATACOES": 1
+    },
+    "10113728000183": {
+        "CNPJ": "10113728000183",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BELEM DE SAO FRANCISCO",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Belém do São Francisco",
+        "UNIDADE": "Secretaria de Administração",
         "QTD_CONTRATACOES": 1
     },
     "10164028000118": {
@@ -845,6 +1673,33 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DA ALIANÇA",
         "QTD_CONTRATACOES": 1
     },
+    "10166817000198": {
+        "CNPJ": "10166817000198",
+        "RAZAO_SOCIAL": "MUNICIPIO DE NAZARE DA MATA",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Nazaré da Mata",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE NAZARÉ DA MATA - PE",
+        "QTD_CONTRATACOES": 2
+    },
+    "10186138000180": {
+        "CNPJ": "10186138000180",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CATENDE",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Catende",
+        "UNIDADE": "Fundo Municipal de Saúde de Catende",
+        "QTD_CONTRATACOES": 1
+    },
+    "10191799000102": {
+        "CNPJ": "10191799000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CUPIRA",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Cupira",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE CUPIRA",
+        "QTD_CONTRATACOES": 1
+    },
     "10234992000175": {
         "CNPJ": "10234992000175",
         "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE CACHOEIRINHA",
@@ -852,6 +1707,15 @@
         "UF": "Pernambuco",
         "MUNICIPIO": "Cachoeirinha",
         "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE CACHOEIRINHA",
+        "QTD_CONTRATACOES": 1
+    },
+    "10291311000100": {
+        "CNPJ": "10291311000100",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE - ESCADA-PE",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Escada",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE ESCADA",
         "QTD_CONTRATACOES": 1
     },
     "10358174000184": {
@@ -899,6 +1763,24 @@
         "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE LIMOEIRO - PE",
         "QTD_CONTRATACOES": 1
     },
+    "10648539000105": {
+        "CNPJ": "10648539000105",
+        "RAZAO_SOCIAL": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DO SUL DE MINAS GERAIS",
+        "ESFERA": "F",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Pouso Alegre",
+        "UNIDADE": "INST.FED.DE EDUC.,CIENC.E TEC.DO SUL DE MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "10673078000120": {
+        "CNPJ": "10673078000120",
+        "RAZAO_SOCIAL": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE MATO GROSSO DO SUL",
+        "ESFERA": "F",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Campo Grande",
+        "UNIDADE": "INST.FED.DE EDUC.,CIENC.E TEC DO MAT.G.DO SUL",
+        "QTD_CONTRATACOES": 1
+    },
     "10690604000160": {
         "CNPJ": "10690604000160",
         "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
@@ -906,6 +1788,15 @@
         "UF": "Espírito Santo",
         "MUNICIPIO": "Conceição da Barra",
         "UNIDADE": "MES-FUNDO MUN DE SAUDE DE CONCEIÇÃO DA BARRA",
+        "QTD_CONTRATACOES": 1
+    },
+    "10706597000148": {
+        "CNPJ": "10706597000148",
+        "RAZAO_SOCIAL": "SERVICO DE AGUA E ESGOTO DE ENGENHEIRO COELHO",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Engenheiro Coelho",
+        "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
     "10727655000110": {
@@ -944,6 +1835,15 @@
         "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE",
         "QTD_CONTRATACOES": 1
     },
+    "10918674000123": {
+        "CNPJ": "10918674000123",
+        "RAZAO_SOCIAL": "INSTITUTO FEDERAL DE EDUCACAO,CIENCIA E TECNOLOGIA DO ACRE",
+        "ESFERA": "F",
+        "UF": "Acre",
+        "MUNICIPIO": "Rio Branco",
+        "UNIDADE": "INST.FED.DE EDUC.,CIENC.E TEC.DO ACRE",
+        "QTD_CONTRATACOES": 1
+    },
     "10971858000157": {
         "CNPJ": "10971858000157",
         "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE CAPIVARI DE BAIXO",
@@ -951,6 +1851,33 @@
         "UF": "Santa Catarina",
         "MUNICIPIO": "Capivari de Baixo",
         "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE CAPIVARI DE BAIXO",
+        "QTD_CONTRATACOES": 1
+    },
+    "11113201000111": {
+        "CNPJ": "11113201000111",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Porangatu",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE",
+        "QTD_CONTRATACOES": 1
+    },
+    "11168270000122": {
+        "CNPJ": "11168270000122",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE -FMS",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Palmeiras de Goiás",
+        "UNIDADE": "FMS - PALMEIRAS DE GOIAS",
+        "QTD_CONTRATACOES": 1
+    },
+    "11218352000134": {
+        "CNPJ": "11218352000134",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Timbé do Sul",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE",
         "QTD_CONTRATACOES": 1
     },
     "11258723000101": {
@@ -962,6 +1889,15 @@
         "UNIDADE": "FMS",
         "QTD_CONTRATACOES": 1
     },
+    "11280020000180": {
+        "CNPJ": "11280020000180",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Bonópolis",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE BONOPOLIS",
+        "QTD_CONTRATACOES": 1
+    },
     "11285282000137": {
         "CNPJ": "11285282000137",
         "RAZAO_SOCIAL": "FUNDACAO ESTATAL DE SAUDE DO PANTANAL",
@@ -969,6 +1905,42 @@
         "UF": "Mato Grosso do Sul",
         "MUNICIPIO": "Coxim",
         "UNIDADE": "FESP - FUNDAÇÃO ESTATAL DE SAÚDE DO PANTANAL",
+        "QTD_CONTRATACOES": 1
+    },
+    "11293112000102": {
+        "CNPJ": "11293112000102",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Tuparetama",
+        "UNIDADE": "Fundo Municipal de Saúde de Tuparetama",
+        "QTD_CONTRATACOES": 1
+    },
+    "11297536000137": {
+        "CNPJ": "11297536000137",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Paty do Alferes",
+        "UNIDADE": "Fundo Municipal de Saúde de Paty do Alferes - RJ",
+        "QTD_CONTRATACOES": 1
+    },
+    "11308894000106": {
+        "CNPJ": "11308894000106",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Macaé",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE MACAE - RJ",
+        "QTD_CONTRATACOES": 1
+    },
+    "11335591000174": {
+        "CNPJ": "11335591000174",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Carmo do Rio Verde",
+        "UNIDADE": "FMS",
         "QTD_CONTRATACOES": 1
     },
     "11352368000135": {
@@ -986,7 +1958,16 @@
         "ESFERA": "M",
         "UF": "Santa Catarina",
         "MUNICIPIO": "Indaial",
-        "UNIDADE": "Fundo Municipal de Saúde de Indaial - SC",
+        "UNIDADE": "Secretaria Municipal de Saúde",
+        "QTD_CONTRATACOES": 2
+    },
+    "11358116000113": {
+        "CNPJ": "11358116000113",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SERTANIA",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Sertânia",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SERTANIA",
         "QTD_CONTRATACOES": 1
     },
     "11358165000156": {
@@ -1034,6 +2015,33 @@
         "UNIDADE": "FMSAUDE SJO",
         "QTD_CONTRATACOES": 1
     },
+    "11429331000168": {
+        "CNPJ": "11429331000168",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Sergipe",
+        "MUNICIPIO": "Santana do São Francisco",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE DE SANTANA DO SÃO FRANCISCO/SE",
+        "QTD_CONTRATACOES": 1
+    },
+    "11430842000108": {
+        "CNPJ": "11430842000108",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE CERRO NEGRO",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Cerro Negro",
+        "UNIDADE": "Fundo Municipal de Saúde de Cerro Negro",
+        "QTD_CONTRATACOES": 1
+    },
+    "11503081000169": {
+        "CNPJ": "11503081000169",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE SAO JOSE DO EGITO",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "São José do Egito",
+        "UNIDADE": "FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL",
+        "QTD_CONTRATACOES": 1
+    },
     "11675013000187": {
         "CNPJ": "11675013000187",
         "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE URUTAI-GO",
@@ -1079,6 +2087,15 @@
         "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE DE COXIM - MS",
         "QTD_CONTRATACOES": 1
     },
+    "12021434000157": {
+        "CNPJ": "12021434000157",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE JARAGUARI",
+        "ESFERA": "M",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Jaraguari",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE JARAGUARI",
+        "QTD_CONTRATACOES": 1
+    },
     "12053489000149": {
         "CNPJ": "12053489000149",
         "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
@@ -1097,6 +2114,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE TRAIPU",
         "QTD_CONTRATACOES": 1
     },
+    "12213549000143": {
+        "CNPJ": "12213549000143",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE DE ARUANA",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Aruanã",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE FMS",
+        "QTD_CONTRATACOES": 1
+    },
     "12224895000127": {
         "CNPJ": "12224895000127",
         "RAZAO_SOCIAL": "MUNICIPIO DE DELMIRO GOUVEIA",
@@ -1113,6 +2139,15 @@
         "UF": "Alagoas",
         "MUNICIPIO": "Novo Lino",
         "UNIDADE": "PREFEITURA MUNICIPAL DE NOVO LINO - AL",
+        "QTD_CONTRATACOES": 1
+    },
+    "12250916000189": {
+        "CNPJ": "12250916000189",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTANA DO IPANEMA",
+        "ESFERA": "M",
+        "UF": "Alagoas",
+        "MUNICIPIO": "Santana do Ipanema",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SANTANA DO IPANEMA",
         "QTD_CONTRATACOES": 1
     },
     "12284122000136": {
@@ -1142,6 +2177,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE COLÔNIA LEOPOLDINA",
         "QTD_CONTRATACOES": 1
     },
+    "12356879000198": {
+        "CNPJ": "12356879000198",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PALMEIRA DOS INDIOS",
+        "ESFERA": "M",
+        "UF": "Alagoas",
+        "MUNICIPIO": "Palmeira dos Índios",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE PALMEIRA DOS ÍNDIOS",
+        "QTD_CONTRATACOES": 1
+    },
+    "12464103000191": {
+        "CNPJ": "12464103000191",
+        "RAZAO_SOCIAL": "MUNICIPIO DE DEPUTADO IRAPUAN PINHEIRO",
+        "ESFERA": "M",
+        "UF": "Ceará",
+        "MUNICIPIO": "Deputado Irapuan Pinheiro",
+        "UNIDADE": "FUNDEB",
+        "QTD_CONTRATACOES": 1
+    },
     "12600146000157": {
         "CNPJ": "12600146000157",
         "RAZAO_SOCIAL": "FUNDACAO SERVICOS DE SAUDE DE NOVA ANDRADINA",
@@ -1149,6 +2202,24 @@
         "UF": "Mato Grosso do Sul",
         "MUNICIPIO": "Nova Andradina",
         "UNIDADE": "FUNDAÇAO SERVIÇOS DE SAUDE DE NOVA ANDRADINA",
+        "QTD_CONTRATACOES": 1
+    },
+    "12640342000155": {
+        "CNPJ": "12640342000155",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Paraty",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE PARATY",
+        "QTD_CONTRATACOES": 1
+    },
+    "13018171000190": {
+        "CNPJ": "13018171000190",
+        "RAZAO_SOCIAL": "COMPANHIA DE SANEAMENTO DE SERGIPE - DESO",
+        "ESFERA": "M",
+        "UF": "Sergipe",
+        "MUNICIPIO": "Aracaju",
+        "UNIDADE": "CIA SANEAMENTO DE SERGIPE DESO",
         "QTD_CONTRATACOES": 1
     },
     "13031547000104": {
@@ -1159,6 +2230,15 @@
         "MUNICIPIO": "São Cristóvão",
         "UNIDADE": "MEC-UNIVERSIDADE FEDERAL/SE",
         "QTD_CONTRATACOES": 2
+    },
+    "13108089000156": {
+        "CNPJ": "13108089000156",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SIMAO DIAS",
+        "ESFERA": "M",
+        "UF": "Sergipe",
+        "MUNICIPIO": "Simão Dias",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SIMÃO DIAS",
+        "QTD_CONTRATACOES": 1
     },
     "13111001000155": {
         "CNPJ": "13111001000155",
@@ -1187,6 +2267,15 @@
         "UNIDADE": "FUNDAÇÃO DE SAÚDE SAPUCAIA DO SUL",
         "QTD_CONTRATACOES": 2
     },
+    "13230982000150": {
+        "CNPJ": "13230982000150",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAPIM GROSSO",
+        "ESFERA": "M",
+        "UF": "Bahia",
+        "MUNICIPIO": "Capim Grosso",
+        "UNIDADE": "MUNICÍPIO DE CAPIM GROSSO/BA",
+        "QTD_CONTRATACOES": 1
+    },
     "13504675000110": {
         "CNPJ": "13504675000110",
         "RAZAO_SOCIAL": "EMPRESA BAIANA DE AGUAS E SANEAMENTO S/A - EMBASA",
@@ -1196,6 +2285,15 @@
         "UNIDADE": "EMPRESA BAIANA DE AGUAS E SANEAMENTO S/A - EMBASA",
         "QTD_CONTRATACOES": 4
     },
+    "13672605000170": {
+        "CNPJ": "13672605000170",
+        "RAZAO_SOCIAL": "MUNICIPIO DE UNA",
+        "ESFERA": "M",
+        "UF": "Bahia",
+        "MUNICIPIO": "Una",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE UNA - BA",
+        "QTD_CONTRATACOES": 1
+    },
     "13676309000148": {
         "CNPJ": "13676309000148",
         "RAZAO_SOCIAL": "MUNICIPIO DE TANHACU",
@@ -1203,6 +2301,15 @@
         "UF": "Bahia",
         "MUNICIPIO": "Tanhaçu",
         "UNIDADE": "TANHACU",
+        "QTD_CONTRATACOES": 1
+    },
+    "13681884000139": {
+        "CNPJ": "13681884000139",
+        "RAZAO_SOCIAL": "CONSORCIO INTERMUNICIPAL DE SAUDE DO LITORAL DO PARANA - CISLIPA",
+        "ESFERA": "N",
+        "UF": "Paraná",
+        "MUNICIPIO": "Paranaguá",
+        "UNIDADE": "MPR-CONSÓRCIO INTERMUNICIPAL SAÚDE LITORAL",
         "QTD_CONTRATACOES": 1
     },
     "13696521000177": {
@@ -1230,6 +2337,15 @@
         "UF": "Bahia",
         "MUNICIPIO": "Mucuri",
         "UNIDADE": "PREFEITURA MUNICIPAL DE MUCURI",
+        "QTD_CONTRATACOES": 2
+    },
+    "13782461000105": {
+        "CNPJ": "13782461000105",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MACAUBAS",
+        "ESFERA": "M",
+        "UF": "Bahia",
+        "MUNICIPIO": "Macaúbas",
+        "UNIDADE": "MUNICIPIO DE MACAUBAS/BA",
         "QTD_CONTRATACOES": 1
     },
     "13846753000164": {
@@ -1239,6 +2355,15 @@
         "UF": "Bahia",
         "MUNICIPIO": "Ibirapitanga",
         "UNIDADE": "PREFEITURA MUNICIPAL DE IBIRAPITANGA - BA",
+        "QTD_CONTRATACOES": 1
+    },
+    "13864377000130": {
+        "CNPJ": "13864377000130",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE - FMS",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Paulo",
+        "UNIDADE": "PMSP - SECRETARIA MUNICIPAL DE SAÚDE",
         "QTD_CONTRATACOES": 1
     },
     "13902557000160": {
@@ -1295,6 +2420,24 @@
         "UNIDADE": "FESBA - FUNDO ESTADUAL DE SAUDE DO ESTADO DA BAHIA",
         "QTD_CONTRATACOES": 2
     },
+    "13988308000139": {
+        "CNPJ": "13988308000139",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SENHOR DO BONFIM",
+        "ESFERA": "M",
+        "UF": "Bahia",
+        "MUNICIPIO": "Senhor do Bonfim",
+        "UNIDADE": "SECRETARIA MUNICIPAL DE EDUCAÇÃO",
+        "QTD_CONTRATACOES": 1
+    },
+    "14060602000149": {
+        "CNPJ": "14060602000149",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO GONCALO DOS CAMPOS",
+        "ESFERA": "M",
+        "UF": "Bahia",
+        "MUNICIPIO": "São Gonçalo dos Campos",
+        "UNIDADE": "ADMINISTRAçãO",
+        "QTD_CONTRATACOES": 1
+    },
     "14105183000114": {
         "CNPJ": "14105183000114",
         "RAZAO_SOCIAL": "MUNICIPIO DE BOM JESUS DA LAPA",
@@ -1302,7 +2445,7 @@
         "UF": "Bahia",
         "MUNICIPIO": "Bom Jesus da Lapa",
         "UNIDADE": "Prefeitura Municipal de Bom Jesus da Lapa",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 3
     },
     "14217327000124": {
         "CNPJ": "14217327000124",
@@ -1311,6 +2454,15 @@
         "UF": "Bahia",
         "MUNICIPIO": "Paulo Afonso",
         "UNIDADE": "PREFEITURA MUNICIPAL DE PAULO AFONSO - BA",
+        "QTD_CONTRATACOES": 1
+    },
+    "14217350000119": {
+        "CNPJ": "14217350000119",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RODELAS",
+        "ESFERA": "M",
+        "UF": "Bahia",
+        "MUNICIPIO": "Rodelas",
+        "UNIDADE": "MUNICÍPIO DE RODELAS/BA",
         "QTD_CONTRATACOES": 1
     },
     "14608771000170": {
@@ -1331,6 +2483,24 @@
         "UNIDADE": "CVC - Consorcio Intermunicipal Velho Coronel - CVC",
         "QTD_CONTRATACOES": 1
     },
+    "15023898000190": {
+        "CNPJ": "15023898000190",
+        "RAZAO_SOCIAL": "MUNICIPIO DE AGUA BOA",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Água Boa",
+        "UNIDADE": "MUNICÍPIO DE ÁGUA BOA/MT",
+        "QTD_CONTRATACOES": 1
+    },
+    "15024003000132": {
+        "CNPJ": "15024003000132",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SINOP",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Sinop",
+        "UNIDADE": "Departamento de Licitações",
+        "QTD_CONTRATACOES": 1
+    },
     "15024029000180": {
         "CNPJ": "15024029000180",
         "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOSE DOS QUATRO MARCOS",
@@ -1347,7 +2517,7 @@
         "UF": "Rio Grande do Norte",
         "MUNICIPIO": "Natal",
         "UNIDADE": "HOSPITAL UNIVERSITÁRIO ONOFRE LOPES",
-        "QTD_CONTRATACOES": 5
+        "QTD_CONTRATACOES": 7
     },
     "15180714000104": {
         "CNPJ": "15180714000104",
@@ -1356,6 +2526,15 @@
         "UF": "Bahia",
         "MUNICIPIO": "Salvador",
         "UNIDADE": "COMPLEXO HOSPITALAR E DE SAUDE DA UFBA",
+        "QTD_CONTRATACOES": 2
+    },
+    "15255367000123": {
+        "CNPJ": "15255367000123",
+        "RAZAO_SOCIAL": "FUNDACAO ESCOLA POLITECNICA DA BAHIA",
+        "ESFERA": "N",
+        "UF": "Bahia",
+        "MUNICIPIO": "Salvador",
+        "UNIDADE": "FUNDACAO ESCOLA POLITECNICA DA BAHIA",
         "QTD_CONTRATACOES": 1
     },
     "15389596000130": {
@@ -1367,6 +2546,24 @@
         "UNIDADE": "Comissão Permanente de Licitação",
         "QTD_CONTRATACOES": 1
     },
+    "15417520000171": {
+        "CNPJ": "15417520000171",
+        "RAZAO_SOCIAL": "CONSELHO REGIONAL DE ENGENHARIA E AGRONOMIA DE MATO GROSSO DO SUL",
+        "ESFERA": "F",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Campo Grande",
+        "UNIDADE": "CONSELHO REG. DE ENGENHARIA E AGRONOMIA - MS",
+        "QTD_CONTRATACOES": 1
+    },
+    "15461510000133": {
+        "CNPJ": "15461510000133",
+        "RAZAO_SOCIAL": "FUNDACAO UNIVERSIDADE FEDERAL DE MATO GROSSO DO SUL",
+        "ESFERA": "F",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Campo Grande",
+        "UNIDADE": "FUNDACAO UNIVERS.FEDERAL/MS",
+        "QTD_CONTRATACOES": 1
+    },
     "15465016000147": {
         "CNPJ": "15465016000147",
         "RAZAO_SOCIAL": "MUNICIPIO DE BODOQUENA",
@@ -1374,6 +2571,42 @@
         "UF": "Mato Grosso do Sul",
         "MUNICIPIO": "Bodoquena",
         "UNIDADE": "MMS-PREFEITURA MUNICIPAL DE BODOQUENA",
+        "QTD_CONTRATACOES": 1
+    },
+    "15883796000145": {
+        "CNPJ": "15883796000145",
+        "RAZAO_SOCIAL": "DEPARTAMENTO ESTADUAL DE TRANSITO",
+        "ESFERA": "E",
+        "UF": "Rondônia",
+        "MUNICIPIO": "Porto Velho",
+        "UNIDADE": "ERO-DEPARTAMENTO ESTADUAL DE TRÃNSITO",
+        "QTD_CONTRATACOES": 1
+    },
+    "16692121000181": {
+        "CNPJ": "16692121000181",
+        "RAZAO_SOCIAL": "HOSPITAL METROPOLITANO ODILON BEHRENS - HOB",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Belo Horizonte",
+        "UNIDADE": "HOSPITAL METROPOLITANO ODILON BEHRENS-BH - MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "16695025000197": {
+        "CNPJ": "16695025000197",
+        "RAZAO_SOCIAL": "POLICIA MILITAR DO ESTADO DE MINAS GERAIS",
+        "ESFERA": "E",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Belo Horizonte",
+        "UNIDADE": "CSC-SAUDE/DS",
+        "QTD_CONTRATACOES": 1
+    },
+    "16752446000102": {
+        "CNPJ": "16752446000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CONGONHAS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Congonhas",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE CONGONHAS - MG",
         "QTD_CONTRATACOES": 1
     },
     "16819831000120": {
@@ -1384,6 +2617,15 @@
         "MUNICIPIO": "Nova Era",
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
+    },
+    "16870974000166": {
+        "CNPJ": "16870974000166",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTO ANTONIO DO MONTE",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Santo Antônio do Monte",
+        "UNIDADE": "Sec. Municipal de Educação",
+        "QTD_CONTRATACOES": 2
     },
     "16886608000103": {
         "CNPJ": "16886608000103",
@@ -1412,6 +2654,33 @@
         "UNIDADE": "EAC-SECRETARIA DE EST.INDÚST.CIÊNCIA E TECNOL",
         "QTD_CONTRATACOES": 1
     },
+    "17005216000142": {
+        "CNPJ": "17005216000142",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ACUCENA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Açucena",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "17005653000166": {
+        "CNPJ": "17005653000166",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BELO ORIENTE",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Belo Oriente",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "17097791000112": {
+        "CNPJ": "17097791000112",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MONTALVANIA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Montalvânia",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
     "17138140000123": {
         "CNPJ": "17138140000123",
         "RAZAO_SOCIAL": "EMPRESA DE PESQUISA AGROPECUARIA DE MINAS GERAIS",
@@ -1419,6 +2688,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Belo Horizonte",
         "UNIDADE": "DPSU",
+        "QTD_CONTRATACOES": 1
+    },
+    "17161837000115": {
+        "CNPJ": "17161837000115",
+        "RAZAO_SOCIAL": "COMPANHIA DE HABITACAO DO ESTADO DE MINAS GERAIS - COHAB MINAS",
+        "ESFERA": "N",
+        "UF": "Roraima",
+        "MUNICIPIO": "Boa Vista",
+        "UNIDADE": "MRR-EMPRESA DE DESEN.URBANO E HABITACIONAL",
         "QTD_CONTRATACOES": 1
     },
     "17217332000125": {
@@ -1439,6 +2717,15 @@
         "UNIDADE": "CCCA",
         "QTD_CONTRATACOES": 1
     },
+    "17503475000101": {
+        "CNPJ": "17503475000101",
+        "RAZAO_SOCIAL": "FUNDACAO EZEQUIEL DIAS",
+        "ESFERA": "E",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Belo Horizonte",
+        "UNIDADE": "SERVICO DE COMPRAS",
+        "QTD_CONTRATACOES": 1
+    },
     "17744442000145": {
         "CNPJ": "17744442000145",
         "RAZAO_SOCIAL": "MUNICIPIO DE MERCES",
@@ -1446,6 +2733,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Mercês",
         "UNIDADE": "PREFEITURA MUNICIPAL DE MERCES",
+        "QTD_CONTRATACOES": 1
+    },
+    "17754201000187": {
+        "CNPJ": "17754201000187",
+        "RAZAO_SOCIAL": "MUNICIPIO DE FELICIO DOS SANTOS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Felício dos Santos",
+        "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
     "17899717000110": {
@@ -1475,6 +2771,33 @@
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
+    "17935396000161": {
+        "CNPJ": "17935396000161",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAMANDUCAIA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Camanducaia",
+        "UNIDADE": "Prefeitura Municipal de Camanducaia-MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "17947581000176": {
+        "CNPJ": "17947581000176",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MURIAE",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Muriaé",
+        "UNIDADE": "SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO",
+        "QTD_CONTRATACOES": 1
+    },
+    "17947649000117": {
+        "CNPJ": "17947649000117",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BARAO DO MONTE ALTO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Barão do Monte Alto",
+        "UNIDADE": "MMG-PREFEITURA MUN. DE BARAO DO MONTE ALTO",
+        "QTD_CONTRATACOES": 1
+    },
     "17954546000184": {
         "CNPJ": "17954546000184",
         "RAZAO_SOCIAL": "MUNICIPIO DE SAO VICENTE DE MINAS",
@@ -1482,7 +2805,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "São Vicente de Minas",
         "UNIDADE": "PREFEITURA MUNICIPAL DE SÃO VICENTE DE MINAS",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "17955535000119": {
         "CNPJ": "17955535000119",
@@ -1502,6 +2825,15 @@
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
+    "18008862000126": {
+        "CNPJ": "18008862000126",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BAEPENDI",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Baependi",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
     "18013326000119": {
         "CNPJ": "18013326000119",
         "RAZAO_SOCIAL": "MUNICIPIO DE PORTEIRINHA",
@@ -1518,6 +2850,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Brasília de Minas",
         "UNIDADE": "Secretaria Municipal de Educação",
+        "QTD_CONTRATACOES": 2
+    },
+    "18025890000151": {
+        "CNPJ": "18025890000151",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BRASOPOLIS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Brazópolis",
+        "UNIDADE": "Prefeitura Municipal de Brazópolis - MG",
         "QTD_CONTRATACOES": 1
     },
     "18025932000154": {
@@ -1536,7 +2877,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Piranguçu",
         "UNIDADE": "Departamento de Administração",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "18080655000182": {
         "CNPJ": "18080655000182",
@@ -1545,6 +2886,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Engenheiro Caldas",
         "UNIDADE": "MUNICIPIO DE ENGENHEIRO CALDAS",
+        "QTD_CONTRATACOES": 1
+    },
+    "18083659000114": {
+        "CNPJ": "18083659000114",
+        "RAZAO_SOCIAL": "MUNICIPIO DE JEQUITINHONHA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Jequitinhonha",
+        "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
     "18094839000100": {
@@ -1565,6 +2915,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE SENHORA DOS REMÉDIOS ",
         "QTD_CONTRATACOES": 1
     },
+    "18125146000129": {
+        "CNPJ": "18125146000129",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BURITIS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Buritis",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
     "18128256000144": {
         "CNPJ": "18128256000144",
         "RAZAO_SOCIAL": "MUNICIPIO DE RODEIRO",
@@ -1583,6 +2942,33 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE VIÇOSA - MG",
         "QTD_CONTRATACOES": 1
     },
+    "18133306000181": {
+        "CNPJ": "18133306000181",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ERVALIA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Ervália",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE ERVÁLIA",
+        "QTD_CONTRATACOES": 1
+    },
+    "18133439000158": {
+        "CNPJ": "18133439000158",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PEDRA DO ANTA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Pedra do Anta",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE PEDRA DO ANTA - MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "18140764000148": {
+        "CNPJ": "18140764000148",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SACRAMENTO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Sacramento",
+        "UNIDADE": "MUNICÍPIO DE SACRAMENTO/MG",
+        "QTD_CONTRATACOES": 1
+    },
     "18178400000157": {
         "CNPJ": "18178400000157",
         "RAZAO_SOCIAL": "MUNICIPIO DE CAMPESTRE",
@@ -1590,7 +2976,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Campestre",
         "UNIDADE": "Unidade Única",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "18239616000185": {
         "CNPJ": "18239616000185",
@@ -1599,7 +2985,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Guapé",
         "UNIDADE": "PREFEITURA MUNICIPAL DE GUAPE",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "18240119000105": {
         "CNPJ": "18240119000105",
@@ -1628,6 +3014,24 @@
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
+    "18244087000108": {
+        "CNPJ": "18244087000108",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIBEIRAO VERMELHO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Ribeirão Vermelho",
+        "UNIDADE": "PREFEITURA DE RIBEIRÃO VERMELHO - MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "18244335000110": {
+        "CNPJ": "18244335000110",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTO ANTONIO DO AMPARO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Santo Antônio do Amparo",
+        "UNIDADE": "Secretaria Municipal de Administração",
+        "QTD_CONTRATACOES": 1
+    },
     "18244350000169": {
         "CNPJ": "18244350000169",
         "RAZAO_SOCIAL": "MUNICIPIO DE NEPOMUCENO",
@@ -1635,6 +3039,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Nepomuceno",
         "UNIDADE": "Prefeitura Municipal de Nepomuceno - MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "18244376000107": {
+        "CNPJ": "18244376000107",
+        "RAZAO_SOCIAL": "MUNICIPIO DE LAVRAS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Lavras",
+        "UNIDADE": "Prefeitura Municipal de Lavras",
         "QTD_CONTRATACOES": 1
     },
     "18244392000108": {
@@ -1663,6 +3076,33 @@
         "MUNICIPIO": "São Gonçalo do Pará",
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
+    },
+    "18291377000102": {
+        "CNPJ": "18291377000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CARMO DO CAJURU",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Carmo do Cajuru",
+        "UNIDADE": "ADMINISTRAÇÃO E RH",
+        "QTD_CONTRATACOES": 1
+    },
+    "18291385000159": {
+        "CNPJ": "18291385000159",
+        "RAZAO_SOCIAL": "MUNICIPIO DE NOVA SERRANA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Nova Serrana",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "18296673000104": {
+        "CNPJ": "18296673000104",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PAINEIRAS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Paineiras",
+        "UNIDADE": "Prefeitura Municipal de Paineiras",
+        "QTD_CONTRATACOES": 3
     },
     "18296699000144": {
         "CNPJ": "18296699000144",
@@ -1700,6 +3140,15 @@
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
+    "18303230000195": {
+        "CNPJ": "18303230000195",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SERRA AZUL DE MINAS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Serra Azul de Minas",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 2
+    },
     "18303255000199": {
         "CNPJ": "18303255000199",
         "RAZAO_SOCIAL": "MUNICIPIO DE RIO VERMELHO",
@@ -1709,6 +3158,15 @@
         "UNIDADE": "MUNICIPIO DE RIO VERMELHO",
         "QTD_CONTRATACOES": 2
     },
+    "18308775000194": {
+        "CNPJ": "18308775000194",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CLAUDIO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Cláudio",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
     "18309724000187": {
         "CNPJ": "18309724000187",
         "RAZAO_SOCIAL": "MUNICIPIO DE ITAUNA",
@@ -1716,7 +3174,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Itaúna",
         "UNIDADE": "Unidade Única",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "18313007000129": {
         "CNPJ": "18313007000129",
@@ -1725,7 +3183,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Crucilândia",
         "UNIDADE": "Unidade Única",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 3
     },
     "18313015000175": {
         "CNPJ": "18313015000175",
@@ -1754,6 +3212,24 @@
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
+    "18314617000147": {
+        "CNPJ": "18314617000147",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAPIM BRANCO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Capim Branco",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "18315218000109": {
+        "CNPJ": "18315218000109",
+        "RAZAO_SOCIAL": "MUNICIPIO DE LEANDRO FERREIRA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Leandro Ferreira",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
     "18316257000112": {
         "CNPJ": "18316257000112",
         "RAZAO_SOCIAL": "MUNICIPIO DE PIEDADE DE PONTE NOVA",
@@ -1770,6 +3246,24 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Juiz de Fora",
         "UNIDADE": "Subsecretaria de Licitações e Compras - SSLICOM",
+        "QTD_CONTRATACOES": 1
+    },
+    "18338269000148": {
+        "CNPJ": "18338269000148",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTA RITA DE JACUTINGA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Santa Rita de Jacutinga",
+        "UNIDADE": "Prefeitura Municipal de Santa Rita de Jacutinga",
+        "QTD_CONTRATACOES": 1
+    },
+    "18338855000192": {
+        "CNPJ": "18338855000192",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TARUMIRIM",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Tarumirim",
+        "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
     "18348722000105": {
@@ -1799,6 +3293,15 @@
         "UNIDADE": "Secretária Municipal de Saúde",
         "QTD_CONTRATACOES": 1
     },
+    "18392506000159": {
+        "CNPJ": "18392506000159",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ALTO JEQUITIBA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Alto Jequitibá",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
     "18400945000166": {
         "CNPJ": "18400945000166",
         "RAZAO_SOCIAL": "MUNICIPIO DE RIO PIRACICABA",
@@ -1815,6 +3318,33 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Padre Paraíso",
         "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 2
+    },
+    "18404855000143": {
+        "CNPJ": "18404855000143",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ITAMBACURI",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Itambacuri",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "18404988000110": {
+        "CNPJ": "18404988000110",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOSE DO DIVINO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "São José do Divino",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "18413179000174": {
+        "CNPJ": "18413179000174",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ITUETA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Itueta",
+        "UNIDADE": "MUNICIPIO DE ITUETA",
         "QTD_CONTRATACOES": 1
     },
     "18414565000180": {
@@ -1824,6 +3354,51 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Pedra Azul",
         "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "18449157000164": {
+        "CNPJ": "18449157000164",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PLANURA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Planura",
+        "UNIDADE": "MUNICIPIO DE PLANURA -  MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "18457226000181": {
+        "CNPJ": "18457226000181",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTA VITORIA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Santa Vitória",
+        "UNIDADE": "MUNICIPIO DE SANTA VITORIA",
+        "QTD_CONTRATACOES": 1
+    },
+    "18457242000174": {
+        "CNPJ": "18457242000174",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ITURAMA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Iturama",
+        "UNIDADE": "MUNICIPIO DE ITURAMA/MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "18457267000178": {
+        "CNPJ": "18457267000178",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CACHOEIRA DOURADA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Cachoeira Dourada",
+        "UNIDADE": "MUNICIPIO DE CACHOEIRA DOURADA/MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "18468041000172": {
+        "CNPJ": "18468041000172",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CRUZEIRO DA FORTALEZA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Cruzeiro da Fortaleza",
+        "UNIDADE": "MUNICÍPIO DE CRUZEIRO DA FORTALEZA/MG",
         "QTD_CONTRATACOES": 1
     },
     "18477315000190": {
@@ -1844,6 +3419,24 @@
         "UNIDADE": "MEDIA E ALTA COMPLEXIDADE",
         "QTD_CONTRATACOES": 1
     },
+    "18602052000101": {
+        "CNPJ": "18602052000101",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GUIMARANIA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Guimarânia",
+        "UNIDADE": "MUNICÍPIO DE GUIMARÂNIA/MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "18666172000164": {
+        "CNPJ": "18666172000164",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO PEDRO DA UNIAO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "São Pedro da União",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
     "18668376000134": {
         "CNPJ": "18668376000134",
         "RAZAO_SOCIAL": "MUNICIPIO DE MONTE BELO",
@@ -1853,6 +3446,15 @@
         "UNIDADE": "SECRETARIA MUNICIPAL DE ADMINISTRACAO",
         "QTD_CONTRATACOES": 1
     },
+    "18671271000134": {
+        "CNPJ": "18671271000134",
+        "RAZAO_SOCIAL": "MUNICIPIO DE OURO FINO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Ouro Fino",
+        "UNIDADE": "Ouro Fino",
+        "QTD_CONTRATACOES": 1
+    },
     "18675934000199": {
         "CNPJ": "18675934000199",
         "RAZAO_SOCIAL": "MUNICIPIO DE MUNHOZ",
@@ -1860,6 +3462,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Munhoz",
         "UNIDADE": "Munhoz",
+        "QTD_CONTRATACOES": 1
+    },
+    "18675967000139": {
+        "CNPJ": "18675967000139",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CONGONHAL",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Congonhal",
+        "UNIDADE": "Prefeitura Municipal de Congonhal",
         "QTD_CONTRATACOES": 1
     },
     "18675975000185": {
@@ -1880,6 +3491,15 @@
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
+    "18677609000165": {
+        "CNPJ": "18677609000165",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CONCEICAO DOS OUROS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Conceição dos Ouros",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE CONCEIÇÃO DOS OUROS",
+        "QTD_CONTRATACOES": 1
+    },
     "18684217000123": {
         "CNPJ": "18684217000123",
         "RAZAO_SOCIAL": "MUNICIPIO DE BOM JARDIM DE MINAS",
@@ -1887,6 +3507,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Bom Jardim de Minas",
         "UNIDADE": "Prefeitura Municipal de Bom Jardim de Minas",
+        "QTD_CONTRATACOES": 2
+    },
+    "18685438000116": {
+        "CNPJ": "18685438000116",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PIEDADE DO RIO GRANDE",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Piedade do Rio Grande",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE PIEDADE DO RIO GRANDE",
         "QTD_CONTRATACOES": 1
     },
     "18691766000125": {
@@ -1916,6 +3545,15 @@
         "UNIDADE": "SETOR DE COMPRAS/DPO/SEAPA",
         "QTD_CONTRATACOES": 1
     },
+    "18940098000122": {
+        "CNPJ": "18940098000122",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BUENO BRANDAO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Bueno Brandão",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
     "19229921000159": {
         "CNPJ": "19229921000159",
         "RAZAO_SOCIAL": "MUNICIPIO DE CAPELINHA",
@@ -1923,6 +3561,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Capelinha",
         "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "19259951000108": {
+        "CNPJ": "19259951000108",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAPELA NOVA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Capela Nova",
+        "UNIDADE": "PREFEITURA  MUNICIPAL DE CAPELA NOVA",
         "QTD_CONTRATACOES": 1
     },
     "19296278000186": {
@@ -1943,12 +3590,30 @@
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
+    "19493732000199": {
+        "CNPJ": "19493732000199",
+        "RAZAO_SOCIAL": "CONSORCIO INTERFEDERATIVO MINAS GERAIS - CIMINAS",
+        "ESFERA": "N",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Araxá",
+        "UNIDADE": "CONSORCIO INTERFEDERATIVO MINAS GERAIS - CIMINAS",
+        "QTD_CONTRATACOES": 7
+    },
     "19769660000160": {
         "CNPJ": "19769660000160",
         "RAZAO_SOCIAL": "MUNICIPIO DE CONSELHEIRO PENA",
         "ESFERA": "M",
         "UF": "Minas Gerais",
         "MUNICIPIO": "Conselheiro Pena",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "19875046000182": {
+        "CNPJ": "19875046000182",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CORONEL FABRICIANO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Coronel Fabriciano",
         "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
@@ -1959,7 +3624,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Ipatinga",
         "UNIDADE": "Unidade Única",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
     },
     "20356762000132": {
         "CNPJ": "20356762000132",
@@ -1968,6 +3633,33 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Desterro de Entre Rios",
         "UNIDADE": "PREFEITURA MUNICIPAL DE DESTERRO DE ENTRE RIO",
+        "QTD_CONTRATACOES": 1
+    },
+    "20362307000140": {
+        "CNPJ": "20362307000140",
+        "RAZAO_SOCIAL": "ASSOCIACAO DOS MUNICIPIOS DA MICRORREGIAO DO MEDIO SAPUCAI - AMESP",
+        "ESFERA": "N",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Pouso Alegre",
+        "UNIDADE": "AMESP",
+        "QTD_CONTRATACOES": 1
+    },
+    "20622890000180": {
+        "CNPJ": "20622890000180",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GOVERNADOR VALADARES",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Governador Valadares",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE GOVERNADOR VALADARES",
+        "QTD_CONTRATACOES": 1
+    },
+    "20920567000193": {
+        "CNPJ": "20920567000193",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BAMBUI",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Bambuí",
+        "UNIDADE": "MUNICIPIO DE BAMBUÍ/MG",
         "QTD_CONTRATACOES": 1
     },
     "21022694000138": {
@@ -2013,7 +3705,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Itajubá",
         "UNIDADE": "Unidade Única",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "22679153000140": {
         "CNPJ": "22679153000140",
@@ -2042,6 +3734,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE PACAJA - PA",
         "QTD_CONTRATACOES": 1
     },
+    "23098510000149": {
+        "CNPJ": "23098510000149",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ARAPORA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Araporã",
+        "UNIDADE": "MUNICÍPIO DE ARAPORÃ/MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "23535271000147": {
+        "CNPJ": "23535271000147",
+        "RAZAO_SOCIAL": "SERVICO AUTONOMO DE AGUA E ESGOTO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Pirapora",
+        "UNIDADE": "Serviço Autônomo de Água e Esgoto de Pirapora",
+        "QTD_CONTRATACOES": 1
+    },
     "23773012000154": {
         "CNPJ": "23773012000154",
         "RAZAO_SOCIAL": "CONSORCIO INTERMUNICIPAL DE DESENVOLVIMENTO REGIONAL - CONDER",
@@ -2066,7 +3776,34 @@
         "ESFERA": "E",
         "UF": "Paraná",
         "MUNICIPIO": "Curitiba",
-        "UNIDADE": "EPR-FUNDAÇAO ESTATAL DE ATENÇAO EM SAUDEE",
+        "UNIDADE": "FUNEAS - Fundação Estatal de Atenção em Saúde do Estado do Paraná",
+        "QTD_CONTRATACOES": 2
+    },
+    "24082879000126": {
+        "CNPJ": "24082879000126",
+        "RAZAO_SOCIAL": "FUNDO ESTADUAL DE SEGURANCA PUBLICA - FESP-AM",
+        "ESFERA": "E",
+        "UF": "Amazonas",
+        "MUNICIPIO": "Manaus",
+        "UNIDADE": "FUNDO ESTADUAL DE SEGURANÃ‡A PÃšBLICA DO AMAZONAS",
+        "QTD_CONTRATACOES": 1
+    },
+    "24334872000154": {
+        "CNPJ": "24334872000154",
+        "RAZAO_SOCIAL": "SERVICO AUTONOMO DE AGUA E ESGOTO",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Sacramento",
+        "UNIDADE": "SERVICO AUTÔNOMO DE ÁGUA E ESGOTO DE SACRAMENTO/MG",
+        "QTD_CONTRATACOES": 1
+    },
+    "24359333000170": {
+        "CNPJ": "24359333000170",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SALINAS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Salinas",
+        "UNIDADE": "Prefeitura Municipal de Salinas",
         "QTD_CONTRATACOES": 1
     },
     "24772253000141": {
@@ -2076,6 +3813,15 @@
         "UF": "Mato Grosso",
         "MUNICIPIO": "Tapurah",
         "UNIDADE": "PREFEITURA MUNICIPAL DE TAPURAH - MT",
+        "QTD_CONTRATACOES": 1
+    },
+    "24950495000188": {
+        "CNPJ": "24950495000188",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAMPO VERDE",
+        "ESFERA": "M",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Campo Verde",
+        "UNIDADE": "MUNICÍPIO DE CAMPO VERDE/MT",
         "QTD_CONTRATACOES": 1
     },
     "24996845000147": {
@@ -2112,6 +3858,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Uberaba",
         "UNIDADE": "COMPANHIA OPERACIONAL DE DESENVOLVIMENTO, SANEAMENTO E AÇÕES URBANAS",
+        "QTD_CONTRATACOES": 2
+    },
+    "25648387000118": {
+        "CNPJ": "25648387000118",
+        "RAZAO_SOCIAL": "UNIVERSIDADE FEDERAL DE UBERLANDIA",
+        "ESFERA": "F",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Uberlândia",
+        "UNIDADE": "FUNDACAO UNIVERSIDADE FEDERAL DE UBERLANDIA",
         "QTD_CONTRATACOES": 1
     },
     "25769548000121": {
@@ -2121,7 +3876,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Uberlândia",
         "UNIDADE": "DEPARTAMENTO MUN.DE ÁGUA ESGOTO DE UBERLÂNDIA",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "25944455000196": {
         "CNPJ": "25944455000196",
@@ -2130,6 +3885,15 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Viçosa",
         "UNIDADE": "UNIVERSIDADE FEDERAL DE VICOSA",
+        "QTD_CONTRATACOES": 3
+    },
+    "25970260000110": {
+        "CNPJ": "25970260000110",
+        "RAZAO_SOCIAL": "MUNICIPIO DE VIRGINIA",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Virgínia",
+        "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 2
     },
     "26388330000190": {
@@ -2139,7 +3903,7 @@
         "UF": "Minas Gerais",
         "MUNICIPIO": "Belo Horizonte",
         "UNIDADE": "COMPRAS/HEMOMINAS",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "26461699000180": {
         "CNPJ": "26461699000180",
@@ -2150,6 +3914,15 @@
         "UNIDADE": "COMPANHIA NACIONAL DE ABASTECIMENTO CONAB",
         "QTD_CONTRATACOES": 1
     },
+    "26677304000181": {
+        "CNPJ": "26677304000181",
+        "RAZAO_SOCIAL": "UNIVERSIDADE ESTADUAL DA REGIAO TOCANTINA DO MARANHAO",
+        "ESFERA": "E",
+        "UF": "Maranhão",
+        "MUNICIPIO": "Imperatriz",
+        "UNIDADE": "UNIVERSIDADE ESTADUAL DA REGIÃO TOCANTINA",
+        "QTD_CONTRATACOES": 1
+    },
     "27080563000193": {
         "CNPJ": "27080563000193",
         "RAZAO_SOCIAL": "ESPIRITO SANTO SECRETARIA DE ESTADO DA EDUCACAO",
@@ -2157,6 +3930,15 @@
         "UF": "Espírito Santo",
         "MUNICIPIO": "Vitória",
         "UNIDADE": "SECRETARIA DE ESTADO DA EDUCAÇÃO",
+        "QTD_CONTRATACOES": 1
+    },
+    "27080605000196": {
+        "CNPJ": "27080605000196",
+        "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DA SAUDE",
+        "ESFERA": "E",
+        "UF": "Espírito Santo",
+        "MUNICIPIO": "Vitória",
+        "UNIDADE": "EES-SECRETARIA DE ESTADO DA SAUDE",
         "QTD_CONTRATACOES": 1
     },
     "27167428000180": {
@@ -2175,6 +3957,15 @@
         "UF": "Espírito Santo",
         "MUNICIPIO": "Serra",
         "UNIDADE": "PREFEITURA MUNICIPAL DA SERRA",
+        "QTD_CONTRATACOES": 1
+    },
+    "27174143000176": {
+        "CNPJ": "27174143000176",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO GABRIEL DA PALHA",
+        "ESFERA": "M",
+        "UF": "Espírito Santo",
+        "MUNICIPIO": "São Gabriel da Palha",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE S.GABRIEL DA PALHA-ES",
         "QTD_CONTRATACOES": 1
     },
     "27273416000130": {
@@ -2213,6 +4004,15 @@
         "UNIDADE": "ERJ-MINISTÉRIO PUBLICO ESTADO RIO DE JANEIRO",
         "QTD_CONTRATACOES": 1
     },
+    "28531762000133": {
+        "CNPJ": "28531762000133",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ARARUAMA",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Araruama",
+        "UNIDADE": "MUNICIPIO DE ARARUAMA - RJ ",
+        "QTD_CONTRATACOES": 1
+    },
     "28695658000184": {
         "CNPJ": "28695658000184",
         "RAZAO_SOCIAL": "MUNICIPIO DE BARRA MANSA",
@@ -2222,6 +4022,15 @@
         "UNIDADE": "Barra Mansa",
         "QTD_CONTRATACOES": 1
     },
+    "28741080000155": {
+        "CNPJ": "28741080000155",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ITABORAI",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Itaboraí",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE ITABORAI - RJ",
+        "QTD_CONTRATACOES": 1
+    },
     "29112760000172": {
         "CNPJ": "29112760000172",
         "RAZAO_SOCIAL": "BOM JESUS DO ITABAPOANA PREFEITURA",
@@ -2229,6 +4038,51 @@
         "UF": "Rio de Janeiro",
         "MUNICIPIO": "Bom Jesus do Itabapoana",
         "UNIDADE": "PREFEITURA MUNICIPAL BOM JESUS DO ITABAPOANA",
+        "QTD_CONTRATACOES": 2
+    },
+    "29115466000114": {
+        "CNPJ": "29115466000114",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CONCEICAO DE MACABU",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Conceição de Macabu",
+        "UNIDADE": "SECRETARIA MUNICIPAL DE SEGURANÇA PÚBLICA E MOBILIDADE URBANA",
+        "QTD_CONTRATACOES": 2
+    },
+    "29116902000170": {
+        "CNPJ": "29116902000170",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOAO DA BARRA",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "São João da Barra",
+        "UNIDADE": "MUNICÍPIO DE SÃO JOÃO DA BARRA/RJ",
+        "QTD_CONTRATACOES": 1
+    },
+    "29138294000102": {
+        "CNPJ": "29138294000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PARACAMBI",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Paracambi",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE PARACAMBI",
+        "QTD_CONTRATACOES": 1
+    },
+    "29138302000102": {
+        "CNPJ": "29138302000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ITAGUAI",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Itaguaí",
+        "UNIDADE": "Prefeitura Municipal de Itaguaí - RJ",
+        "QTD_CONTRATACOES": 1
+    },
+    "29141322000132": {
+        "CNPJ": "29141322000132",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PIRAI",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Piraí",
+        "UNIDADE": "Piraí",
         "QTD_CONTRATACOES": 1
     },
     "29427465000105": {
@@ -2247,7 +4101,7 @@
         "UF": "Rio de Janeiro",
         "MUNICIPIO": "Niterói",
         "UNIDADE": "NITERÓI EMPRESA DE LAZER E TURISMO S/A - RJ",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "30350149000161": {
         "CNPJ": "30350149000161",
@@ -2276,6 +4130,24 @@
         "UNIDADE": "CENTRO DE CIÊNCIAS AGRÁRIAS DA UFES",
         "QTD_CONTRATACOES": 1
     },
+    "32512501000143": {
+        "CNPJ": "32512501000143",
+        "RAZAO_SOCIAL": "MUNICIPIO DE VOLTA REDONDA",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Volta Redonda",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE VOLTA REDONDA-RJ",
+        "QTD_CONTRATACOES": 3
+    },
+    "32893926000140": {
+        "CNPJ": "32893926000140",
+        "RAZAO_SOCIAL": "AGENCIA DE TECNOLOGIA DA INFORMACAO",
+        "ESFERA": "E",
+        "UF": "Tocantins",
+        "MUNICIPIO": "Palmas",
+        "UNIDADE": "Agência de Tecnologia da Informação",
+        "QTD_CONTRATACOES": 1
+    },
     "33657248000189": {
         "CNPJ": "33657248000189",
         "RAZAO_SOCIAL": "BNDES",
@@ -2292,7 +4164,7 @@
         "UF": "Rio de Janeiro",
         "MUNICIPIO": "Rio de Janeiro",
         "UNIDADE": "FUNDACAO OSWALDO CRUZ/RJ",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 5
     },
     "35576651000109": {
         "CNPJ": "35576651000109",
@@ -2303,6 +4175,15 @@
         "UNIDADE": "SUPERINTENDÊNCIA DE TRANSITO E TRANSP PUBLIC",
         "QTD_CONTRATACOES": 1
     },
+    "36350346000167": {
+        "CNPJ": "36350346000167",
+        "RAZAO_SOCIAL": "MUNICIPIO DE VILA PAVAO",
+        "ESFERA": "M",
+        "UF": "Espírito Santo",
+        "MUNICIPIO": "Vila Pavão",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE VILA PAVÃO",
+        "QTD_CONTRATACOES": 1
+    },
     "37115383000153": {
         "CNPJ": "37115383000153",
         "RAZAO_SOCIAL": "MINISTERIO DE MINAS E ENERGIA",
@@ -2310,7 +4191,7 @@
         "UF": "Rio de Janeiro",
         "MUNICIPIO": "Rio de Janeiro",
         "UNIDADE": "INDUSTRIAS NUCLEARES DO BRASIL S/A",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "37115482000135": {
         "CNPJ": "37115482000135",
@@ -2319,6 +4200,15 @@
         "UF": "Distrito Federal",
         "MUNICIPIO": "Brasília",
         "UNIDADE": "POLÍCIA CIVIL DO DISTRITO FEDERAL",
+        "QTD_CONTRATACOES": 1
+    },
+    "37212719000104": {
+        "CNPJ": "37212719000104",
+        "RAZAO_SOCIAL": "MUNICIPIO DE NOVA ALVORADA DO SUL",
+        "ESFERA": "M",
+        "UF": "Mato Grosso do Sul",
+        "MUNICIPIO": "Nova Alvorada do Sul",
+        "UNIDADE": "MUNICIPIO DE NOVA ALVORADA DO SUL",
         "QTD_CONTRATACOES": 1
     },
     "37464831000124": {
@@ -2355,6 +4245,15 @@
         "UF": "Rio de Janeiro",
         "MUNICIPIO": "Rio de Janeiro",
         "UNIDADE": "Secretaria de Estado de Policia Civil",
+        "QTD_CONTRATACOES": 2
+    },
+    "42498733000148": {
+        "CNPJ": "42498733000148",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIO DE JANEIRO",
+        "ESFERA": "M",
+        "UF": "Rio de Janeiro",
+        "MUNICIPIO": "Rio de Janeiro",
+        "UNIDADE": "MRJ-PREFEITURA MUNICIPAL DO RIO DE JANEIRO",
         "QTD_CONTRATACOES": 1
     },
     "42521088000137": {
@@ -2393,6 +4292,15 @@
         "UNIDADE": "ADMINISTRAÇÃO GERAL",
         "QTD_CONTRATACOES": 1
     },
+    "44477909000100": {
+        "CNPJ": "44477909000100",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MARILIA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Marília",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE MARÍLIA",
+        "QTD_CONTRATACOES": 2
+    },
     "44482248000101": {
         "CNPJ": "44482248000101",
         "RAZAO_SOCIAL": "MUNICIPIO DE OCAUCU",
@@ -2402,6 +4310,15 @@
         "UNIDADE": "MUNICIPIO DE OCAUCU",
         "QTD_CONTRATACOES": 1
     },
+    "44498988000136": {
+        "CNPJ": "44498988000136",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BOCAINA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Bocaina",
+        "UNIDADE": "PREFEITURA MUNICIPAL",
+        "QTD_CONTRATACOES": 1
+    },
     "44531788000138": {
         "CNPJ": "44531788000138",
         "RAZAO_SOCIAL": "MUNICIPIO DE LINS",
@@ -2409,6 +4326,15 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Lins",
         "UNIDADE": "Prefeitura Municipal de Lins",
+        "QTD_CONTRATACOES": 1
+    },
+    "44547313000130": {
+        "CNPJ": "44547313000130",
+        "RAZAO_SOCIAL": "MUNICIPIO DE QUATA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Quatá",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE QUATA",
         "QTD_CONTRATACOES": 1
     },
     "44660272000193": {
@@ -2438,6 +4364,42 @@
         "UNIDADE": "DIRETORIA DE SAÚDE ",
         "QTD_CONTRATACOES": 1
     },
+    "44733608000109": {
+        "CNPJ": "44733608000109",
+        "RAZAO_SOCIAL": "MUNICIPIO DE INDAIATUBA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Indaiatuba",
+        "UNIDADE": "Indaiatuba",
+        "QTD_CONTRATACOES": 1
+    },
+    "44763928000101": {
+        "CNPJ": "44763928000101",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MOCOCA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Mococa",
+        "UNIDADE": "Prefeitura Municipal de Mococa",
+        "QTD_CONTRATACOES": 1
+    },
+    "44847663000111": {
+        "CNPJ": "44847663000111",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SERRA NEGRA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Serra Negra",
+        "UNIDADE": "MSP-PREFEITURA MUNICIPAL DE SERRA NEGRA",
+        "QTD_CONTRATACOES": 1
+    },
+    "44927267000102": {
+        "CNPJ": "44927267000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PACAEMBU",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Pacaembu",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE",
+        "QTD_CONTRATACOES": 1
+    },
     "44937365000112": {
         "CNPJ": "44937365000112",
         "RAZAO_SOCIAL": "MUNICIPIO DE MIRANTE DO PARANAPANEMA",
@@ -2456,6 +4418,24 @@
         "UNIDADE": "Prefeitura Municipal de Eldorado - SP",
         "QTD_CONTRATACOES": 1
     },
+    "45115391000128": {
+        "CNPJ": "45115391000128",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GUARANI D'OESTE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Guarani d'Oeste",
+        "UNIDADE": "MUNICIPIO DE GUARANI D'OESTE",
+        "QTD_CONTRATACOES": 1
+    },
+    "45116712000109": {
+        "CNPJ": "45116712000109",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOAO DAS DUAS PONTES",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São João das Duas Pontes",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE  SAO JOAO DAS DUAS PONTES",
+        "QTD_CONTRATACOES": 1
+    },
     "45122942000180": {
         "CNPJ": "45122942000180",
         "RAZAO_SOCIAL": "MUNICIPIO DE PINDORAMA",
@@ -2463,6 +4443,15 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Pindorama",
         "UNIDADE": "PREFEITURA MUNICIPAL",
+        "QTD_CONTRATACOES": 1
+    },
+    "45129177000120": {
+        "CNPJ": "45129177000120",
+        "RAZAO_SOCIAL": "CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DOS MUNICIPIOS DA AMNAP - CIM AMNAP",
+        "ESFERA": "N",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Adamantina",
+        "UNIDADE": "CONSORCIO INTER.MULT.DOS MUNIC. DA AMNAP-CIM AMNAP",
         "QTD_CONTRATACOES": 1
     },
     "45132495000140": {
@@ -2473,6 +4462,24 @@
         "MUNICIPIO": "Limeira",
         "UNIDADE": "PREFEITURA MUNICIPAL DE LIMEIRA",
         "QTD_CONTRATACOES": 1
+    },
+    "45152139000199": {
+        "CNPJ": "45152139000199",
+        "RAZAO_SOCIAL": "MUNICIPIO DE NOVO HORIZONTE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Novo Horizonte",
+        "UNIDADE": "Novo Horizonte",
+        "QTD_CONTRATACOES": 1
+    },
+    "45176005000108": {
+        "CNPJ": "45176005000108",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TAUBATE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Taubaté",
+        "UNIDADE": "Prefeitura Municipal de Taubaté",
+        "QTD_CONTRATACOES": 2
     },
     "45189305000121": {
         "CNPJ": "45189305000121",
@@ -2519,6 +4526,33 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE BRODOWSKI",
         "QTD_CONTRATACOES": 1
     },
+    "45302130000117": {
+        "CNPJ": "45302130000117",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTO ANTONIO DA ALEGRIA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Santo Antônio da Alegria",
+        "UNIDADE": "Unidade Única",
+        "QTD_CONTRATACOES": 1
+    },
+    "45307980000108": {
+        "CNPJ": "45307980000108",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CRISTAIS PAULISTA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Cristais Paulista",
+        "UNIDADE": "ADMINISTRAÇÃO DO GABINETE",
+        "QTD_CONTRATACOES": 1
+    },
+    "45323474000102": {
+        "CNPJ": "45323474000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ARAMINA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Aramina",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE ARAMINA",
+        "QTD_CONTRATACOES": 1
+    },
     "45332095000189": {
         "CNPJ": "45332095000189",
         "RAZAO_SOCIAL": "MUNICIPIO DE MOGI-MIRIM",
@@ -2526,7 +4560,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Mogi Mirim",
         "UNIDADE": "PREFEITURA MUNICIPAL DE MOJI-MIRIM - SP",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "45352267000186": {
         "CNPJ": "45352267000186",
@@ -2553,7 +4587,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Ibaté",
         "UNIDADE": "Prefeitura Municipal de Ibaté",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "45371820000128": {
         "CNPJ": "45371820000128",
@@ -2562,7 +4596,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Sertãozinho",
         "UNIDADE": "PREFEITURA MUNICIPAL DE SERTÃOZINHO - SP",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "45417018000121": {
         "CNPJ": "45417018000121",
@@ -2571,6 +4605,15 @@
         "UF": "Amazonas",
         "MUNICIPIO": "Manaus",
         "UNIDADE": "Secretaria Municipal de Segurança Pública e Defesa Social",
+        "QTD_CONTRATACOES": 1
+    },
+    "45479391000107": {
+        "CNPJ": "45479391000107",
+        "RAZAO_SOCIAL": "SERVICO AUTONOMO DE AGUA E ESGOTO DE PORTO FELIZ",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Porto Feliz",
+        "UNIDADE": "SAAE",
         "QTD_CONTRATACOES": 1
     },
     "45509650000103": {
@@ -2591,6 +4634,15 @@
         "UNIDADE": "URBANIZADORA MUNICIPAL S/A DE SÃO JOSE CAMPOS",
         "QTD_CONTRATACOES": 1
     },
+    "45728326000178": {
+        "CNPJ": "45728326000178",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GUAPIACU",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Guapiaçu",
+        "UNIDADE": "PREFEITURA MUNICIPAL",
+        "QTD_CONTRATACOES": 1
+    },
     "45751435000106": {
         "CNPJ": "45751435000106",
         "RAZAO_SOCIAL": "MUNICIPIO DE PAULINIA",
@@ -2598,6 +4650,24 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Paulínia",
         "UNIDADE": "MUNICIPIO DE PAULINIA",
+        "QTD_CONTRATACOES": 1
+    },
+    "45780061000157": {
+        "CNPJ": "45780061000157",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ITUPEVA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Itupeva",
+        "UNIDADE": "Itupeva",
+        "QTD_CONTRATACOES": 1
+    },
+    "45780079000159": {
+        "CNPJ": "45780079000159",
+        "RAZAO_SOCIAL": "MUNICIPIO DE JARINU",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Jarinu",
+        "UNIDADE": "Prefeitura Municipal de Jarinu",
         "QTD_CONTRATACOES": 1
     },
     "45781176000166": {
@@ -2609,6 +4679,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE AMERICANA",
         "QTD_CONTRATACOES": 2
     },
+    "45786159000111": {
+        "CNPJ": "45786159000111",
+        "RAZAO_SOCIAL": "MUNICIPIO DE IRACEMAPOLIS",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Iracemápolis",
+        "UNIDADE": "Prefeitura Municipal de Iracemápolis",
+        "QTD_CONTRATACOES": 1
+    },
     "45787652000156": {
         "CNPJ": "45787652000156",
         "RAZAO_SOCIAL": "MUNICIPIO DE MONTE MOR",
@@ -2617,6 +4696,24 @@
         "MUNICIPIO": "Monte Mor",
         "UNIDADE": "Prefeitura Municipal de Monte Mor - SP",
         "QTD_CONTRATACOES": 2
+    },
+    "45787660000100": {
+        "CNPJ": "45787660000100",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SUMARE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Sumaré",
+        "UNIDADE": "SECRETARIA MUNICIPAL DE INCLUSÃO, ASSISTÊNCIA E DESENVOLVIMENTO SOCIAL",
+        "QTD_CONTRATACOES": 1
+    },
+    "45944428000120": {
+        "CNPJ": "45944428000120",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MAIRINQUE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Mairinque",
+        "UNIDADE": "Prefeitura Municipal de Mairinque",
+        "QTD_CONTRATACOES": 1
     },
     "46068425000133": {
         "CNPJ": "46068425000133",
@@ -2634,7 +4731,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Campinas",
         "UNIDADE": "SANASA",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "46137410000180": {
         "CNPJ": "46137410000180",
@@ -2643,7 +4740,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Bauru",
         "UNIDADE": "PREFEITURA MUNICIPAL DE BAURU/SP",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
     },
     "46137444000174": {
         "CNPJ": "46137444000174",
@@ -2652,7 +4749,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Agudos",
         "UNIDADE": "Prefeitura Municipal de Agudos",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "46156477000161": {
         "CNPJ": "46156477000161",
@@ -2661,6 +4758,15 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Coroados",
         "UNIDADE": "PREFEITURA MUNICIPAL DE COROADOS",
+        "QTD_CONTRATACOES": 1
+    },
+    "46177523000109": {
+        "CNPJ": "46177523000109",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO VICENTE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Vicente",
+        "UNIDADE": "São Vicente",
         "QTD_CONTRATACOES": 1
     },
     "46189734000161": {
@@ -2681,6 +4787,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE MINEIROS DO TIETÊ - SP",
         "QTD_CONTRATACOES": 1
     },
+    "46200846000176": {
+        "CNPJ": "46200846000176",
+        "RAZAO_SOCIAL": "MUNICIPIO DE LENCOIS PAULISTA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Lençóis Paulista",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE LENÇÓIS PAULISTA - SP",
+        "QTD_CONTRATACOES": 1
+    },
+    "46200853000178": {
+        "CNPJ": "46200853000178",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MACATUBA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Macatuba",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE MACATUBA - SP",
+        "QTD_CONTRATACOES": 1
+    },
     "46223749000107": {
         "CNPJ": "46223749000107",
         "RAZAO_SOCIAL": "MUNICIPIO DE MANDURI",
@@ -2699,6 +4823,15 @@
         "UNIDADE": "Prefeitura Municipal de Vargem Grande do Sul",
         "QTD_CONTRATACOES": 1
     },
+    "46319000000150": {
+        "CNPJ": "46319000000150",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GUARULHOS",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Guarulhos",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE GUARULHOS - SP",
+        "QTD_CONTRATACOES": 1
+    },
     "46363933000144": {
         "CNPJ": "46363933000144",
         "RAZAO_SOCIAL": "MUNICIPIO DE LOUVEIRA",
@@ -2715,7 +4848,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "São Paulo",
         "UNIDADE": "ESP-COORD. GERAL ADMINIST. - CGA",
-        "QTD_CONTRATACOES": 6
+        "QTD_CONTRATACOES": 10
     },
     "46377800000127": {
         "CNPJ": "46377800000127",
@@ -2724,16 +4857,16 @@
         "UF": "São Paulo",
         "MUNICIPIO": "São Paulo",
         "UNIDADE": "ESP-CENTRO DE MOTOMECANIZACAO - CMM",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
     },
     "46384111000140": {
         "CNPJ": "46384111000140",
         "RAZAO_SOCIAL": "SAO PAULO SECRETARIA DA EDUCACAO",
         "ESFERA": "E",
         "UF": "São Paulo",
-        "MUNICIPIO": "Birigui",
-        "UNIDADE": "ESP-DIR.ENS.-REG.BIRIGUI",
-        "QTD_CONTRATACOES": 2
+        "MUNICIPIO": "Adamantina",
+        "UNIDADE": "ESP-DIR.ENS.-REG.ADAMANTINA",
+        "QTD_CONTRATACOES": 4
     },
     "46392130000118": {
         "CNPJ": "46392130000118",
@@ -2742,6 +4875,24 @@
         "UF": "São Paulo",
         "MUNICIPIO": "São Paulo",
         "UNIDADE": "PMSP - SECRETARIA MUNICIPAL DA FAZENDA",
+        "QTD_CONTRATACOES": 1
+    },
+    "46422408000152": {
+        "CNPJ": "46422408000152",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTA BARBARA D'OESTE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Santa Bárbara d'Oeste",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SANTA BARBARA D'OESTE",
+        "QTD_CONTRATACOES": 2
+    },
+    "46444063000138": {
+        "CNPJ": "46444063000138",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SOCORRO",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Socorro",
+        "UNIDADE": "Socorro",
         "QTD_CONTRATACOES": 1
     },
     "46446696000185": {
@@ -2771,6 +4922,24 @@
         "UNIDADE": "Prefeitura Municipal de Ubatuba",
         "QTD_CONTRATACOES": 1
     },
+    "46522975000180": {
+        "CNPJ": "46522975000180",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIO GRANDE DA SERRA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Rio Grande da Serra",
+        "UNIDADE": "Municipio De Rio Grande Da Serra",
+        "QTD_CONTRATACOES": 1
+    },
+    "46522983000127": {
+        "CNPJ": "46522983000127",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTANA DE PARNAIBA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Santana de Parnaíba",
+        "UNIDADE": "Secretaria Municipal de Compras e Licitações",
+        "QTD_CONTRATACOES": 2
+    },
     "46523031000128": {
         "CNPJ": "46523031000128",
         "RAZAO_SOCIAL": "MUNICIPIO DE ITAPEVI",
@@ -2778,7 +4947,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Itapevi",
         "UNIDADE": "Itapevi",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "46523056000121": {
         "CNPJ": "46523056000121",
@@ -2787,6 +4956,15 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Suzano",
         "UNIDADE": "PREFEITURA MUNICIPAL DE SUZANO - SP",
+        "QTD_CONTRATACOES": 1
+    },
+    "46523080000160": {
+        "CNPJ": "46523080000160",
+        "RAZAO_SOCIAL": "MUNICIPIO DE FRANCO DA ROCHA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Franco da Rocha",
+        "UNIDADE": "Prefeitura Municipal de Franco da Rocha",
         "QTD_CONTRATACOES": 1
     },
     "46523122000163": {
@@ -2816,6 +4994,15 @@
         "UNIDADE": "Juquiá",
         "QTD_CONTRATACOES": 1
     },
+    "46588950000180": {
+        "CNPJ": "46588950000180",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOSE DO RIO PRETO",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São José do Rio Preto",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SAO JOSE DO RIO PRETO",
+        "QTD_CONTRATACOES": 1
+    },
     "46596151000155": {
         "CNPJ": "46596151000155",
         "RAZAO_SOCIAL": "MUNICIPIO DA ESTANCIA TURISTICA DE OLIMPIA",
@@ -2823,7 +5010,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Olímpia",
         "UNIDADE": "PREFEITURA MUNICIPAL DA ESTÂNCIA TURÍSTICA DE OLÍMPIA",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "46599809000182": {
         "CNPJ": "46599809000182",
@@ -2832,7 +5019,34 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Votuporanga",
         "UNIDADE": "PREFEITURA DO MUNICÍPIO DE VOTUPORANGA",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
+    },
+    "46613196000190": {
+        "CNPJ": "46613196000190",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SALES",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Sales",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SALES",
+        "QTD_CONTRATACOES": 1
+    },
+    "46634044000174": {
+        "CNPJ": "46634044000174",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SOROCABA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Sorocaba",
+        "UNIDADE": "Prefeitura Municipal de Sorocaba",
+        "QTD_CONTRATACOES": 1
+    },
+    "46634077000114": {
+        "CNPJ": "46634077000114",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAPELA DO ALTO",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Capela do Alto",
+        "UNIDADE": "Capela do Alto",
+        "QTD_CONTRATACOES": 1
     },
     "46634127000163": {
         "CNPJ": "46634127000163",
@@ -2888,6 +5102,33 @@
         "UNIDADE": "SECRETARIA MUNICIPAL DE EDUCACAO ",
         "QTD_CONTRATACOES": 1
     },
+    "46634416000162": {
+        "CNPJ": "46634416000162",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIVERSUL",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Riversul",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE RIVERSUL - SP",
+        "QTD_CONTRATACOES": 1
+    },
+    "46634572000123": {
+        "CNPJ": "46634572000123",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CESARIO LANGE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Cesário Lange",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE CESARIO LANGE - SP",
+        "QTD_CONTRATACOES": 1
+    },
+    "46634580000170": {
+        "CNPJ": "46634580000170",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PORANGABA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Porangaba",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE PORANGABA - SP",
+        "QTD_CONTRATACOES": 1
+    },
     "46638714000120": {
         "CNPJ": "46638714000120",
         "RAZAO_SOCIAL": "MUNICIPIO DE TREMEMBE",
@@ -2895,6 +5136,24 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Tremembé",
         "UNIDADE": "Tremembé",
+        "QTD_CONTRATACOES": 1
+    },
+    "46643466000106": {
+        "CNPJ": "46643466000106",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOSE DOS CAMPOS",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São José dos Campos",
+        "UNIDADE": "SECRETARIA DE GESTAO ADMINISTRATIVA E FINANCAS",
+        "QTD_CONTRATACOES": 1
+    },
+    "46668596000101": {
+        "CNPJ": "46668596000101",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CRUZEIRO",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Cruzeiro",
+        "UNIDADE": "Cruzeiro",
         "QTD_CONTRATACOES": 1
     },
     "46680518000114": {
@@ -2949,7 +5208,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "São José dos Campos",
         "UNIDADE": "ESP-UNESP-INST.CIEN.TECNOLOG.-C.S.J.CAMPOS",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
     },
     "48468284000171": {
         "CNPJ": "48468284000171",
@@ -2996,6 +5255,15 @@
         "UNIDADE": "SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO - SAAE",
         "QTD_CONTRATACOES": 1
     },
+    "50122571000177": {
+        "CNPJ": "50122571000177",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ITATIBA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Itatiba",
+        "UNIDADE": "Itatiba",
+        "QTD_CONTRATACOES": 1
+    },
     "50387844000105": {
         "CNPJ": "50387844000105",
         "RAZAO_SOCIAL": "MUNICIPIO DE JABOTICABAL",
@@ -3014,6 +5282,24 @@
         "UNIDADE": "CAMARA MUNICIPAL DE OSASCO - SP",
         "QTD_CONTRATACOES": 1
     },
+    "50804079000181": {
+        "CNPJ": "50804079000181",
+        "RAZAO_SOCIAL": "CAMARA MUNICIPAL DA ESTANCIA TURISTICA DE SAO ROQUE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Roque",
+        "UNIDADE": "CAMARA MUNIC EST.TURIST SAO ROQUE",
+        "QTD_CONTRATACOES": 1
+    },
+    "51501484000193": {
+        "CNPJ": "51501484000193",
+        "RAZAO_SOCIAL": "CONSORCIO INTERMUNICIPAL DO VALE DO PARANAPANEMA",
+        "ESFERA": "N",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Assis",
+        "UNIDADE": "CONSORCIO INTERM DO VALE DO PARANAPANEMA",
+        "QTD_CONTRATACOES": 1
+    },
     "52356268000245": {
         "CNPJ": "52356268000245",
         "RAZAO_SOCIAL": "CONDERG - CONS. DE DESENV. - HOSPITAL DIVINOLÂNDIA",
@@ -3021,6 +5307,15 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Divinolândia",
         "UNIDADE": "CONSÓRCIO DE DESENVOLVIMENTO DA REGIÃO DE GOVERNO DE SÃO JOÃO DA BOA VISTA",
+        "QTD_CONTRATACOES": 1
+    },
+    "52879780000195": {
+        "CNPJ": "52879780000195",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SEBASTIANOPOLIS DO SUL",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Sebastianópolis do Sul",
+        "UNIDADE": "MUNICIPIO DE SEBASTIANOPOLIS DO SUL",
         "QTD_CONTRATACOES": 1
     },
     "54715094000104": {
@@ -3032,6 +5327,15 @@
         "UNIDADE": "CES-FUNDAÇÃO C M S CULT E COMUNICAÇÃO PÚBLICA",
         "QTD_CONTRATACOES": 1
     },
+    "54801121000161": {
+        "CNPJ": "54801121000161",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PIRAPOZINHO",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Pirapozinho",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE PIRAPOZINHO - SP",
+        "QTD_CONTRATACOES": 1
+    },
     "55251185000107": {
         "CNPJ": "55251185000107",
         "RAZAO_SOCIAL": "MUNICIPIO DE PRESIDENTE BERNARDES",
@@ -3039,6 +5343,24 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Presidente Bernardes",
         "UNIDADE": "PREFEITURA MUNICIPAL",
+        "QTD_CONTRATACOES": 1
+    },
+    "55293427000117": {
+        "CNPJ": "55293427000117",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PRESIDENTE EPITACIO",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Presidente Epitácio",
+        "UNIDADE": "PREFEITURA MUNICIPAL",
+        "QTD_CONTRATACOES": 1
+    },
+    "55356653000108": {
+        "CNPJ": "55356653000108",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PRESIDENTE PRUDENTE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Presidente Prudente",
+        "UNIDADE": "Unidade Única",
         "QTD_CONTRATACOES": 1
     },
     "56023443000152": {
@@ -3057,7 +5379,7 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Ribeirão Preto",
         "UNIDADE": "PREFEITURA MUNICIPAL DE RIBEIRAO PRETO - SP",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "56089790000188": {
         "CNPJ": "56089790000188",
@@ -3066,6 +5388,24 @@
         "UF": "São Paulo",
         "MUNICIPIO": "São Paulo",
         "UNIDADE": "ESP-COORD. DE FISCALIZACAO E BIODIVERSIDADE",
+        "QTD_CONTRATACOES": 1
+    },
+    "57252971000146": {
+        "CNPJ": "57252971000146",
+        "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DE SAUDE DE MATO GROSSO - SES",
+        "ESFERA": "E",
+        "UF": "Mato Grosso",
+        "MUNICIPIO": "Cuiabá",
+        "UNIDADE": "SECRETARIA DE ESTADO DE SAÚDE",
+        "QTD_CONTRATACOES": 1
+    },
+    "59952259000185": {
+        "CNPJ": "59952259000185",
+        "RAZAO_SOCIAL": "ASSEMBLEIA LEGISLATIVA DO ESTADO DE SAO PAULO",
+        "ESFERA": "E",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Paulo",
+        "UNIDADE": "ASSEMBLEIA LEGISLATIVA DO EST. SÃO PAULO",
         "QTD_CONTRATACOES": 1
     },
     "60448040000122": {
@@ -3111,7 +5451,25 @@
         "UF": "São Paulo",
         "MUNICIPIO": "São Paulo",
         "UNIDADE": "ESP-HOSPITAL UNIVERSITÁRIO - USP",
-        "QTD_CONTRATACOES": 3
+        "QTD_CONTRATACOES": 10
+    },
+    "63084727000114": {
+        "CNPJ": "63084727000114",
+        "RAZAO_SOCIAL": "MORPARA CAMARA MUNICIPAL",
+        "ESFERA": "M",
+        "UF": "Bahia",
+        "MUNICIPIO": "Morpará",
+        "UNIDADE": "CÂMARA MUNICIPAL DE MORPARÁ - BA ",
+        "QTD_CONTRATACOES": 1
+    },
+    "63678320000115": {
+        "CNPJ": "63678320000115",
+        "RAZAO_SOCIAL": "FUNDACAO HOSPITALAR DE HEMATOLOGIA E HEMOTERAPIA DO AMAZONAS",
+        "ESFERA": "E",
+        "UF": "Amazonas",
+        "MUNICIPIO": "Manaus",
+        "UNIDADE": "FUNDAÃ‡ÃƒO DE HEMATOLOGIA E HEMOTERAPIA DO AMAZONAS",
+        "QTD_CONTRATACOES": 1
     },
     "63762025000142": {
         "CNPJ": "63762025000142",
@@ -3120,6 +5478,15 @@
         "UF": "Rondônia",
         "MUNICIPIO": "Alto Paraíso",
         "UNIDADE": "MUNICÍPIO DE ALTO PARAÍSO/RO",
+        "QTD_CONTRATACOES": 1
+    },
+    "63762058000192": {
+        "CNPJ": "63762058000192",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CACAULANDIA",
+        "ESFERA": "M",
+        "UF": "Rondônia",
+        "MUNICIPIO": "Cacaulândia",
+        "UNIDADE": "MUNICÍPIO DE CACAULÂNDIA/RO",
         "QTD_CONTRATACOES": 1
     },
     "64037815000128": {
@@ -3131,6 +5498,78 @@
         "UNIDADE": "SECRETARIA MUNICIPAL DE SAÚDE/FUNDO MUNICIPAL DE SAÚDE",
         "QTD_CONTRATACOES": 1
     },
+    "65708786000141": {
+        "CNPJ": "65708786000141",
+        "RAZAO_SOCIAL": "MUNICIPIO DE UBARANA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Ubarana",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE UBARANA",
+        "QTD_CONTRATACOES": 1
+    },
+    "65712002000159": {
+        "CNPJ": "65712002000159",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ASPASIA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Aspásia",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE ASPÁSIA - SP",
+        "QTD_CONTRATACOES": 1
+    },
+    "66229584000180": {
+        "CNPJ": "66229584000180",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTA RITA DE MINAS",
+        "ESFERA": "M",
+        "UF": "Minas Gerais",
+        "MUNICIPIO": "Santa Rita de Minas",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SANTA RITA DE MINAS",
+        "QTD_CONTRATACOES": 1
+    },
+    "68596162000178": {
+        "CNPJ": "68596162000178",
+        "RAZAO_SOCIAL": "INSTITUTO AGUA E TERRA",
+        "ESFERA": "E",
+        "UF": "Paraná",
+        "MUNICIPIO": "Curitiba",
+        "UNIDADE": "IAT - Instituto Água e Terra (Antigo IAP)",
+        "QTD_CONTRATACOES": 1
+    },
+    "68949894000102": {
+        "CNPJ": "68949894000102",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE MOBILIDADE URBANA E SEGURANCA VIARIA DO MUNICIPIO DE MORRINHOS-GO",
+        "ESFERA": "M",
+        "UF": "Goiás",
+        "MUNICIPIO": "Morrinhos",
+        "UNIDADE": " FUNDO MUNICIPAL DE SEGURANÇA E MOBILIDADE URBANA",
+        "QTD_CONTRATACOES": 1
+    },
+    "69902112000134": {
+        "CNPJ": "69902112000134",
+        "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE - FMS",
+        "ESFERA": "M",
+        "UF": "Pernambuco",
+        "MUNICIPIO": "Vertente do Lério",
+        "UNIDADE": "Fundo Municipal de Saúde Vertente do Lério",
+        "QTD_CONTRATACOES": 1
+    },
+    "70946009000175": {
+        "CNPJ": "70946009000175",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO ROQUE",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Roque",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE SÃO ROQUE",
+        "QTD_CONTRATACOES": 1
+    },
+    "71584833000195": {
+        "CNPJ": "71584833000195",
+        "RAZAO_SOCIAL": "PROCURADORIA GERAL DO ESTADO",
+        "ESFERA": "E",
+        "UF": "São Paulo",
+        "MUNICIPIO": "São Paulo",
+        "UNIDADE": "ESP-FED-PROCURADORIA GERAL DO EST-FUNPROGESP",
+        "QTD_CONTRATACOES": 1
+    },
     "71989685000199": {
         "CNPJ": "71989685000199",
         "RAZAO_SOCIAL": "MUNICIPIO DE TABATINGA",
@@ -3138,6 +5577,24 @@
         "UF": "São Paulo",
         "MUNICIPIO": "Tabatinga",
         "UNIDADE": "PREFEITURA MUNICIPAL DE TABATINGA",
+        "QTD_CONTRATACOES": 1
+    },
+    "72962806000171": {
+        "CNPJ": "72962806000171",
+        "RAZAO_SOCIAL": "SUPERINTENDENCIA DE AGUA, ESGOTOS E MEIO AMBIENTE DE VOTUPORANGA",
+        "ESFERA": "M",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Votuporanga",
+        "UNIDADE": "SUPERINTENDÊNCIA DE ÁGUA, ESGOTOS E MEIO AMBIENTE DE VOTUPORANGA - SP",
+        "QTD_CONTRATACOES": 2
+    },
+    "75095679000149": {
+        "CNPJ": "75095679000149",
+        "RAZAO_SOCIAL": "UNIVERSIDADE FEDERAL DO PARANA",
+        "ESFERA": "F",
+        "UF": "Paraná",
+        "MUNICIPIO": "Curitiba",
+        "UNIDADE": "UNIVERSIDADE FEDERAL DO PARANA",
         "QTD_CONTRATACOES": 1
     },
     "75101873000190": {
@@ -3167,6 +5624,15 @@
         "UNIDADE": "Unidade administrativa",
         "QTD_CONTRATACOES": 1
     },
+    "75442756000190": {
+        "CNPJ": "75442756000190",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAMBARA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Cambará",
+        "UNIDADE": "UNIDADE ADMINISTRATIVA",
+        "QTD_CONTRATACOES": 1
+    },
     "75443812000100": {
         "CNPJ": "75443812000100",
         "RAZAO_SOCIAL": "MUNICIPIO DE GUAPIRAMA",
@@ -3185,6 +5651,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL STO. ANTONIO DO CAIUA-PR",
         "QTD_CONTRATACOES": 1
     },
+    "75587204000170": {
+        "CNPJ": "75587204000170",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TERRA ROXA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Terra Roxa",
+        "UNIDADE": "PREFEITURA MUN. DE TERRA ROXA - PR",
+        "QTD_CONTRATACOES": 2
+    },
+    "75636530000120": {
+        "CNPJ": "75636530000120",
+        "RAZAO_SOCIAL": "MUNICIPIO DE VERE",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Verê",
+        "UNIDADE": "Prefeitura Municipal de Verê",
+        "QTD_CONTRATACOES": 1
+    },
     "75687681000107": {
         "CNPJ": "75687681000107",
         "RAZAO_SOCIAL": "MUNICIPIO DE GENERAL CARNEIRO",
@@ -3193,6 +5677,15 @@
         "MUNICIPIO": "General Carneiro",
         "UNIDADE": "PREFEITURA MUNICIPAL DE GENERAL CARNEIRO - PR",
         "QTD_CONTRATACOES": 1
+    },
+    "75771253000168": {
+        "CNPJ": "75771253000168",
+        "RAZAO_SOCIAL": "MUNICIPIO DE APUCARANA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Apucarana",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE APUCARANA/PR",
+        "QTD_CONTRATACOES": 2
     },
     "75771477000170": {
         "CNPJ": "75771477000170",
@@ -3203,6 +5696,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE LONDRINA - PR",
         "QTD_CONTRATACOES": 1
     },
+    "75845537000151": {
+        "CNPJ": "75845537000151",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GUARACI",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Guaraci",
+        "UNIDADE": "UNIDADE ADMINISTRATIVA",
+        "QTD_CONTRATACOES": 1
+    },
+    "75967760000171": {
+        "CNPJ": "75967760000171",
+        "RAZAO_SOCIAL": "MUNICIPIO DE UNIAO DA VITORIA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "União da Vitória",
+        "UNIDADE": "MPR-PREFEITURA MUNICIPAL DE UNIAO DA VITORIA",
+        "QTD_CONTRATACOES": 1
+    },
     "75969667000104": {
         "CNPJ": "75969667000104",
         "RAZAO_SOCIAL": "MUNICIPIO DE JABOTI",
@@ -3210,6 +5721,24 @@
         "UF": "Paraná",
         "MUNICIPIO": "Jaboti",
         "UNIDADE": "PREFEITURA MUNICIPAL DE JABOTI - PR",
+        "QTD_CONTRATACOES": 1
+    },
+    "75969881000152": {
+        "CNPJ": "75969881000152",
+        "RAZAO_SOCIAL": "MUNICIPIO DE JAPIRA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Japira",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE JAPIRA - PR",
+        "QTD_CONTRATACOES": 1
+    },
+    "76002641000147": {
+        "CNPJ": "76002641000147",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIO NEGRO",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Rio Negro",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE RIO NEGRO/PR",
         "QTD_CONTRATACOES": 1
     },
     "76017466000161": {
@@ -3228,7 +5757,16 @@
         "UF": "Paraná",
         "MUNICIPIO": "Lapa",
         "UNIDADE": "PREFEITURA MUNICIPAL DA LAPA - PR",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
+    },
+    "76022508000152": {
+        "CNPJ": "76022508000152",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GUARAQUECABA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Guaraqueçaba",
+        "UNIDADE": "Prefeitura Municipal de Guaraqueçaba - PR",
+        "QTD_CONTRATACOES": 1
     },
     "76105535000199": {
         "CNPJ": "76105535000199",
@@ -3248,6 +5786,33 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE MANDIRITUBA - PR",
         "QTD_CONTRATACOES": 1
     },
+    "76105576000185": {
+        "CNPJ": "76105576000185",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIO BRANCO DO SUL",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Rio Branco do Sul",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE",
+        "QTD_CONTRATACOES": 1
+    },
+    "76105600000186": {
+        "CNPJ": "76105600000186",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAMPINA GRANDE DO SUL",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Campina Grande do Sul",
+        "UNIDADE": "Prefeitura Municipal de Campina Grande do Sul - PR",
+        "QTD_CONTRATACOES": 2
+    },
+    "76105634000170": {
+        "CNPJ": "76105634000170",
+        "RAZAO_SOCIAL": "MUNICIPIO DE COLOMBO",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Colombo",
+        "UNIDADE": "Departamento de Controle e Conservação de Patrimônio",
+        "QTD_CONTRATACOES": 1
+    },
     "76169879000161": {
         "CNPJ": "76169879000161",
         "RAZAO_SOCIAL": "MUNICIPIO DE RESERVA",
@@ -3255,6 +5820,15 @@
         "UF": "Paraná",
         "MUNICIPIO": "Reserva",
         "UNIDADE": "DEPARTAMENTO DE SAUDE",
+        "QTD_CONTRATACOES": 1
+    },
+    "76179837000101": {
+        "CNPJ": "76179837000101",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PORTO AMAZONAS",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Porto Amazonas",
+        "UNIDADE": "FUNDO MUNICIPAL DE SAÚDE",
         "QTD_CONTRATACOES": 1
     },
     "76205707000104": {
@@ -3273,6 +5847,51 @@
         "UF": "Paraná",
         "MUNICIPIO": "Santa Izabel do Oeste",
         "UNIDADE": "PREF.MUN. DE SANTA IZABEL DO OESTE - PR",
+        "QTD_CONTRATACOES": 2
+    },
+    "76205806000188": {
+        "CNPJ": "76205806000188",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TOLEDO",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Toledo",
+        "UNIDADE": "GAB DA SECRETARIA DE INFRAESTRUTURA RURAL E URBANA E DE SERVICOS",
+        "QTD_CONTRATACOES": 1
+    },
+    "76205814000124": {
+        "CNPJ": "76205814000124",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MARECHAL CANDIDO RONDON",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Marechal Cândido Rondon",
+        "UNIDADE": "PREFEITURA MUNUNICIPAL MAR.CANDIDO RONDOM",
+        "QTD_CONTRATACOES": 2
+    },
+    "76205970000195": {
+        "CNPJ": "76205970000195",
+        "RAZAO_SOCIAL": "MUNICIPIO DE LARANJEIRAS DO SUL",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Laranjeiras do Sul",
+        "UNIDADE": "SECRETARIA DE ASSISTENCIA SOCIAL E SEGURANCA DA FAMILIA",
+        "QTD_CONTRATACOES": 1
+    },
+    "76206465000165": {
+        "CNPJ": "76206465000165",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MATELANDIA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Matelândia",
+        "UNIDADE": "Municipio de Matelandia",
+        "QTD_CONTRATACOES": 2
+    },
+    "76208487000164": {
+        "CNPJ": "76208487000164",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PALOTINA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Palotina",
+        "UNIDADE": "Unidade administrativa",
         "QTD_CONTRATACOES": 1
     },
     "76208867000107": {
@@ -3302,6 +5921,15 @@
         "UNIDADE": "Unidade administrativa",
         "QTD_CONTRATACOES": 1
     },
+    "76244961000103": {
+        "CNPJ": "76244961000103",
+        "RAZAO_SOCIAL": "MUNICIPIO DE IBIPORA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Ibiporã",
+        "UNIDADE": "UNIDADE ADMINISTRATIVA",
+        "QTD_CONTRATACOES": 1
+    },
     "76282656000106": {
         "CNPJ": "76282656000106",
         "RAZAO_SOCIAL": "MUNICIPIO DE MARINGA",
@@ -3309,7 +5937,7 @@
         "UF": "Paraná",
         "MUNICIPIO": "Maringá",
         "UNIDADE": "PREFEITURA MUNICIPAL DE MARINGA - PR",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
     },
     "76282664000152": {
         "CNPJ": "76282664000152",
@@ -3336,7 +5964,34 @@
         "UF": "Paraná",
         "MUNICIPIO": "Mandaguari",
         "UNIDADE": "PREFEITURA MUNICIPAL DE MANDAGUARÍ - PR",
-        "QTD_CONTRATACOES": 2
+        "QTD_CONTRATACOES": 3
+    },
+    "76288760000108": {
+        "CNPJ": "76288760000108",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ROLANDIA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Rolândia",
+        "UNIDADE": "Prefeitura Municipal de Rolândia - PR",
+        "QTD_CONTRATACOES": 1
+    },
+    "76309806000128": {
+        "CNPJ": "76309806000128",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CIANORTE",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Cianorte",
+        "UNIDADE": "Unidade administrativa",
+        "QTD_CONTRATACOES": 1
+    },
+    "76331941000170": {
+        "CNPJ": "76331941000170",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CORNELIO PROCOPIO",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Cornélio Procópio",
+        "UNIDADE": "Prefeitura Municipal de Cornélio Procópio",
+        "QTD_CONTRATACOES": 1
     },
     "76381854000127": {
         "CNPJ": "76381854000127",
@@ -3347,6 +6002,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE CRUZEIRO DO OESTE - PR",
         "QTD_CONTRATACOES": 1
     },
+    "76402882000183": {
+        "CNPJ": "76402882000183",
+        "RAZAO_SOCIAL": "MUNICIPIO DE JANIOPOLIS",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Janiópolis",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE JANIOPOLIS - PR",
+        "QTD_CONTRATACOES": 2
+    },
     "76484013000145": {
         "CNPJ": "76484013000145",
         "RAZAO_SOCIAL": "COMPANHIA DE SANEAMENTO DO PARANA SANEPAR",
@@ -3354,7 +6018,7 @@
         "UF": "Paraná",
         "MUNICIPIO": "Curitiba",
         "UNIDADE": "SEDE",
-        "QTD_CONTRATACOES": 3
+        "QTD_CONTRATACOES": 5
     },
     "76878669000142": {
         "CNPJ": "76878669000142",
@@ -3365,6 +6029,24 @@
         "UNIDADE": "SAAE - Serviço Autônomo de Água e Esgoto",
         "QTD_CONTRATACOES": 1
     },
+    "76910900000138": {
+        "CNPJ": "76910900000138",
+        "RAZAO_SOCIAL": "MUNICIPIO DE JAGUARIAIVA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Jaguariaíva",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE JAGUARIAÍVA - PR",
+        "QTD_CONTRATACOES": 1
+    },
+    "76958966000106": {
+        "CNPJ": "76958966000106",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ARAPONGAS",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Arapongas",
+        "UNIDADE": "MPR-PREFEITURA MUNICIPAL DE ARAPONGAS",
+        "QTD_CONTRATACOES": 1
+    },
     "76966860000146": {
         "CNPJ": "76966860000146",
         "RAZAO_SOCIAL": "MUNICIPIO DE JACAREZINHO",
@@ -3373,6 +6055,24 @@
         "MUNICIPIO": "Jacarezinho",
         "UNIDADE": "MPR-PREFEITURA MUNICIPAL DE JACAREZINHO",
         "QTD_CONTRATACOES": 2
+    },
+    "76968627000100": {
+        "CNPJ": "76968627000100",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTO ANTONIO DA PLATINA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Santo Antônio da Platina",
+        "UNIDADE": "Departamento Municipal de Saúde",
+        "QTD_CONTRATACOES": 1
+    },
+    "76995422000106": {
+        "CNPJ": "76995422000106",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOAO",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "São João",
+        "UNIDADE": "Div. de Adm. da Saude",
+        "QTD_CONTRATACOES": 1
     },
     "76995455000156": {
         "CNPJ": "76995455000156",
@@ -3390,7 +6090,7 @@
         "UF": "Paraná",
         "MUNICIPIO": "Curitiba",
         "UNIDADE": "SECRETARIA DE ESTADO DA ADMINISTRAÇAO PREV.",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 5
     },
     "77356665000167": {
         "CNPJ": "77356665000167",
@@ -3410,6 +6110,42 @@
         "UNIDADE": "MPR-PEFEITURA MUNICIPAL DE FRANCISCO BELTRÃO",
         "QTD_CONTRATACOES": 2
     },
+    "77964393000188": {
+        "CNPJ": "77964393000188",
+        "RAZAO_SOCIAL": "TECPAR",
+        "ESFERA": "N",
+        "UF": "Paraná",
+        "MUNICIPIO": "Curitiba",
+        "UNIDADE": "EPR-INSTITUTO DE TECNOLOGIA DO PARANA",
+        "QTD_CONTRATACOES": 1
+    },
+    "78200482000110": {
+        "CNPJ": "78200482000110",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SARANDI",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Sarandi",
+        "UNIDADE": "MPR-PREFEITURA MUNICIPAL DE SARANDI",
+        "QTD_CONTRATACOES": 1
+    },
+    "78279973000107": {
+        "CNPJ": "78279973000107",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TURVO",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Turvo",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE TURVO - PR",
+        "QTD_CONTRATACOES": 1
+    },
+    "78279981000145": {
+        "CNPJ": "78279981000145",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CANTAGALO",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Cantagalo",
+        "UNIDADE": "Prefeitura Municipal de Cantagalo - PR",
+        "QTD_CONTRATACOES": 1
+    },
     "78680337000770": {
         "CNPJ": "78680337000770",
         "RAZAO_SOCIAL": "UNIVERSIDADE ESTADUAL DO OESTE DO PARANA",
@@ -3417,6 +6153,15 @@
         "UF": "Paraná",
         "MUNICIPIO": "Cascavel",
         "UNIDADE": "UNIVERSIDADE EST OESTE DO PARANA (REITORIA)",
+        "QTD_CONTRATACOES": 2
+    },
+    "79151312000156": {
+        "CNPJ": "79151312000156",
+        "RAZAO_SOCIAL": "UNIVERSIDADE ESTADUAL DE MARINGA",
+        "ESFERA": "E",
+        "UF": "Paraná",
+        "MUNICIPIO": "Maringá",
+        "UNIDADE": "UNIVERSIDADE ESTADUAL DE MARINGA - PR",
         "QTD_CONTRATACOES": 2
     },
     "80059918000145": {
@@ -3464,6 +6209,15 @@
         "UNIDADE": "Departamento de Compras e Licitações",
         "QTD_CONTRATACOES": 1
     },
+    "82892274000105": {
+        "CNPJ": "82892274000105",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO JOSE",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "São José",
+        "UNIDADE": "FMS -  Fundo Municipal de Saúde",
+        "QTD_CONTRATACOES": 1
+    },
     "82916818000113": {
         "CNPJ": "82916818000113",
         "RAZAO_SOCIAL": "MUNICIPIO DE CRICIUMA",
@@ -3473,6 +6227,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE CRICIÚMA - SC",
         "QTD_CONTRATACOES": 1
     },
+    "82926536000105": {
+        "CNPJ": "82926536000105",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO LUDGERO",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "São Ludgero",
+        "UNIDADE": "MUNICÍPIO DE SÃO LUDGERO",
+        "QTD_CONTRATACOES": 1
+    },
+    "82926569000147": {
+        "CNPJ": "82926569000147",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GRAVATAL",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Gravatal",
+        "UNIDADE": "SECRETARIA MUNICIPAL DE INFRA ESTRUTURA",
+        "QTD_CONTRATACOES": 1
+    },
     "82939448000130": {
         "CNPJ": "82939448000130",
         "RAZAO_SOCIAL": "MUNICIPIO DE IBICARE",
@@ -3480,7 +6252,7 @@
         "UF": "Santa Catarina",
         "MUNICIPIO": "Ibicaré",
         "UNIDADE": "Fundo Municipal de Saúde",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "82939455000131": {
         "CNPJ": "82939455000131",
@@ -3491,6 +6263,51 @@
         "UNIDADE": "FUNDO MUNICIPAL DE ASSISTÊNCIA SOCIAL",
         "QTD_CONTRATACOES": 1
     },
+    "82951344000140": {
+        "CNPJ": "82951344000140",
+        "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DE INFRAESTRUTURA E MOBILIDADE (SIE)",
+        "ESFERA": "E",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Florianópolis",
+        "UNIDADE": "Secretaria de Estado da Infraestrutura e Mobilidade",
+        "QTD_CONTRATACOES": 2
+    },
+    "82951351000142": {
+        "CNPJ": "82951351000142",
+        "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DA ADMINISTRACAO",
+        "ESFERA": "E",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Florianópolis",
+        "UNIDADE": "Diretoria de Gestão de Licitações e Contratos",
+        "QTD_CONTRATACOES": 2
+    },
+    "83021808000182": {
+        "CNPJ": "83021808000182",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CHAPECO",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Chapecó",
+        "UNIDADE": "Prefeitura Municipal de Chapecó",
+        "QTD_CONTRATACOES": 1
+    },
+    "83052191000162": {
+        "CNPJ": "83052191000162",
+        "RAZAO_SOCIAL": "EMPRESA DE PESQUISA AGROPECUARIA E EXTENSAO RURAL DE SANTA CATARINA",
+        "ESFERA": "N",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Florianópolis",
+        "UNIDADE": "EPAGRI - S.A.",
+        "QTD_CONTRATACOES": 1
+    },
+    "83074294000123": {
+        "CNPJ": "83074294000123",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIO DAS ANTAS",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Rio das Antas",
+        "UNIDADE": "ADM - Secret. Mun. de Obras e Serviços - SMOS",
+        "QTD_CONTRATACOES": 1
+    },
     "83102327000100": {
         "CNPJ": "83102327000100",
         "RAZAO_SOCIAL": "MUNICIPIO DE PENHA",
@@ -3498,6 +6315,15 @@
         "UF": "Santa Catarina",
         "MUNICIPIO": "Penha",
         "UNIDADE": "DEPARTAMENTO ADMINISTRATIVO",
+        "QTD_CONTRATACOES": 1
+    },
+    "83102442000176": {
+        "CNPJ": "83102442000176",
+        "RAZAO_SOCIAL": "MUNICIPIO DE WITMARSUM",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Witmarsum",
+        "UNIDADE": "Obras e Servicos Urbanos",
         "QTD_CONTRATACOES": 1
     },
     "83102467000170": {
@@ -3518,6 +6344,33 @@
         "UNIDADE": "MUNICÍPIO DE PORTO UNIÃO",
         "QTD_CONTRATACOES": 1
     },
+    "83102673000180": {
+        "CNPJ": "83102673000180",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PETROLANDIA",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Petrolândia",
+        "UNIDADE": "Fundo Municipal de Agricultura",
+        "QTD_CONTRATACOES": 1
+    },
+    "83102681000126": {
+        "CNPJ": "83102681000126",
+        "RAZAO_SOCIAL": "MUNICIPIO DE POUSO REDONDO",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Pouso Redondo",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE POUSO REDONDO - SC",
+        "QTD_CONTRATACOES": 1
+    },
+    "83102756000179": {
+        "CNPJ": "83102756000179",
+        "RAZAO_SOCIAL": "MUNICIPIO DE RIO NEGRINHO",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Rio Negrinho",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE RIO NEGRINHO - SC",
+        "QTD_CONTRATACOES": 1
+    },
     "83108357000115": {
         "CNPJ": "83108357000115",
         "RAZAO_SOCIAL": "MUNICIPIO DE BLUMENAU",
@@ -3536,6 +6389,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE JOINVILLE",
         "QTD_CONTRATACOES": 1
     },
+    "83211375000128": {
+        "CNPJ": "83211375000128",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ABEL FIGUEIREDO",
+        "ESFERA": "M",
+        "UF": "Pará",
+        "MUNICIPIO": "Abel Figueiredo",
+        "UNIDADE": "Fundo Municipal de Saúde",
+        "QTD_CONTRATACOES": 1
+    },
+    "83334698000109": {
+        "CNPJ": "83334698000109",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SANTA BARBARA DO PARA",
+        "ESFERA": "M",
+        "UF": "Pará",
+        "MUNICIPIO": "Santa Bárbara do Pará",
+        "UNIDADE": "PREFEITURA MUNICIPAL SANTA BARBARA DO PARA",
+        "QTD_CONTRATACOES": 1
+    },
     "84722933000182": {
         "CNPJ": "84722933000182",
         "RAZAO_SOCIAL": "MUNICIPIO DE TEIXEIROPOLIS",
@@ -3543,6 +6414,15 @@
         "UF": "Rondônia",
         "MUNICIPIO": "Teixeirópolis",
         "UNIDADE": "MUNICÍPIO DE TEIXEIRÓPOLIS/RO",
+        "QTD_CONTRATACOES": 1
+    },
+    "85361863000147": {
+        "CNPJ": "85361863000147",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PALMITOS",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Palmitos",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE PALMITOS - SC",
         "QTD_CONTRATACOES": 1
     },
     "86051398000100": {
@@ -3581,6 +6461,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL",
         "QTD_CONTRATACOES": 2
     },
+    "87531976000179": {
+        "CNPJ": "87531976000179",
+        "RAZAO_SOCIAL": "MUNICIPIO DE AGUDO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Agudo",
+        "UNIDADE": "PREFEITURA MUNICIPAL",
+        "QTD_CONTRATACOES": 1
+    },
+    "87612537000190": {
+        "CNPJ": "87612537000190",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PASSO FUNDO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Passo Fundo",
+        "UNIDADE": "Coordenadoria de Licitações e Contratos",
+        "QTD_CONTRATACOES": 1
+    },
     "87612818000143": {
         "CNPJ": "87612818000143",
         "RAZAO_SOCIAL": "MUNICIPIO DE SANTO CRISTO",
@@ -3617,6 +6515,33 @@
         "UNIDADE": "EXECUTIVO MUNICIPAL",
         "QTD_CONTRATACOES": 1
     },
+    "87613485000177": {
+        "CNPJ": "87613485000177",
+        "RAZAO_SOCIAL": "MUNICIPIO DE VICTOR GRAEFF",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Victor Graeff",
+        "UNIDADE": "Prefeitura Municipal de Victor Graeff",
+        "QTD_CONTRATACOES": 1
+    },
+    "87613600000103": {
+        "CNPJ": "87613600000103",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CACIQUE DOBLE",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Cacique Doble",
+        "UNIDADE": "Setor de Licitações",
+        "QTD_CONTRATACOES": 1
+    },
+    "87849923000109": {
+        "CNPJ": "87849923000109",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BENTO GONCALVES",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Bento Gonçalves",
+        "UNIDADE": "MUNICÍPIO DE BENTO GONÇALVES",
+        "QTD_CONTRATACOES": 1
+    },
     "87897740000150": {
         "CNPJ": "87897740000150",
         "RAZAO_SOCIAL": "MUNICIPIO DE SANTIAGO",
@@ -3633,7 +6558,7 @@
         "UF": "Rio Grande do Sul",
         "MUNICIPIO": "Alvorada",
         "UNIDADE": "Departamento Geral de Compras, Licitações e Contratos",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
     },
     "88138292000174": {
         "CNPJ": "88138292000174",
@@ -3642,6 +6567,15 @@
         "UF": "Rio Grande do Sul",
         "MUNICIPIO": "Rosário do Sul",
         "UNIDADE": "PREFEITURA MUNICIPAL DE ROSARIO DO SUL",
+        "QTD_CONTRATACOES": 1
+    },
+    "88227764000165": {
+        "CNPJ": "88227764000165",
+        "RAZAO_SOCIAL": "MUNICIPIO DE TUPANCIRETA",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Tupanciretã",
+        "UNIDADE": "PREFEITURA MUNICIPAL",
         "QTD_CONTRATACOES": 1
     },
     "88370879000104": {
@@ -3653,6 +6587,15 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE SÃO SEBASTIÃO DO CAÍ",
         "QTD_CONTRATACOES": 1
     },
+    "88379763000136": {
+        "CNPJ": "88379763000136",
+        "RAZAO_SOCIAL": "MUNICIPIO DE IGREJINHA",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Igrejinha",
+        "UNIDADE": "Departamento de Licitações",
+        "QTD_CONTRATACOES": 1
+    },
     "88489786000101": {
         "CNPJ": "88489786000101",
         "RAZAO_SOCIAL": "MUNICIPIO DE SAO BORJA",
@@ -3660,7 +6603,16 @@
         "UF": "Rio Grande do Sul",
         "MUNICIPIO": "São Borja",
         "UNIDADE": "Prefeitura Municipal de São Borja",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 4
+    },
+    "88566872000162": {
+        "CNPJ": "88566872000162",
+        "RAZAO_SOCIAL": "MUNICIPIO DO RIO GRANDE",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Rio Grande",
+        "UNIDADE": "PREFEITURA MUNICIPAL DO RIO GRANDE - RS",
+        "QTD_CONTRATACOES": 2
     },
     "88577416000118": {
         "CNPJ": "88577416000118",
@@ -3725,6 +6677,33 @@
         "UNIDADE": "MRS-PREFEITURA MUNICIPAL DE CAXIAS DO SUL",
         "QTD_CONTRATACOES": 1
     },
+    "88847082000155": {
+        "CNPJ": "88847082000155",
+        "RAZAO_SOCIAL": "MUNICIPIO DE GRAMADO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Gramado",
+        "UNIDADE": "SECRETARIA DA SAÚDE",
+        "QTD_CONTRATACOES": 1
+    },
+    "89814693000160": {
+        "CNPJ": "89814693000160",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO LEOPOLDO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "São Leopoldo",
+        "UNIDADE": "Prefeitura Municipal de São Leopoldo",
+        "QTD_CONTRATACOES": 1
+    },
+    "89848949000150": {
+        "CNPJ": "89848949000150",
+        "RAZAO_SOCIAL": "MUNICIPIO DE FARROUPILHA",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Farroupilha",
+        "UNIDADE": "Secretaria de Obras e Trânsito",
+        "QTD_CONTRATACOES": 1
+    },
     "90976853000156": {
         "CNPJ": "90976853000156",
         "RAZAO_SOCIAL": "EMPRESA DE TRENS URBANOS DE PORTO ALEGRE S/A",
@@ -3743,6 +6722,24 @@
         "UNIDADE": "Autarquia Municipal de Saúde",
         "QTD_CONTRATACOES": 1
     },
+    "92242080000100": {
+        "CNPJ": "92242080000100",
+        "RAZAO_SOCIAL": "UNIVERSIDADE FEDERAL DE PELOTAS",
+        "ESFERA": "F",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Pelotas",
+        "UNIDADE": "UNIVERSIDADE FEDERAL DE PELOTAS/RS",
+        "QTD_CONTRATACOES": 1
+    },
+    "92412808000102": {
+        "CNPJ": "92412808000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MATO CASTELHANO",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Mato Castelhano",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE MATO CASTELHANO - RS",
+        "QTD_CONTRATACOES": 1
+    },
     "92787118000120": {
         "CNPJ": "92787118000120",
         "RAZAO_SOCIAL": "HOSPITAL NOSSA SENHORA DA CONCEICAO S/A",
@@ -3751,6 +6748,15 @@
         "MUNICIPIO": "Porto Alegre",
         "UNIDADE": "HOSPITAL NOSSA SENHORA DA CONCEICAO S A",
         "QTD_CONTRATACOES": 2
+    },
+    "92924901000198": {
+        "CNPJ": "92924901000198",
+        "RAZAO_SOCIAL": "PORTO ALEGRE DEPARTAMENTO MUNICIPAL DE AGUAS E ESGOTOS",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Porto Alegre",
+        "UNIDADE": "Gerência de Licitações e Contratos",
+        "QTD_CONTRATACOES": 1
     },
     "92931245000150": {
         "CNPJ": "92931245000150",
@@ -3770,6 +6776,51 @@
         "UNIDADE": "UNIVERSIDADE FED. DE CIENCIAS DA SAUDE/RS",
         "QTD_CONTRATACOES": 1
     },
+    "93845519000151": {
+        "CNPJ": "93845519000151",
+        "RAZAO_SOCIAL": "MUNICIPIO DE PORTO MAUA",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "Porto Mauá",
+        "UNIDADE": "MUNICIPIO DE PORTO MAUA/RS",
+        "QTD_CONTRATACOES": 2
+    },
+    "94442241000134": {
+        "CNPJ": "94442241000134",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO VALERIO DO SUL",
+        "ESFERA": "M",
+        "UF": "Rio Grande do Sul",
+        "MUNICIPIO": "São Valério do Sul",
+        "UNIDADE": "Departamento de Compras",
+        "QTD_CONTRATACOES": 1
+    },
+    "95583571000102": {
+        "CNPJ": "95583571000102",
+        "RAZAO_SOCIAL": "MUNICIPIO DE MARIPA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Maripá",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE MARIPA - PR",
+        "QTD_CONTRATACOES": 2
+    },
+    "95583597000150": {
+        "CNPJ": "95583597000150",
+        "RAZAO_SOCIAL": "MUNICIPIO DE SAO PEDRO DO IGUACU",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "São Pedro do Iguaçu",
+        "UNIDADE": "MUNICIPIO DE SAO PEDRO DO IGUAÇU - PR",
+        "QTD_CONTRATACOES": 1
+    },
+    "95587648000112": {
+        "CNPJ": "95587648000112",
+        "RAZAO_SOCIAL": "MUNICIPIO DE NOVA LARANJEIRAS",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Nova Laranjeiras",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE NOVA LARANJEIRAS - PR",
+        "QTD_CONTRATACOES": 1
+    },
     "95591764000105": {
         "CNPJ": "95591764000105",
         "RAZAO_SOCIAL": "UNIVERSIDADE FEDERAL DE SANTA MARIA",
@@ -3778,6 +6829,15 @@
         "MUNICIPIO": "Santa Maria",
         "UNIDADE": "UNIVERSIDADE FEDERAL DE STA.MARIA/RS",
         "QTD_CONTRATACOES": 2
+    },
+    "95640520000175": {
+        "CNPJ": "95640520000175",
+        "RAZAO_SOCIAL": "MUNICIPIO DE BRASILANDIA DO SUL",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Brasilândia do Sul",
+        "UNIDADE": "Unidade administrativa",
+        "QTD_CONTRATACOES": 1
     },
     "95719373000123": {
         "CNPJ": "95719373000123",
@@ -3788,6 +6848,24 @@
         "UNIDADE": "PREFEITURA MUNICIPAL DE MERCEDES - PR",
         "QTD_CONTRATACOES": 1
     },
+    "95725057000164": {
+        "CNPJ": "95725057000164",
+        "RAZAO_SOCIAL": "MUNICIPIO DE ITAIPULANDIA",
+        "ESFERA": "M",
+        "UF": "Paraná",
+        "MUNICIPIO": "Itaipulândia",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE ITAIPULÂNDIA - PR",
+        "QTD_CONTRATACOES": 1
+    },
+    "95780441000160": {
+        "CNPJ": "95780441000160",
+        "RAZAO_SOCIAL": "MUNICIPIO DE CAPIVARI DE BAIXO",
+        "ESFERA": "M",
+        "UF": "Santa Catarina",
+        "MUNICIPIO": "Capivari de Baixo",
+        "UNIDADE": "PREFEITURA MUNICIPAL DE CAPIVARI DE BAIXO - SC",
+        "QTD_CONTRATACOES": 1
+    },
     "95996187000131": {
         "CNPJ": "95996187000131",
         "RAZAO_SOCIAL": "MUNICIPIO DE VARGEM BONITA",
@@ -3795,7 +6873,16 @@
         "UF": "Santa Catarina",
         "MUNICIPIO": "Vargem Bonita",
         "UNIDADE": "FUNDO MUNICIPAL DE SAUDE DE VARGEM BONITA",
-        "QTD_CONTRATACOES": 1
+        "QTD_CONTRATACOES": 2
+    },
+    "96291141000180": {
+        "CNPJ": "96291141000180",
+        "RAZAO_SOCIAL": "SAO PAULO SECRETARIA DA ADMINISTRACAO PENITENCIARIA",
+        "ESFERA": "E",
+        "UF": "São Paulo",
+        "MUNICIPIO": "Pacaembu",
+        "UNIDADE": "ESP-PENIT. OZIAS LUCIO DOS SANTOS - PACAEMBU",
+        "QTD_CONTRATACOES": 2
     },
     "98671597000109": {
         "CNPJ": "98671597000109",

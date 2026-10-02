@@ -1,34 +1,49 @@
 {
     "amparoLegal": {
         "1": "Lei 14.133/2021, Art. 28, I",
+        "2": "Lei 14.133/2021, Art. 28, II ",
         "18": "Lei 14.133/2021, Art. 75, I",
         "19": "Lei 14.133/2021, Art. 75, II",
-        "113": "Lei 13.303/2016, Art. 32, IV"
+        "113": "Lei 13.303/2016, Art. 32, IV",
+        "140": "Lei 14.133/2021, Art. 79, I",
+        "141": "Lei 14.133/2021, Art. 79, II"
     },
     "criterioJulgamento": {
         "1": "Menor preço",
-        "2": "Maior desconto"
+        "2": "Maior desconto",
+        "4": "Técnica e preço",
+        "7": "Não se aplica"
     },
     "fontesOrcamentarias": {
+        "1": "Não se aplica",
         "2": "Municipal",
         "3": "Estadual",
-        "4": "Federal"
+        "4": "Federal",
+        "5": "Organismo Internacional",
+        "6": "Distrital"
     },
     "itemCategoria": {
         "3": "Não se aplica"
     },
     "modalidade": {
+        "4": "Concorrência - Eletrônica",
+        "5": "Concorrência - Presencial",
         "6": "Pregão - Eletrônico",
-        "8": "Dispensa"
+        "8": "Dispensa",
+        "12": "Credenciamento"
     },
     "modoDisputa": {
         "1": "Aberto",
         "2": "Fechado",
         "3": "Aberto-Fechado",
-        "4": "Dispensa Com Disputa"
+        "4": "Dispensa Com Disputa",
+        "5": "Não se aplica",
+        "6": "Fechado-Aberto"
     },
     "situacaoCompra": {
         "1": "Divulgada no PNCP",
+        "2": "Revogada",
+        "3": "Anulada",
         "4": "Suspensa"
     },
     "tipoDocumento": {
@@ -36,10 +51,11 @@
         "2": "Edital",
         "3": "Minuta do Contrato",
         "4": "Termo de Referência",
+        "6": "Projeto Básico",
         "7": "Estudo Técnico Preliminar",
         "8": "Projeto Executivo",
         "9": "Mapa de Riscos",
-        "10": "DFD",
+        "10": "Documento de Formalização da Demanda - DFD",
         "16": "Outros Documentos",
         "19": "Minuta de Ata de Registro de Preços",
         "20": "Ato que autoriza a Contratação Direta"
