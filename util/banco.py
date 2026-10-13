@@ -293,7 +293,6 @@ def inserir_compra(compra):
     """
     Insere uma contratação desejada no banco de dados.
     """
-    print("### ENTREI NA FUNÇÃO inserir_compra ###", flush=True)
 
     from ferramentas.gerar_dataset import extrair_dados_compra
 
@@ -305,10 +304,6 @@ def inserir_compra(compra):
     
     clientes = compra.get("clientes",{})
     itens = compra.get("itens",[])
-
-    print("Tipo de compra['itens']:", type(compra.get("itens")))
-    print("Quantidade de itens:", len(itens))
-
 
     conn = conectar()
     cursor = conn.cursor()
