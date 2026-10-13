@@ -1,5 +1,9 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from pathlib import Path
+
+def excluir_runtime_jupyter(arquivo):
+    return "jupyter" in str(arquivo).lower()
 
 a = Analysis(
     ['interface/menu.py'],
@@ -10,7 +14,7 @@ a = Analysis(
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=['matplotlib', 'scipy', 'PIL', 'lxml'],
+    excludes=['matplotlib', 'scipy', 'PIL', 'lxml','PySide6'],
     noarchive=False,
     optimize=0,
 )

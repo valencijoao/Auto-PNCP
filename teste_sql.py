@@ -1,28 +1,19 @@
-from ferramentas.gerar_orgaos import gerar_orgaos 
-from ferramentas.gerar_dataset import gerar_dataset
-from util.banco import inserir_orgaos, inserir_contratacoes, inserir_vinculos_clientes, inserir_clientes, consultar_contratacao
-import sqlite3
+from util.banco import conectar
 
-df = gerar_dataset()
+conn = conectar()
 
-from util.banco import consultar_contratacao
+itens = conn.execute("""
+    SELECT    
+        COUNT(*) AS TOTAL_ITENS,
+        COUNT(DISTINCT id_interno) AS CONTRATACOES_COM_ITENS
+    FROM itens;
+""").fetchone()
 
-from ferramentas.gerar_dataset import carregar_compra
-from util.banco import inserir_compra, adicionar_cliente_contratacao, remover_cliente_contratacao
-from config.caminhos import COMPRAS
-
-import sqlite3
-
-from util.banco import (
-    inserir_orgaos,
-    inserir_contratacoes,
-    inserir_vinculos_clientes,
-    inserir_clientes,
-    consultar_contratacao
-)
+print("Total de itens:", itens[0])
+print("Contratação com itens:", itens[1])
 
 
-pasta = COMPRAS / "45787660000100-2026-268"
+conn.close()
 
-resultado = consultar_contratacao("18315218000109",2026,67)
-print(resultado)
+
+

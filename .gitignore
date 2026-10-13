@@ -1,10 +1,24 @@
 .venv/
 
+
+
 teste_sql.py
+
+AutoPainel.exe
+AutoPainel.spec
+dataset_interno.csv
+dataset_interno.xlsx
+dataset_sql
+dataset_exportado.xlsx
+
+
+
 clientes/
 enviadas/
 datasets/
 compras/
+banco/
+
 traduzidos
 escopo.txt
 .gitignore

@@ -312,6 +312,10 @@ def baixar_compra_completa(
     compra = carregar_compra(
         pasta
     )
+
+    print("Função chamada:", inserir_compra)
+    print("Arquivo da função:", inserir_compra.__code__.co_filename)
+    print("Linha da função:", inserir_compra.__code__.co_firstlineno)
     
     inserir_compra(compra)
 

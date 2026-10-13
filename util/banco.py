@@ -1,4 +1,5 @@
 import sqlite3
+import pandas as pd
 from pathlib import Path
 from datetime import datetime
 from config.caminhos import DADOS
@@ -34,7 +35,7 @@ def conectar():
 
 def criar_banco():
     """
-    Cria o banco de dados.
+    Cria as tabelas do banco de dados.
     """
 
     conn = conectar()
@@ -89,6 +90,7 @@ def criar_banco():
 
     """)
 
+
     colunas_contratacoes = {
         linha[1]
         for linha in cursor.execute("PRAGMA table_info(contratacoes)")
@@ -128,6 +130,20 @@ def criar_banco():
                 REFERENCES clientes(cliente)
         
         )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS itens (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id_interno TEXT NOT NULL,
+            material_ou_servico TEXT,
+            tipo_beneficio_nome TEXT,
+
+            FOREIGN KEY (id_interno)
+                REFERENCES contratacoes(id_interno)
+        
+        )
+    
     """)
 
     conn.commit()
@@ -277,6 +293,7 @@ def inserir_compra(compra):
     """
     Insere uma contratação desejada no banco de dados.
     """
+    print("### ENTREI NA FUNÇÃO inserir_compra ###", flush=True)
 
     from ferramentas.gerar_dataset import extrair_dados_compra
 
@@ -287,6 +304,10 @@ def inserir_compra(compra):
         return
     
     clientes = compra.get("clientes",{})
+    itens = compra.get("itens",[])
+
+    print("Tipo de compra['itens']:", type(compra.get("itens")))
+    print("Quantidade de itens:", len(itens))
 
 
     conn = conectar()
@@ -372,10 +393,31 @@ def inserir_compra(compra):
         cliente
     ))
 
+    id_interno = registro['ID_INTERNO']
+
+    cursor.execute("""
+        DELETE FROM itens
+        WHERE id_interno = ?
+    """, (id_interno,))
+
+    for item in itens:
+        cursor.execute("""
+            INSERT INTO itens (
+                id_interno,
+                material_ou_servico,
+                tipo_beneficio_nome
+            )
+            VALUES (?, ?, ?)
+        """, (
+            id_interno,
+            item.get("materialOuServico"),
+            item.get("tipoBeneficioNome")
+        ))
+
     conn.commit()
     conn.close()
 
-    print(f"Compra inserida: {registro['ID_INTERNO']}")
+    print(f"Compra inserida: {id_interno}")
 
 
 def obter_pasta_contratacao(id_interno):
@@ -715,6 +757,66 @@ def atualizar_clientes_json(pasta, clientes):
             ensure_ascii=False,
             indent=4
         )
+
+def consultar_dataset():
+    """
+    Lê o dataset diretamento no SQLite.
+    """
+
+    conn = conectar()
+
+    consulta = """
+        SELECT 
+            c.id_interno AS ID_INTERNO,
+            c.id AS ID,
+            cc.cliente AS CLIENTE,
+
+            c.numero_compra AS NUMERO_COMPRA,
+            c.ano_compra AS ANO_COMPRA,
+            c.sequencial_compra AS SEQUENCIAL_COMPRA,
+
+            o.estado AS ESTADO,
+            o.unidade AS UNIDADE,
+            o.cnpj AS CNPJ,
+            o.orgao AS ORGAO,
+            o.esfera AS ESFERA,
+            o.municipio AS MUNICIPIO,
+
+            c.valor_estimado AS VALOR_ESTIMADO,
+            c.valor_homologado AS VALOR_HOMOLOGADO,            
+            
+            c.data_publicacao AS DATA_PUBLICACAO,
+            c.data_disputa AS DATA_DISPUTA,
+
+            c.modalidade AS MODALIDADE,
+            c.modo_disputa AS MODO_DISPUTA,
+            c.situacao AS SITUACAO,
+            c.srp AS SRP,
+            
+            c.link_pncp AS LINK_PNCP,
+            c.link_portal AS LINK_PORTAL
+
+        FROM contratacoes c
+
+        LEFT JOIN orgaos o
+            ON c.cnpj = o.cnpj
+        
+        LEFT JOIN contratacao_cliente cc
+            ON c.id_interno = cc.id_interno
+
+        ORDER BY 
+            c.ano_compra DESC,
+            c.sequencial_compra
+    """
+
+    df = pd.read_sql_query(
+        consulta,
+        conn
+    )
+
+    conn.close()
+
+    return df
 
 
 
