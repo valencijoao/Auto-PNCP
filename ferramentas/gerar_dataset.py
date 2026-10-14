@@ -507,7 +507,7 @@ def gerar_dataset_cliente(df, cliente):
     df_cliente["DATA_DISPUTA"] = pd.to_datetime(
         df_cliente["DATA_DISPUTA"],
         errors="coerce",
-        dayfirst=True
+        dayfirst=False
     )
 
     df_cliente = df_cliente[
@@ -558,7 +558,7 @@ def salvar_dataset_cliente(df_cliente, cliente):
     df_cliente["DATA_DISPUTA"] = pd.to_datetime(
         df_cliente["DATA_DISPUTA"],
         errors="coerce",
-        dayfirst=True
+        dayfirst=False
     )
 
     df_cliente["VALOR_ESTIMADO"] = df_cliente[
@@ -600,7 +600,7 @@ def atualizar_datasets_clientes():
             df["DATA_DISPUTA"] = pd.to_datetime(
                 df["DATA_DISPUTA"],
                 errors="coerce",
-                dayfirst=True
+                dayfirst=False
             )
 
         if "VALOR_ESTIMADO" in df.columns:
