@@ -5,6 +5,7 @@ from datetime import datetime
 from config.caminhos import DADOS
 import json
 from config.caminhos import COMPRAS
+from ferramentas.gerar_dataset import analisar_itens
 
 PASTA_BANCO = DADOS / "banco"
 
@@ -804,12 +805,49 @@ def consultar_dataset():
             c.sequencial_compra
     """
 
-    df = pd.read_sql_query(
-        consulta,
-        conn
+    consulta_itens = """
+        SELECT
+            id_interno,
+            material_ou_servico,
+            tipo_beneficio_nome
+        FROM itens
+        ORDER BY id_interno
+    """
+
+    try:
+        df = pd.read_sql_query(consulta, conn)
+        df_itens = pd.read_sql_query(consulta_itens, conn)
+    finally:
+        conn.close()
+
+    itens_por_compra = {}
+
+    for _, linha in df_itens.iterrows():
+        id_interno = linha['id_interno']
+
+        item = {
+            "materialOuServico": linha["material_ou_servico"],
+            "tipoBeneficioNome": linha["tipo_beneficio_nome"]
+        }
+
+        itens_por_compra.setdefault(id_interno, []).append(item)
+
+    indicadores = df["ID_INTERNO"].map(
+        lambda id_interno: analisar_itens(
+            itens_por_compra.get(id_interno,[])
+        )
     )
 
-    conn.close()
+    df_indicadores = pd.DataFrame(
+        indicadores.tolist(),
+        index= df.index
+
+    )
+
+    df =  pd.concat(
+        [df, df_indicadores],
+        axis=1
+    )
 
     return df
 
