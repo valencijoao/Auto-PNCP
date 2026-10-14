@@ -18,6 +18,7 @@ enviadas/
 datasets/
 compras/
 banco/
+dados/
 
 traduzidos
 escopo.txt
@@ -25,9 +26,7 @@ escopo.txt
 util/links.txt
 dataset_interno.csv
 enviadas/*.xlsx
-dados/portais_tratados.json
-dados/portais.json
-dados/dominios.json
+
 df_enviadas
 
 
