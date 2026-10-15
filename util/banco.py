@@ -852,7 +852,111 @@ def consultar_dataset():
     return df
 
 
+def validacao_compras_local():
+    """
+    Verifica as contratações armazenadas localmente
+    e procura correspondência no banco de dados.
+    Não altera dados.
+    """
 
+    from ferramentas.gerar_dataset import (
+        carregar_compra,
+        extrair_dados_compra)
+    
+    from config.caminhos import COMPRAS
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    total_pastas = 0
+    compras_com_dados = 0
+    compras_com_itens = 0
+    compras_encontradas = 0
+    compras_nao_encontradas = 0
+    total_itens = 0
+    itens_de_compras_encontradas = 0
+    compras_invalidas = 0
+
+    try:        
+        pastas = [
+            pasta
+            for pasta in COMPRAS.iterdir()
+            if pasta.is_dir()
+        ]
+
+        total_pastas = len(pastas)
+
+
+
+        for pasta in pastas:
+            try:
+                compra = carregar_compra(pasta)
+                registro = extrair_dados_compra(compra)
+            except (OSError, ValueError, TypeError) as erro:
+                print(f"Falha ao processar {pasta.name}: {erro}")
+                compras_invalidas += 1
+                continue
+
+            if not isinstance(compra, dict) or not compra.get("dados"):
+                continue
+
+            compras_com_dados += 1
+
+            itens = compra.get("itens",[])
+
+            if not isinstance(itens, list):
+                compras_invalidas += 1
+                continue
+
+            quantidade_itens = len(itens)
+
+            if quantidade_itens > 0:
+                compras_com_itens +=1
+                total_itens += quantidade_itens
+
+            if not registro:
+                compras_invalidas += 1
+                continue
+
+            id_interno = registro.get("ID_INTERNO")
+
+            if not id_interno:
+                compras_invalidas += 1
+                continue
+            
+            cursor.execute("""
+                SELECT 1
+                FROM contratacoes
+                WHERE id_interno = ?
+                LIMIT 1
+                """,
+                (id_interno,),
+            )
+
+            resultado = cursor.fetchone()
+
+            if resultado:
+                compras_encontradas += 1
+                itens_de_compras_encontradas += quantidade_itens
+            else:
+                compras_nao_encontradas += 1
+
+
+    finally:
+        conn.close()
+
+    print("\n=== Validação das compras já baixadas ===")
+    print(f"Pastas encontradas: {total_pastas}")
+    print(f"Contratações com dados JSON: {compras_com_dados}")
+    print(f"Contratações com itens nos JSONs: {compras_com_itens}")
+    print(f"Total de itens nos JSONs: {total_itens}")
+    print(f"Contratações encontradas no banco: {compras_encontradas}")
+    print(f"Contratações não encontradas no banco: {compras_nao_encontradas}")
+    print(f"Itens associados a contratações encontradas: {itens_de_compras_encontradas}")
+    print(f"Pastas ou contratações inválidas: {compras_invalidas}")
+
+
+        
 if __name__ =="__main__":
 
     criar_banco()
