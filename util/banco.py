@@ -5,7 +5,7 @@ from datetime import datetime
 from config.caminhos import DADOS
 import json
 from config.caminhos import COMPRAS
-from ferramentas.gerar_dataset import analisar_itens
+from ferramentas.gerar_dataset import analisar_itens, carregar_compra, extrair_dados_compra
 
 PASTA_BANCO = DADOS / "banco"
 
@@ -859,10 +859,6 @@ def validacao_compras_local():
     Não altera dados.
     """
 
-    from ferramentas.gerar_dataset import (
-        carregar_compra,
-        extrair_dados_compra)
-    
     from config.caminhos import COMPRAS
 
     conn = conectar()
@@ -954,6 +950,180 @@ def validacao_compras_local():
     print(f"Contratações não encontradas no banco: {compras_nao_encontradas}")
     print(f"Itens associados a contratações encontradas: {itens_de_compras_encontradas}")
     print(f"Pastas ou contratações inválidas: {compras_invalidas}")
+
+
+def importar_itens(confirmar=False):
+    """
+    Recupera os itens dos JSONs locais para contratações
+    já existentes no banco.
+
+    Por padrão, executa apenas uma simulação.
+    Para gravar os dados, utilize confirmar=True.
+
+    Contratações sem itens locais válidos são ignoradas,
+    preservando os itens que já estejam no banco.
+   
+    """
+
+    conn = conectar()
+    cursor = conn.cursor()
+
+    pastas_processadas = set()
+
+    contratacoes_elegiveis = 0
+    contratacoes_atualizadas = 0
+    contratacoes_sem_itens = 0
+    contratacoes_nao_encontradas = 0
+    contratacoes_invalidas = 0
+
+    total_itens = 0
+    itens_existentes_substituidos = 0
+
+    try:
+        pastas = [
+            pasta
+            for pasta in COMPRAS.iterdir()
+            if pasta.is_dir()
+        ]
+
+        for pasta in pastas:
+            try:
+                compra = carregar_compra(pasta)
+                registro = extrair_dados_compra(compra)
+            
+            except (OSError, ValueError, TypeError) as erro:
+                print(f"Falha ao processar: {pasta.name}: {erro}")
+                contratacoes_invalidas += 1
+                continue
+
+            if not isinstance(compra, dict) or not registro:
+                contratacoes_invalidas += 1
+                continue
+
+            id_interno = registro.get("ID_INTERNO")
+
+            if not id_interno:
+                contratacoes_invalidas += 1
+                continue
+
+            if id_interno in pastas_processadas:
+                continue
+
+            pastas_processadas.add(id_interno)
+
+            itens = compra.get("itens",[])
+
+            if not isinstance(itens, list):
+                contratacoes_invalidas += 1
+                continue
+
+            if not itens:
+                contratacoes_sem_itens += 1
+                continue
+
+
+            if not all(isinstance(item, dict) for item in itens):
+                contratacoes_invalidas += 1
+                continue
+
+            cursor.execute(
+                """
+                SELECT 1
+                FROM contratacoes
+                WHERE id_interno = ?
+                LIMIT 1
+                """,
+                (id_interno,),
+            )
+
+            if cursor.fetchone() is None:
+                contratacoes_nao_encontradas += 1
+                continue
+
+            contratacoes_elegiveis += 1
+            total_itens += len(itens)
+
+            cursor.execute(
+                """
+                SELECT COUNT(*)
+                FROM itens
+                WHERE id_interno = ?
+                """,
+                (id_interno,),
+            )
+
+            itens_existentes_substituidos += cursor.fetchone()[0]
+
+            if not confirmar:
+                continue
+
+            cursor.execute(
+                """
+                DELETE FROM itens
+                WHERE id_interno = ?
+                """,
+                (id_interno,),
+            )
+
+            cursor.executemany(
+                """
+                INSERT INTO itens (
+                    id_interno,
+                    material_ou_servico,
+                    tipo_beneficio_nome
+                )
+                VALUES (?, ?, ?)
+                """,
+                [
+                    (
+                        id_interno,
+                        item.get("materialOuServico"),
+                        item.get("tipoBeneficioNome"),
+                    )
+                    for item in itens
+                ],
+            )
+
+            contratos_atualizados += 1
+
+        if confirmar:
+            conn.commit()
+
+    except Exception:
+        conn.rollback()
+        raise
+
+    finally:
+        conn.close()
+
+    print("\n=== Importação de itens históricos ===")
+    print(
+        f"Modo: {'IMPORTAÇÃO EFETIVA' if confirmar else 'SIMULAÇÃO'}"
+    )
+    print(f"Pastas analisadas: {len(pastas)}")
+    print(f"Contratações elegíveis: {contratacoes_elegiveis}")
+    print(f"Itens encontrados para importação: {total_itens}")
+    print(
+        "Itens existentes que seriam substituídos: "
+        f"{itens_existentes_substituidos}"
+    )
+    print(f"Contratações sem itens locais: {contratacoes_sem_itens}")
+    print(
+        f"Contratações não encontradas no banco: "
+        f"{contratacoes_nao_encontradas}"
+    )
+    print(f"Contratações inválidas: {contratacoes_invalidas}")
+
+    if confirmar:
+        print(f"Contratações atualizadas: {contratos_atualizados}")
+        print(f"Itens históricos importados: {total_itens}")
+    else:
+        print("\nNenhuma alteração foi realizada no banco.")
+        print(
+            "Após conferir os resultados, execute novamente "
+            "com confirmar=True para importar."
+        )
+
 
 
         
