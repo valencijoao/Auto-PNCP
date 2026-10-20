@@ -952,7 +952,7 @@ def validacao_compras_local():
     print(f"Pastas ou contratações inválidas: {compras_invalidas}")
 
 
-def importar_itens(confirmar=False):
+def importar_itens(confirmar=True):
     """
     Recupera os itens dos JSONs locais para contratações
     já existentes no banco.
@@ -1084,7 +1084,7 @@ def importar_itens(confirmar=False):
                 ],
             )
 
-            contratos_atualizados += 1
+            contratacoes_atualizadas += 1
 
         if confirmar:
             conn.commit()
@@ -1115,7 +1115,7 @@ def importar_itens(confirmar=False):
     print(f"Contratações inválidas: {contratacoes_invalidas}")
 
     if confirmar:
-        print(f"Contratações atualizadas: {contratos_atualizados}")
+        print(f"Contratações atualizadas: {contratacoes_atualizadas}")
         print(f"Itens históricos importados: {total_itens}")
     else:
         print("\nNenhuma alteração foi realizada no banco.")
