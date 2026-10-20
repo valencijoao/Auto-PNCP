@@ -8,6 +8,7 @@ else:
 
 DADOS = BASE_DIR / "dados"
 COMPRAS = DADOS / "compras"
+BANCO = DADOS / "banco"
 DATASETS = DADOS / "datasets"
 CLIENTES = DADOS / "enviadas"
 TRADUZIDOS = DADOS / "traduzidos"
@@ -17,6 +18,7 @@ PASTA_DE_REDE = Path(
 CAMINHO_DOMINIOS = DADOS / "dominios.json"
 CAMINHO_ORGAOS = DADOS/ "orgaos.json"
 CAMINHO_PORTAIS_TRATADOS = DADOS / "portais_tratados.json"
+CAMINHO_BANCO = BANCO / "compras.db"
 
 DADOS.mkdir(exist_ok=True)
 
