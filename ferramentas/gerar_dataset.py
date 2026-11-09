@@ -133,11 +133,11 @@ def extrair_dados_compra(compra):
 
     link_portal = dados.get("linkSistemaOrigem")
 
-    link_pncp = f"https://pncp.gov.br/app/editais/{cnpj}/{ano_compra}/{sequencial_compra}"
+    link_pncp = dados.get("_linkPNCPManual")
+    if link_pncp is None:
+        link_pncp = f"https://pncp.gov.br/app/editais/{cnpj}/{ano_compra}/{sequencial_compra}"
 
-    origem = obter_origem(
-        dados
-    )
+    origem = dados.get("_origemManual") or obter_origem(dados)
 
     if origem is None:
         origem = dados.get(

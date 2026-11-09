@@ -11,6 +11,28 @@ def _pausa():
     input("\nPressione Enter para continuar...")
 
 
+def _solicitar_identificador_contratacao():
+    """Lê a identificação no mesmo formato usado pela mineração."""
+    entrada = input("CNPJ/ANO/SEQUENCIAL: ").strip()
+    partes = [parte.strip() for parte in entrada.split("/")]
+    if (
+        len(partes) != 3
+        or len(partes[0]) != 14
+        or not partes[0].isdigit()
+        or len(partes[1]) != 4
+        or not partes[1].isdigit()
+        or not partes[2].isdigit()
+    ):
+        print("Formato inválido. Use CNPJ/ANO/SEQUENCIAL, por exemplo: 12345678000190/2026/12.")
+        return None
+
+    ano, sequencial = int(partes[1]), int(partes[2])
+    if ano < 1900 or sequencial < 1:
+        print("Ano ou sequencial inválido.")
+        return None
+    return partes[0], ano, sequencial
+
+
 def _mostrar_contratacao(dados):
     if not dados:
         print("Contratação não encontrada.")
@@ -23,6 +45,7 @@ def _mostrar_contratacao(dados):
         ("Município", "municipio"), ("Valor estimado", "valor_estimado"),
         ("Data de envio", "data_envio"),
         ("Situação", "situacao"), ("Link PNCP", "link_pncp"),
+        ("Link do portal", "link_portal"),
     ]
     for titulo, chave in campos:
         print(f"{titulo}: {dados.get(chave) or '—'}")
@@ -32,26 +55,18 @@ def _mostrar_contratacao(dados):
 
 
 def _consulta_contratacao():
-    cnpj = input("CNPJ: ").strip()
-    ano_txt = input("Ano: ").strip()
-    seq_txt = input("Sequencial: ").strip()
-    if not cnpj.isdigit() or len(cnpj) != 14:
-        print("CNPJ inválido. Informe os 14 números.")
+    identificador = _solicitar_identificador_contratacao()
+    if identificador is None:
         return
-    try:
-        ano, sequencial = int(ano_txt), int(seq_txt)
-        if ano < 1900 or sequencial < 0:
-            raise ValueError
-    except ValueError:
-        print("Ano ou sequencial inválido.")
-        return
+    cnpj, ano, sequencial = identificador
     _mostrar_contratacao(banco.consultar_contratacao(cnpj, ano, sequencial))
 
 
 def _gerenciar_clientes():
-    dados = banco.consultar_contratacao(
-        input("CNPJ: ").strip(), input("Ano: ").strip(), input("Sequencial: ").strip()
-    )
+    identificador = _solicitar_identificador_contratacao()
+    if identificador is None:
+        return
+    dados = banco.consultar_contratacao(*identificador)
     if not _mostrar_contratacao(dados):
         return
     id_interno = dados["id_interno"]
@@ -77,6 +92,57 @@ def _gerenciar_clientes():
             banco.adicionar_cliente_contratacao(id_interno, cliente)
         else:
             banco.remover_cliente_contratacao(id_interno, cliente)
+
+
+def _adicionar_contratacao_manual():
+    from ferramentas.contratacao_manual import cadastrar_contratacao_manual
+
+    identificador = _solicitar_identificador_contratacao()
+    if identificador is None:
+        return
+    cnpj, ano, sequencial = identificador
+
+    print("\nDados da contratação manual. Órgão, portal e data de publicação são obrigatórios.")
+    formulario = {
+        "numero_compra": input("Número da compra/processo [usa o sequencial]: ").strip(),
+        "orgao": input("Órgão: ").strip(),
+        "estado": input("Estado (UF): ").strip(),
+        "municipio": input("Município: ").strip(),
+        "unidade": input("Unidade: ").strip(),
+        "esfera": input("Esfera do órgão: ").strip(),
+        "portal": input("Nome do portal: ").strip(),
+        "link_portal": input("Link da contratação no portal: ").strip(),
+        "data_publicacao": input("Data de publicação (DD/MM/AAAA ou AAAA-MM-DD): ").strip(),
+        "data_disputa": input("Data da disputa (opcional): ").strip(),
+        "modalidade": input("Modalidade: ").strip(),
+        "modo_disputa": input("Modo de disputa: ").strip(),
+        "situacao": input("Situação: ").strip(),
+        "valor_estimado": input("Valor estimado (opcional): ").strip(),
+        "valor_homologado": input("Valor homologado (opcional): ").strip(),
+        "item": input("Item/objeto destinado ao cliente: ").strip(),
+    }
+    formulario["clientes"] = [
+        cliente.strip()
+        for cliente in input("Clientes associados, separados por vírgula (opcional): ").split(",")
+        if cliente.strip()
+    ]
+    formulario["srp"] = input("É registro de preços? (s/n; Enter = não): ").strip().lower() in {"s", "sim"}
+
+    print(f"\nContratação: {cnpj}/{ano}/{sequencial}")
+    print(f"Órgão: {formulario['orgao'] or '—'} | Portal: {formulario['portal'] or '—'}")
+    print(f"Clientes: {', '.join(formulario['clientes']) or 'Nenhum'}")
+    if input("Confirmar o cadastro? (s/n): ").strip().lower() not in {"s", "sim"}:
+        print("Cadastro cancelado.")
+        return
+
+    resultado = cadastrar_contratacao_manual(cnpj, ano, sequencial, formulario)
+    print(f"Contratação cadastrada: {resultado['id_interno']}")
+    if resultado["clientes_atualizados"]:
+        print(f"Planilhas atualizadas: {', '.join(resultado['clientes_atualizados'])}")
+    elif formulario["clientes"]:
+        print("Contratação cadastrada, mas não foi possível atualizar as planilhas dos clientes.")
+    for cliente, erro in resultado["falhas"].items():
+        print(f"Falha na planilha de {cliente}: {erro}")
 
 
 def _consultar_banco():
@@ -234,12 +300,13 @@ def main():
         if not banco.ARQUIVO_BANCO.exists():
             return
     opcoes = {"1": _minerar, "2": _consulta_contratacao, "3": _gerenciar_clientes,
-              "4": _consultar_banco, "5": _gerar_excel, "6": _configuracoes}
+              "4": _consultar_banco, "5": _gerar_excel, "6": _configuracoes,
+              "7": _adicionar_contratacao_manual}
     while True:
         print("\n====================================\n           AUTO PAINEL\n====================================")
-        print("1 - Minerar novas contratações\n2 - Consultar contratação\n3 - Gerenciar clientes\n4 - Consultar banco\n5 - Gerar dataset Excel\n6 - Configurações\n7 - Sair")
+        print("1 - Minerar novas contratações\n2 - Consultar contratação\n3 - Gerenciar clientes\n4 - Consultar banco\n5 - Gerar dataset Excel\n6 - Configurações\n7 - Adicionar contratação manualmente\n8 - Sair")
         escolha = input("\nEscolha: ").strip()
-        if escolha == "7":
+        if escolha == "8":
             print("Até logo.")
             return
         acao = opcoes.get(escolha)
